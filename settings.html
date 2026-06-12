@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Settings — DSEL</title>
+<link rel="icon" href="/img/original/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/css/style.css?v=5">
+<script>(function(){var s=localStorage.getItem('dsel-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));})();</script>
+</head>
+<body>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head">
+    <div class="drawer-avatar" id="drawerAvatar">G</div>
+    <div class="drawer-user"><strong id="drawerUserName">Guest</strong><small id="drawerUserMail">Sign in to access your account</small></div>
+    <button class="drawer-close" id="drawerClose" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="drawer-section" id="drawerAuthBlock">
+    <div class="drawer-label">Account</div>
+    <a class="dlink" href="/login.html"><i class="bi bi-box-arrow-in-right"></i> Login<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/register.html"><i class="bi bi-person-plus-fill"></i> Sign Up<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section" id="drawerUserBlock" style="display:none">
+    <div class="drawer-label">My Profile</div>
+    <a class="dlink" href="/profile.html"><i class="bi bi-person-circle"></i> View Profile<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/my-courses.html"><i class="bi bi-mortarboard-fill"></i> My Courses<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/progress.html"><i class="bi bi-graph-up"></i> Progress<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/certificates.html"><i class="bi bi-award-fill"></i> Certificates<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+    <div class="drawer-section">
+    <div class="drawer-label">Books &amp; Study Material</div>
+    <a class="dlink" href="/books.html"><i class="bi bi-collection-fill"></i> All Books &amp; PDFs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Subscription</div>
+    <a class="dlink" href="/courses.html"><i class="bi bi-stars"></i> My Plan<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/billing.html"><i class="bi bi-receipt"></i> Billing &amp; Payments<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Preferences</div>
+    <button class="dlink" id="drawerThemeToggle"><i class="bi bi-moon-stars-fill"></i> <span id="drawerThemeLabel">Dark Mode</span><span class="arrow"><i class="bi bi-chevron-right"></i></span></button>
+    <a class="dlink" href="/settings.html#language"><i class="bi bi-translate"></i> Language<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/notifications.html"><i class="bi bi-bell-fill"></i> Notifications<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/settings.html#privacy"><i class="bi bi-shield-lock-fill"></i> Privacy<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/settings.html"><i class="bi bi-gear-fill"></i> Settings<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Support</div>
+    <a class="dlink" href="/contact.html"><i class="bi bi-headset"></i> Contact Us<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp Help<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/about.html"><i class="bi bi-info-circle-fill"></i> About<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <button class="dlink" id="drawerLogout" style="display:none;color:#dc2626"><i class="bi bi-box-arrow-right" style="color:#dc2626"></i> Logout<span class="arrow"><i class="bi bi-chevron-right"></i></span></button>
+  </div>
+  <div class="drawer-foot">© <span class="year"></span> The Dream School of English Language · DSEL</div>
+</aside>
+
+<div class="topbar"><div class="container"><div><i class="bi bi-geo-alt"></i> Stadium Road, Sidhi, MP — 486661</div><div><a href="tel:+918770462942"><i class="bi bi-telephone"></i> +91 8770462942</a></div></div></div>
+<header class="header"><div class="container nav">
+<div class="header-left"><button class="drawer-toggle" id="drawerToggle" aria-label="Open menu"><i class="bi bi-list"></i></button><a class="brand" href="/"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo"><span class="brand-name"><span class="full">The Dream School of English Language <span style="color:var(--brand)">(DSEL)</span></span><small>Sidhi · Madhya Pradesh — since 2011</small></span></a></div>
+<button class="menu-toggle" aria-label="Open menu"><i class="bi bi-list"></i></button>
+<ul class="menu"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/courses.html">Courses</a></li><li><a href="/activities.html">Activities</a></li><li><a href="/news.html">News</a></li><li><a href="/events.html">Events</a></li><li><a href="/tests.html">Tests</a></li><li><a href="/contact.html">Contact</a></li></ul>
+<div class="nav-cta"><a href="/login.html" class="btn btn-ghost">Login</a><a href="/register.html" class="btn btn-primary">Sign Up</a></div>
+</div></header>
+
+
+<main style="padding:50px 0">
+  <div class="container" style="max-width:880px">
+    <div class="crumbs"><a href="/">Home</a> · Settings</div>
+    <h1 style="margin-bottom:30px">Settings</h1>
+
+    <div class="card" style="padding:0;overflow:hidden;margin-bottom:24px" id="appearance">
+      <div style="padding:22px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px"><i class="bi bi-palette-fill" style="font-size:1.4rem;color:var(--brand)"></i><h3 style="margin:0">Appearance</h3></div>
+      <div style="padding:8px 26px">
+        <div class="set-row"><div><strong>Theme</strong><br><small style="color:var(--muted)">Light or dark interface</small></div><div class="seg" id="themeSeg"><button data-v="light"><i class="bi bi-sun-fill"></i> Light</button><button data-v="dark"><i class="bi bi-moon-stars-fill"></i> Dark</button><button data-v="auto"><i class="bi bi-circle-half"></i> Auto</button></div></div>
+        <div class="set-row"><div><strong>Compact mode</strong><br><small style="color:var(--muted)">Tighter spacing across pages</small></div><label class="sw"><input type="checkbox" data-set="compact"><span></span></label></div>
+      </div>
+    </div>
+
+    <div class="card" style="padding:0;overflow:hidden;margin-bottom:24px" id="language">
+      <div style="padding:22px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px"><i class="bi bi-translate" style="font-size:1.4rem;color:var(--brand)"></i><h3 style="margin:0">Language</h3></div>
+      <div style="padding:8px 26px">
+        <div class="set-row"><div><strong>Display language</strong><br><small style="color:var(--muted)">For website content</small></div><select id="lang" style="padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--card-bg);color:var(--ink);font:inherit"><option value="en">English</option><option value="hi">हिन्दी (Hindi)</option><option value="en-hi">English + Hindi</option></select></div>
+      </div>
+    </div>
+
+    <div class="card" style="padding:0;overflow:hidden;margin-bottom:24px" id="account">
+      <div style="padding:22px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px"><i class="bi bi-person-fill" style="font-size:1.4rem;color:var(--brand)"></i><h3 style="margin:0">Account</h3></div>
+      <div style="padding:8px 26px">
+        <a href="/profile.html" class="set-row" style="text-decoration:none;color:inherit"><div><strong>Edit profile</strong><br><small style="color:var(--muted)">Update name, mobile, course</small></div><i class="bi bi-chevron-right" style="color:var(--muted)"></i></a>
+        <button class="set-row" id="changePwd" style="background:none;border:none;width:100%;text-align:left;cursor:pointer"><div><strong>Change password</strong><br><small style="color:var(--muted)">Update your login password</small></div><i class="bi bi-chevron-right" style="color:var(--muted)"></i></button>
+        <button class="set-row" id="exportData" style="background:none;border:none;width:100%;text-align:left;cursor:pointer"><div><strong>Export my data</strong><br><small style="color:var(--muted)">Download a copy as JSON</small></div><i class="bi bi-download" style="color:var(--brand)"></i></button>
+        <button class="set-row" id="logoutBtn" style="background:none;border:none;width:100%;text-align:left;cursor:pointer;color:#dc2626"><div><strong>Logout</strong><br><small style="color:var(--muted)">Sign out of this browser</small></div><i class="bi bi-box-arrow-right" style="color:#dc2626"></i></button>
+      </div>
+    </div>
+
+    <div class="card" style="padding:0;overflow:hidden;margin-bottom:24px" id="privacy">
+      <div style="padding:22px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px"><i class="bi bi-shield-lock-fill" style="font-size:1.4rem;color:var(--brand)"></i><h3 style="margin:0">Privacy</h3></div>
+      <div style="padding:8px 26px">
+        <div class="set-row"><div><strong>Allow WhatsApp contact</strong><br><small style="color:var(--muted)">Receive course updates on WhatsApp</small></div><label class="sw"><input type="checkbox" data-set="wa-contact" checked><span></span></label></div>
+        <div class="set-row"><div><strong>Allow phone calls</strong><br><small style="color:var(--muted)">Receive admission/follow-up calls</small></div><label class="sw"><input type="checkbox" data-set="phone-contact" checked><span></span></label></div>
+        <div class="set-row"><div><strong>Show profile in alumni</strong><br><small style="color:var(--muted)">Show your name in DSEL alumni list</small></div><label class="sw"><input type="checkbox" data-set="alumni"><span></span></label></div>
+        <button class="set-row" id="clearData" style="background:none;border:none;width:100%;text-align:left;cursor:pointer;color:#dc2626"><div><strong>Clear all local data</strong><br><small style="color:var(--muted)">Removes session, preferences, cached data</small></div><i class="bi bi-trash3" style="color:#dc2626"></i></button>
+      </div>
+    </div>
+
+    <div class="card" style="padding:0;overflow:hidden;margin-bottom:24px">
+      <div style="padding:22px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px"><i class="bi bi-info-circle-fill" style="font-size:1.4rem;color:var(--brand)"></i><h3 style="margin:0">About</h3></div>
+      <div style="padding:8px 26px">
+        <div class="set-row"><div><strong>App version</strong></div><span style="color:var(--muted);font-weight:600">1.0.0</span></div>
+        <a href="/contact.html" class="set-row" style="text-decoration:none;color:inherit"><div><strong>Contact support</strong></div><i class="bi bi-chevron-right" style="color:var(--muted)"></i></a>
+        <a href="https://wa.me/918770462942" target="_blank" rel="noopener" class="set-row" style="text-decoration:none;color:inherit"><div><strong>WhatsApp help</strong></div><i class="bi bi-whatsapp" style="color:#25d366"></i></a>
+      </div>
+    </div>
+
+    <p id="setSaveToast" style="display:none;position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:var(--success);color:#fff;padding:12px 22px;border-radius:999px;font-weight:700;z-index:100;box-shadow:var(--shadow)"><i class="bi bi-check-circle-fill"></i> Saved</p>
+  </div>
+</main>
+
+<style>
+.set-row{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);gap:18px;font-size:.97rem}
+.set-row:last-child{border-bottom:none}
+.set-row strong{color:var(--ink);font-weight:700}
+.seg{display:flex;background:var(--bg-alt);border-radius:10px;padding:3px;gap:2px}
+.seg button{background:transparent;border:none;padding:8px 14px;border-radius:8px;cursor:pointer;color:var(--ink-soft);font-weight:600;font-size:.88rem;display:flex;align-items:center;gap:6px;transition:var(--t)}
+.seg button.on{background:var(--card-bg);color:var(--brand);box-shadow:var(--shadow-sm)}
+.sw{position:relative;display:inline-block;width:46px;height:26px;flex-shrink:0}
+.sw input{opacity:0;width:0;height:0}
+.sw span{position:absolute;cursor:pointer;inset:0;background:#cbd5e1;border-radius:999px;transition:.25s}
+.sw span::before{content:"";position:absolute;left:3px;top:3px;width:20px;height:20px;background:#fff;border-radius:50%;transition:.25s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.sw input:checked + span{background:var(--brand)}
+.sw input:checked + span::before{transform:translateX(20px)}
+html[data-theme="dark"] .sw span{background:#3a4a5e}
+</style>
+
+<a class="fab-wa" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+<script src="/js/main.js?v=5"></script>
+<script>
+(function(){
+  // Theme segmented control
+  var seg = document.getElementById('themeSeg');
+  function setActive(){
+    var cur = localStorage.getItem('dsel-theme') || 'auto';
+    seg.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.v === cur));
+  }
+  setActive();
+  seg.addEventListener('click', function(e){
+    var b = e.target.closest('button'); if (!b) return;
+    var v = b.dataset.v;
+    if (v === 'auto') {
+      localStorage.removeItem('dsel-theme');
+      var d = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', d ? 'dark' : 'light');
+    } else {
+      localStorage.setItem('dsel-theme', v);
+      document.documentElement.setAttribute('data-theme', v);
+    }
+    setActive(); toast();
+  });
+
+  // Toggles & selects -> persist
+  function loadPrefs(){
+    var p = JSON.parse(localStorage.getItem('dsel-prefs') || '{}');
+    document.querySelectorAll('[data-set]').forEach(el => {
+      if (p[el.dataset.set] !== undefined) el.checked = !!p[el.dataset.set];
+    });
+    if (p.lang) document.getElementById('lang').value = p.lang;
+  }
+  function savePref(k, v){
+    var p = JSON.parse(localStorage.getItem('dsel-prefs') || '{}');
+    p[k] = v; localStorage.setItem('dsel-prefs', JSON.stringify(p));
+    toast();
+  }
+  loadPrefs();
+  document.querySelectorAll('[data-set]').forEach(el => el.addEventListener('change', () => savePref(el.dataset.set, el.checked)));
+  document.getElementById('lang').addEventListener('change', e => savePref('lang', e.target.value));
+
+  // Action buttons
+  document.getElementById('changePwd').onclick = () => {
+    var cur = JSON.parse(localStorage.getItem('dsel-current') || 'null');
+    if (!cur) { alert('Please login first.'); location.href='/login.html'; return; }
+    var oldP = prompt('Current password:'); if (!oldP) return;
+    var users = JSON.parse(localStorage.getItem('dsel-users') || '[]');
+    var u = users.find(x => x.email === cur.email);
+    if (!u || u.password !== oldP) { alert('Incorrect current password.'); return; }
+    var newP = prompt('New password (min 6 chars):'); if (!newP || newP.length < 6) { alert('Password too short.'); return; }
+    u.password = newP; localStorage.setItem('dsel-users', JSON.stringify(users));
+    alert('Password changed successfully.');
+  };
+  document.getElementById('exportData').onclick = () => {
+    var data = {
+      session: JSON.parse(localStorage.getItem('dsel-current') || 'null'),
+      preferences: JSON.parse(localStorage.getItem('dsel-prefs') || '{}'),
+      users: JSON.parse(localStorage.getItem('dsel-users') || '[]'),
+      exportedAt: new Date().toISOString()
+    };
+    var blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+    a.download = 'dsel-data-' + Date.now() + '.json'; a.click();
+  };
+  document.getElementById('clearData').onclick = () => {
+    if (!confirm('This removes your session, preferences, and cached data on this device. Continue?')) return;
+    ['dsel-current','dsel-prefs','dsel-theme'].forEach(k => localStorage.removeItem(k));
+    alert('Local data cleared.'); location.href='/';
+  };
+  document.getElementById('logoutBtn').onclick = () => {
+    localStorage.removeItem('dsel-current'); location.href='/';
+  };
+
+  function toast(){
+    var t = document.getElementById('setSaveToast');
+    t.style.display = 'block';
+    clearTimeout(window._t); window._t = setTimeout(() => t.style.display='none', 1800);
+  }
+
+  // Scroll to anchor section
+  if (location.hash) {
+    var el = document.querySelector(location.hash);
+    if (el) setTimeout(() => el.scrollIntoView({behavior:'smooth',block:'start'}), 100);
+  }
+})();
+</script>
+<script src="/js/chat-widget.js?v=5"></script>
+</body></html>

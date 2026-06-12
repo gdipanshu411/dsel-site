@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Profile — DSEL</title>
+<link rel="icon" href="/img/original/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/css/style.css?v=5">
+<script>(function(){var s=localStorage.getItem('dsel-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));})();</script>
+<script>(function(){var c=localStorage.getItem('dsel-current');if(!c){location.href='/login.html';}})();</script>
+</head>
+<body>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><div class="drawer-avatar" id="drawerAvatar">G</div><div class="drawer-user"><strong id="drawerUserName">Guest</strong><small id="drawerUserMail">Sign in</small></div><button class="drawer-close" id="drawerClose"><i class="bi bi-x-lg"></i></button></div>
+  <div class="drawer-section" id="drawerAuthBlock"><div class="drawer-label">Account</div><a class="dlink" href="/login.html"><i class="bi bi-box-arrow-in-right"></i> Login<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/register.html"><i class="bi bi-person-plus-fill"></i> Sign Up<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section" id="drawerUserBlock" style="display:none"><div class="drawer-label">My Profile</div><a class="dlink" href="/profile.html"><i class="bi bi-person-circle"></i> View Profile<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/my-courses.html"><i class="bi bi-mortarboard-fill"></i> My Courses<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/progress.html"><i class="bi bi-graph-up"></i> Progress<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/certificates.html"><i class="bi bi-award-fill"></i> Certificates<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Books &amp; Study Material</div><a class="dlink" href="/books.html"><i class="bi bi-collection-fill"></i> All Books &amp; PDFs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Subscription</div><a class="dlink" href="/courses.html"><i class="bi bi-stars"></i> My Plan<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/billing.html"><i class="bi bi-receipt"></i> Billing<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Preferences</div><button class="dlink" id="drawerThemeToggle"><i class="bi bi-moon-stars-fill"></i> <span id="drawerThemeLabel">Dark Mode</span><span class="arrow"><i class="bi bi-chevron-right"></i></span></button><a class="dlink" href="/settings.html#language"><i class="bi bi-translate"></i> Language<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/notifications.html"><i class="bi bi-bell-fill"></i> Notifications<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/settings.html"><i class="bi bi-gear-fill"></i> Settings<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Support</div><a class="dlink" href="/contact.html"><i class="bi bi-headset"></i> Contact Us<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/feedback.html"><i class="bi bi-chat-quote-fill"></i> Feedback &amp; Comments<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp Help<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><button class="dlink" id="drawerLogout" style="display:none;color:#dc2626"><i class="bi bi-box-arrow-right" style="color:#dc2626"></i> Logout<span class="arrow"><i class="bi bi-chevron-right"></i></span></button></div>
+  <div class="drawer-foot">© <span class="year"></span> DSEL</div>
+</aside>
+
+<div class="topbar"><div class="container"><div><i class="bi bi-geo-alt"></i> Stadium Road, Sidhi, MP — 486661</div><div><a href="tel:+918770462942"><i class="bi bi-telephone"></i> +91 8770462942</a></div></div></div>
+<header class="header"><div class="container nav">
+<div class="header-left"><button class="drawer-toggle" id="drawerToggle"><i class="bi bi-list"></i></button><a class="brand" href="/"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo"><span class="brand-name"><span class="full">The Dream School of English Language <span style="color:var(--brand)">(DSEL)</span></span><small>Sidhi · Madhya Pradesh — since 2011</small></span></a></div>
+<button class="menu-toggle"><i class="bi bi-list"></i></button>
+<ul class="menu"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/courses.html">Courses</a></li><li><a href="/activities.html">Activities</a></li><li><a href="/contact.html">Contact</a></li></ul>
+<div class="nav-cta"><a href="/login.html" class="btn btn-ghost">Login</a></div>
+</div></header>
+
+<main style="padding:50px 0">
+  <div class="container" style="max-width:880px">
+    <div class="crumbs"><a href="/">Home</a> · Profile</div>
+
+    <div id="viewMode">
+      <div class="card" style="padding:40px">
+        <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:24px">
+          <div style="position:relative">
+            <img id="profPhoto" src="" alt="" style="width:110px;height:110px;border-radius:50%;object-fit:cover;display:none;border:3px solid var(--brand)">
+            <div id="profAvatar" style="width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,var(--brand),#0a6b96);color:#fff;display:grid;place-items:center;font-weight:900;font-size:2.6rem;box-shadow:var(--shadow)">U</div>
+            <button id="changePhoto" title="Change photo" style="position:absolute;bottom:0;right:0;width:36px;height:36px;border-radius:50%;background:var(--brand);color:#fff;border:3px solid var(--bg);cursor:pointer;display:grid;place-items:center"><i class="bi bi-camera-fill"></i></button>
+          </div>
+          <div style="flex:1;min-width:200px">
+            <span class="pill">Student Profile</span>
+            <h1 id="profName" style="margin:0 0 6px;font-size:2.2rem">Loading...</h1>
+            <p id="profMail" style="margin:0;color:var(--muted)"></p>
+          </div>
+          <button class="btn btn-primary" id="editBtn"><i class="bi bi-pencil-fill"></i> Edit Profile</button>
+        </div>
+        <hr class="sep">
+        <div class="grid grid-3" style="gap:18px">
+          <div><small style="color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:.78rem">Mobile</small><div id="profMobile" style="margin-top:6px;font-weight:700;font-size:1.05rem">—</div></div>
+          <div><small style="color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:.78rem">Gender</small><div id="profGender" style="margin-top:6px;font-weight:700;font-size:1.05rem">—</div></div>
+          <div><small style="color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:.78rem">City</small><div id="profCity" style="margin-top:6px;font-weight:700;font-size:1.05rem">—</div></div>
+          <div><small style="color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:.78rem">Profession</small><div id="profProf" style="margin-top:6px;font-weight:700;font-size:1.05rem">—</div></div>
+          <div><small style="color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:.78rem">Institution</small><div id="profInst" style="margin-top:6px;font-weight:700;font-size:1.05rem">—</div></div>
+          <div><small style="color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:.78rem">Course</small><div id="profCourse" style="margin-top:6px;font-weight:700;font-size:1.05rem">—</div></div>
+        </div>
+        <hr class="sep">
+        <div class="flex" style="justify-content:space-between"><a href="/courses.html" class="btn btn-primary"><i class="bi bi-mortarboard-fill"></i> Browse Courses</a><button class="btn btn-ghost" id="logoutBtn"><i class="bi bi-box-arrow-right"></i> Logout</button></div>
+      </div>
+    </div>
+
+    <div id="editMode" style="display:none">
+      <div class="card" style="padding:40px">
+        <h1 style="margin:0 0 24px">Edit Profile</h1>
+        <form id="editForm" class="form" style="background:transparent;padding:0;border:none;box-shadow:none">
+          <div class="row-2">
+            <div class="field"><label>Full name *</label><input name="name" required></div>
+            <div class="field"><label>Email *</label><input name="email" type="email" required></div>
+          </div>
+          <div class="row-2">
+            <div class="field"><label>Mobile *</label><input name="mobile" type="tel" required></div>
+            <div class="field"><label>Gender</label><select name="gender"><option value="">Select…</option><option>Male</option><option>Female</option><option>Other</option><option>Prefer not to say</option></select></div>
+          </div>
+          <div class="row-2">
+            <div class="field"><label>City</label><input name="city"></div>
+            <div class="field"><label>Profession</label><select name="profession"><option value="">Select…</option><option>School Student</option><option>College Student</option><option>Job Seeker</option><option>Working Professional</option><option>Government Job Aspirant</option><option>Homemaker</option><option>Other</option></select></div>
+          </div>
+          <div class="field"><label>School / College / Company</label><input name="institution"></div>
+          <div class="field"><label>Course interested in</label><select name="course"><option>Spoken English Foundation</option><option>Interview & GD Mastery</option><option>Public Speaking & Debate</option><option>Not sure / Free level check</option></select></div>
+          <div class="flex" style="margin-top:14px"><button type="submit" class="btn btn-primary"><i class="bi bi-check-lg"></i> Save Changes</button><button type="button" class="btn btn-ghost" id="cancelEdit">Cancel</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<input type="file" id="photoInput" accept="image/*" style="display:none">
+
+<a class="fab-wa" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+<script src="/js/main.js?v=5"></script>
+<script src="/js/chat-widget.js?v=5"></script>
+<script>
+(function(){
+  var cur = JSON.parse(localStorage.getItem('dsel-current') || 'null');
+  if (!cur) return;
+  var users = JSON.parse(localStorage.getItem('dsel-users') || '[]');
+  var u = users.find(function(x){return x.email===cur.email;}) || cur;
+
+  function paint(){
+    document.getElementById('profName').textContent = u.name || 'Student';
+    document.getElementById('profMail').textContent = u.email || '';
+    document.getElementById('profMobile').textContent = u.mobile || '—';
+    document.getElementById('profGender').textContent = u.gender || '—';
+    document.getElementById('profCity').textContent = u.city || '—';
+    document.getElementById('profProf').textContent = u.profession || '—';
+    document.getElementById('profInst').textContent = u.institution || '—';
+    document.getElementById('profCourse').textContent = u.course || '—';
+    var av = document.getElementById('profAvatar');
+    var ph = document.getElementById('profPhoto');
+    if (u.photo) { ph.src = u.photo; ph.style.display = 'block'; av.style.display = 'none'; }
+    else { ph.style.display = 'none'; av.style.display = 'grid'; av.textContent = (u.name||'U')[0].toUpperCase(); }
+  }
+  paint();
+
+  function persist(){
+    var idx = users.findIndex(function(x){return x.email===u.email;});
+    if (idx >= 0) users[idx] = u; else users.push(u);
+    localStorage.setItem('dsel-users', JSON.stringify(users));
+    localStorage.setItem('dsel-current', JSON.stringify({name:u.name,email:u.email,mobile:u.mobile,photo:u.photo}));
+  }
+
+  document.getElementById('changePhoto').onclick = function(){ document.getElementById('photoInput').click(); };
+  document.getElementById('photoInput').onchange = function(e){
+    var file = e.target.files[0]; if (!file) return;
+    var img = new Image();
+    img.onload = function(){
+      var max = 320, w = img.width, h = img.height;
+      if (w > h) { if (w > max){ h = h*max/w; w = max; } }
+      else      { if (h > max){ w = w*max/h; h = max; } }
+      var c = document.createElement('canvas'); c.width = w; c.height = h;
+      c.getContext('2d').drawImage(img, 0, 0, w, h);
+      u.photo = c.toDataURL('image/jpeg', 0.85);
+      persist(); paint();
+    };
+    var r = new FileReader();
+    r.onload = function(ev){ img.src = ev.target.result; };
+    r.readAsDataURL(file);
+  };
+
+  var view = document.getElementById('viewMode');
+  var edit = document.getElementById('editMode');
+  document.getElementById('editBtn').onclick = function(){
+    var f = document.getElementById('editForm');
+    f.name.value = u.name||''; f.email.value = u.email||''; f.mobile.value = u.mobile||'';
+    f.gender.value = u.gender||''; f.city.value = u.city||''; f.profession.value = u.profession||'';
+    f.institution.value = u.institution||''; f.course.value = u.course||'Spoken English Foundation';
+    view.style.display='none'; edit.style.display=''; window.scrollTo(0,0);
+  };
+  document.getElementById('cancelEdit').onclick = function(){ view.style.display=''; edit.style.display='none'; };
+  document.getElementById('editForm').onsubmit = function(e){
+    e.preventDefault();
+    var f = e.target;
+    u.name = f.name.value; u.email = f.email.value; u.mobile = f.mobile.value;
+    u.gender = f.gender.value; u.city = f.city.value; u.profession = f.profession.value;
+    u.institution = f.institution.value; u.course = f.course.value;
+    persist(); paint(); view.style.display=''; edit.style.display='none'; window.scrollTo(0,0);
+  };
+  document.getElementById('logoutBtn').onclick = function(){ localStorage.removeItem('dsel-current'); location.href='/'; };
+})();
+</script>
+</body></html>

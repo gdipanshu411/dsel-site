@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grammar — DSEL</title>
+<link rel="icon" href="/img/original/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/css/style.css?v=5">
+<script>(function(){var s=localStorage.getItem('dsel-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));})();</script>
+</head>
+<body>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head">
+    <div class="drawer-avatar" id="drawerAvatar">G</div>
+    <div class="drawer-user"><strong id="drawerUserName">Guest</strong><small id="drawerUserMail">Sign in to access your account</small></div>
+    <button class="drawer-close" id="drawerClose" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="drawer-section" id="drawerAuthBlock">
+    <div class="drawer-label">Account</div>
+    <a class="dlink" href="/login.html"><i class="bi bi-box-arrow-in-right"></i> Login<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/register.html"><i class="bi bi-person-plus-fill"></i> Sign Up<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section" id="drawerUserBlock" style="display:none">
+    <div class="drawer-label">My Profile</div>
+    <a class="dlink" href="/profile.html"><i class="bi bi-person-circle"></i> View Profile<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/my-courses.html"><i class="bi bi-mortarboard-fill"></i> My Courses<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/progress.html"><i class="bi bi-graph-up"></i> Progress<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/certificates.html"><i class="bi bi-award-fill"></i> Certificates<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+    <div class="drawer-section">
+    <div class="drawer-label">Books &amp; Study Material</div>
+    <a class="dlink" href="/books.html"><i class="bi bi-collection-fill"></i> All Books &amp; PDFs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Subscription</div>
+    <a class="dlink" href="/courses.html"><i class="bi bi-stars"></i> My Plan<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/billing.html"><i class="bi bi-receipt"></i> Billing &amp; Payments<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Preferences</div>
+    <button class="dlink" id="drawerThemeToggle"><i class="bi bi-moon-stars-fill"></i> <span id="drawerThemeLabel">Dark Mode</span><span class="arrow"><i class="bi bi-chevron-right"></i></span></button>
+    <a class="dlink" href="/settings.html#language"><i class="bi bi-translate"></i> Language<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/notifications.html"><i class="bi bi-bell-fill"></i> Notifications<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/settings.html#privacy"><i class="bi bi-shield-lock-fill"></i> Privacy<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/settings.html"><i class="bi bi-gear-fill"></i> Settings<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Support</div>
+    <a class="dlink" href="/contact.html"><i class="bi bi-headset"></i> Contact Us<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp Help<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/about.html"><i class="bi bi-info-circle-fill"></i> About<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <button class="dlink" id="drawerLogout" style="display:none;color:#dc2626"><i class="bi bi-box-arrow-right" style="color:#dc2626"></i> Logout<span class="arrow"><i class="bi bi-chevron-right"></i></span></button>
+  </div>
+  <div class="drawer-foot">© <span class="year"></span> The Dream School of English Language · DSEL</div>
+</aside>
+
+<div class="topbar"><div class="container"><div><i class="bi bi-geo-alt"></i> Stadium Road, Sidhi, MP — 486661</div><div><a href="tel:+918770462942"><i class="bi bi-telephone"></i> +91 8770462942</a></div></div></div>
+<header class="header"><div class="container nav">
+<div class="header-left"><button class="drawer-toggle" id="drawerToggle" aria-label="Open menu"><i class="bi bi-list"></i></button><a class="brand" href="/"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo"><span class="brand-name"><span class="full">The Dream School of English Language <span style="color:var(--brand)">(DSEL)</span></span><small>Sidhi · Madhya Pradesh — since 2011</small></span></a></div>
+<button class="menu-toggle" aria-label="Open menu"><i class="bi bi-list"></i></button>
+<ul class="menu"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/courses.html">Courses</a></li><li><a href="/activities.html">Activities</a></li><li><a href="/news.html">News</a></li><li><a href="/events.html">Events</a></li><li><a href="/tests.html">Tests</a></li><li><a href="/contact.html">Contact</a></li></ul>
+<div class="nav-cta"><a href="/login.html" class="btn btn-ghost">Login</a><a href="/register.html" class="btn btn-primary">Sign Up</a></div>
+</div></header>
+
+<main style="padding:50px 0">
+  <div class="container" style="max-width:1080px">
+    <div class="crumbs"><a href="/">Home</a> · <a href="/books.html">Books</a> · Grammar</div>
+    <h1 style="margin-bottom:10px">Grammar</h1>
+    <p style="color:var(--ink-soft);margin-bottom:24px">All major English grammar topics — taught simply, with examples. Click any topic to read.</p>
+
+    <div style="display:grid;grid-template-columns:240px 1fr;gap:30px" class="g-grid">
+      <aside class="card" style="padding:18px;height:max-content;position:sticky;top:90px">
+        <h4 style="margin:0 0 10px;font-size:.78rem;text-transform:uppercase;color:var(--muted);letter-spacing:.06em">Topics</h4>
+        <nav id="gnav" style="display:flex;flex-direction:column;gap:2px"></nav>
+      </aside>
+
+      <div id="gcontent"></div>
+    </div>
+  </div>
+</main>
+
+<style>
+@media (max-width:880px){.g-grid{grid-template-columns:1fr !important}.g-grid aside{position:relative !important;top:0 !important}}
+#gnav a{padding:10px 12px;border-radius:8px;color:var(--ink-soft);text-decoration:none;font-weight:600;font-size:.92rem;transition:var(--t)}
+#gnav a:hover{background:var(--bg-alt);color:var(--brand)}
+#gnav a.on{background:var(--brand);color:#fff}
+.gtopic{background:var(--card-bg);border:1px solid var(--line);border-radius:18px;padding:32px;margin-bottom:22px}
+.gtopic h2{margin:0 0 14px;color:var(--ink)}
+.gtopic h3{margin:24px 0 10px;color:var(--brand);font-size:1.15rem}
+.gtopic h4{margin:16px 0 8px;color:var(--ink);font-size:1rem;font-weight:800}
+.gtopic ul{margin:8px 0;padding-left:22px;line-height:1.85}
+.gtopic .ex{background:var(--bg-alt);border-left:3px solid var(--accent);padding:12px 16px;border-radius:0 10px 10px 0;margin:10px 0;color:var(--ink-soft)}
+.gtopic .ex strong{color:var(--ink)}
+.gtopic .form{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px;font-family:Georgia,serif;font-size:1.05rem;color:var(--brand);font-weight:700;margin:12px 0}
+.gtopic table{width:100%;border-collapse:collapse;margin:14px 0}
+.gtopic th,.gtopic td{padding:10px 14px;border:1px solid var(--line);text-align:left;font-size:.94rem}
+.gtopic th{background:var(--bg-alt);font-weight:800;color:var(--brand)}
+</style>
+
+<a class="fab-wa" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+<script src="/js/main.js?v=5"></script>
+<script>
+(function(){
+  var topics = [
+    {id:'parts',title:'Parts of Speech',html:`
+<h2>Parts of Speech</h2>
+<p>Every word in English belongs to one of 8 categories called parts of speech.</p>
+<h3>1. Noun</h3><p>A word that names a person, place, thing, or idea.</p>
+<div class="ex"><strong>Examples:</strong> Ravi, Sidhi, book, happiness</div>
+<h3>2. Pronoun</h3><p>A word used in place of a noun.</p>
+<div class="ex"><strong>Examples:</strong> I, you, he, she, it, we, they, this, those</div>
+<h3>3. Verb</h3><p>A word that shows action or state of being.</p>
+<div class="ex"><strong>Examples:</strong> run, speak, is, become, write</div>
+<h3>4. Adjective</h3><p>A word that describes a noun.</p>
+<div class="ex"><strong>Examples:</strong> tall, beautiful, three, this, English</div>
+<h3>5. Adverb</h3><p>A word that describes a verb, adjective, or another adverb.</p>
+<div class="ex"><strong>Examples:</strong> quickly, very, well, here, today</div>
+<h3>6. Preposition</h3><p>A word that shows the relationship between a noun/pronoun and other words.</p>
+<div class="ex"><strong>Examples:</strong> in, on, at, under, with, between</div>
+<h3>7. Conjunction</h3><p>A word that joins words, phrases, or clauses.</p>
+<div class="ex"><strong>Examples:</strong> and, but, or, because, although, while</div>
+<h3>8. Interjection</h3><p>A word that expresses sudden emotion.</p>
+<div class="ex"><strong>Examples:</strong> Oh! Wow! Alas! Hurray!</div>
+`},
+    {id:'tenses',title:'Tenses (Overview)',html:`
+<h2>The 12 Tenses</h2>
+<p>English has 3 times (Past, Present, Future), each with 4 forms (Simple, Continuous, Perfect, Perfect Continuous) — making 12 tenses.</p>
+<table>
+<tr><th>Time</th><th>Simple</th><th>Continuous</th><th>Perfect</th><th>Perfect Continuous</th></tr>
+<tr><td><strong>Present</strong></td><td>I write</td><td>I am writing</td><td>I have written</td><td>I have been writing</td></tr>
+<tr><td><strong>Past</strong></td><td>I wrote</td><td>I was writing</td><td>I had written</td><td>I had been writing</td></tr>
+<tr><td><strong>Future</strong></td><td>I will write</td><td>I will be writing</td><td>I will have written</td><td>I will have been writing</td></tr>
+</table>
+<p style="margin-top:14px">Use the side menu to explore each tense in detail.</p>
+`},
+    {id:'present-simple',title:'Present Simple',html:`
+<h2>Present Simple Tense</h2>
+<p>Used for habits, regular actions, and general truths.</p>
+<div class="form">Subject + V1 (+ s/es with He/She/It) + Object</div>
+<h3>Examples</h3>
+<div class="ex">I <strong>speak</strong> English. / She <strong>speaks</strong> English.</div>
+<div class="ex">The sun <strong>rises</strong> in the east.</div>
+<div class="ex">We <strong>study</strong> at DSEL every day.</div>
+<h3>Negative</h3>
+<div class="form">Subject + do/does + not + V1 + Object</div>
+<div class="ex">I <strong>do not speak</strong> French. / He <strong>does not speak</strong> French.</div>
+<h3>Question</h3>
+<div class="form">Do/Does + Subject + V1 + Object?</div>
+<div class="ex"><strong>Do</strong> you <strong>speak</strong> English? / <strong>Does</strong> she <strong>study</strong> here?</div>
+<h3>Time markers</h3>
+<p>always, often, usually, sometimes, never, every day, on Mondays, daily</p>
+`},
+    {id:'present-cont',title:'Present Continuous',html:`
+<h2>Present Continuous Tense</h2>
+<p>Used for actions happening right now or around the present moment.</p>
+<div class="form">Subject + am/is/are + V-ing + Object</div>
+<h3>Examples</h3>
+<div class="ex">I <strong>am writing</strong> a letter.</div>
+<div class="ex">She <strong>is studying</strong> right now.</div>
+<div class="ex">They <strong>are playing</strong> in the field.</div>
+<h3>Negative</h3>
+<div class="form">Subject + am/is/are + not + V-ing</div>
+<div class="ex">I <strong>am not watching</strong> TV.</div>
+<h3>Question</h3>
+<div class="form">Am/Is/Are + Subject + V-ing?</div>
+<div class="ex"><strong>Are</strong> you <strong>coming</strong>? / <strong>Is</strong> she <strong>working</strong>?</div>
+<h3>Time markers</h3>
+<p>now, right now, at the moment, currently, today, this week</p>
+`},
+    {id:'present-perfect',title:'Present Perfect',html:`
+<h2>Present Perfect Tense</h2>
+<p>Used for actions completed at an unspecified time, or actions that started in the past and continue now.</p>
+<div class="form">Subject + has/have + V3 + Object</div>
+<h3>Examples</h3>
+<div class="ex">I <strong>have finished</strong> my homework.</div>
+<div class="ex">She <strong>has lived</strong> here since 2011.</div>
+<div class="ex">We <strong>have just</strong> arrived.</div>
+<h3>Negative & Question</h3>
+<div class="ex">I <strong>have not seen</strong> him today. / <strong>Have</strong> you <strong>eaten</strong>?</div>
+<h3>Time markers</h3>
+<p>just, already, yet, ever, never, since, for, recently, lately</p>
+`},
+    {id:'past-simple',title:'Past Simple',html:`
+<h2>Past Simple Tense</h2>
+<p>Used for actions completed in the past at a definite time.</p>
+<div class="form">Subject + V2 + Object</div>
+<h3>Examples</h3>
+<div class="ex">I <strong>spoke</strong> to her yesterday.</div>
+<div class="ex">They <strong>visited</strong> Sidhi last week.</div>
+<div class="ex">He <strong>wrote</strong> a beautiful letter.</div>
+<h3>Negative</h3>
+<div class="form">Subject + did + not + V1</div>
+<div class="ex">I <strong>did not go</strong> to school.</div>
+<h3>Question</h3>
+<div class="form">Did + Subject + V1?</div>
+<div class="ex"><strong>Did</strong> you <strong>see</strong> the film?</div>
+<h3>Time markers</h3>
+<p>yesterday, last week, ago, in 2020, last night</p>
+`},
+    {id:'past-cont',title:'Past Continuous',html:`
+<h2>Past Continuous Tense</h2>
+<p>Used for actions in progress in the past.</p>
+<div class="form">Subject + was/were + V-ing</div>
+<div class="ex">I <strong>was studying</strong> when you called.</div>
+<div class="ex">They <strong>were playing</strong> at 5 pm yesterday.</div>
+`},
+    {id:'past-perfect',title:'Past Perfect',html:`
+<h2>Past Perfect Tense</h2>
+<p>Used for an action that happened before another past action.</p>
+<div class="form">Subject + had + V3</div>
+<div class="ex">When I arrived, she <strong>had already left</strong>.</div>
+<div class="ex">He told me he <strong>had finished</strong> his work.</div>
+`},
+    {id:'future-simple',title:'Future Simple',html:`
+<h2>Future Simple Tense</h2>
+<p>Used for actions that will happen in the future.</p>
+<div class="form">Subject + will + V1</div>
+<div class="ex">I <strong>will call</strong> you tomorrow.</div>
+<div class="ex">She <strong>will come</strong> next week.</div>
+<p>"Going to" is also used for plans: <em>"I am going to study tonight."</em></p>
+`},
+    {id:'articles',title:'Articles (a, an, the)',html:`
+<h2>Articles</h2>
+<h3>"A" and "An" (Indefinite)</h3>
+<p>Used for any one (not specific) singular countable noun.</p>
+<ul><li><strong>"a"</strong> before consonant sound — a book, a university, a one-way street</li>
+<li><strong>"an"</strong> before vowel sound — an apple, an honest man, an hour</li></ul>
+<h3>"The" (Definite)</h3>
+<p>Used for a specific noun, or a noun mentioned earlier.</p>
+<div class="ex">I bought <strong>a</strong> book. <strong>The</strong> book is interesting.</div>
+<div class="ex"><strong>The</strong> sun, <strong>the</strong> moon, <strong>the</strong> Ganga (unique things)</div>
+<h3>No article</h3>
+<p>Used with names, languages, meals, sports, abstract nouns when general.</p>
+<div class="ex">I speak English. (not "the English") / I love music.</div>
+`},
+    {id:'modals',title:'Modal Verbs',html:`
+<h2>Modal Verbs</h2>
+<p>Modals are helping verbs that express ability, possibility, permission, or obligation.</p>
+<table>
+<tr><th>Modal</th><th>Use</th><th>Example</th></tr>
+<tr><td>can</td><td>ability, permission</td><td>I can speak English.</td></tr>
+<tr><td>could</td><td>past ability, polite</td><td>Could you help me?</td></tr>
+<tr><td>may</td><td>permission, possibility</td><td>You may sit. / It may rain.</td></tr>
+<tr><td>might</td><td>weak possibility</td><td>She might come tomorrow.</td></tr>
+<tr><td>will</td><td>future, willingness</td><td>I will help you.</td></tr>
+<tr><td>would</td><td>polite, conditional</td><td>I would like tea.</td></tr>
+<tr><td>shall</td><td>suggestion, future</td><td>Shall we begin?</td></tr>
+<tr><td>should</td><td>advice, expectation</td><td>You should practice daily.</td></tr>
+<tr><td>must</td><td>strong necessity</td><td>You must attend the class.</td></tr>
+<tr><td>ought to</td><td>moral obligation</td><td>You ought to respect elders.</td></tr>
+</table>
+<p>Modals are followed by V1 (base verb) — never with "to".</p>
+`},
+    {id:'prepositions',title:'Prepositions',html:`
+<h2>Prepositions</h2>
+<p>Words that show the relationship between a noun and other words in a sentence.</p>
+<h3>Time</h3>
+<ul>
+<li><strong>at</strong> — at 5 o'clock, at night</li>
+<li><strong>on</strong> — on Monday, on July 1st</li>
+<li><strong>in</strong> — in May, in 2026, in the morning</li>
+<li><strong>by, before, after</strong> — by 6 pm, after lunch</li>
+</ul>
+<h3>Place</h3>
+<ul>
+<li><strong>at</strong> — at school, at home (specific point)</li>
+<li><strong>in</strong> — in Sidhi, in India (inside)</li>
+<li><strong>on</strong> — on the table, on the wall (surface)</li>
+<li><strong>under, above, between, near, beside</strong></li>
+</ul>
+<h3>Direction</h3>
+<ul><li>to, from, into, onto, towards, through, across</li></ul>
+`},
+    {id:'conjunctions',title:'Conjunctions',html:`
+<h2>Conjunctions</h2>
+<p>Words that join words, phrases, or sentences.</p>
+<h3>Coordinating (FANBOYS)</h3>
+<p><strong>For, And, Nor, But, Or, Yet, So</strong> — connect equal parts.</p>
+<div class="ex">I went to the shop <strong>and</strong> bought milk.</div>
+<h3>Subordinating</h3>
+<p>because, although, while, since, if, when, after, before, unless, until</p>
+<div class="ex"><strong>Although</strong> it rained, we went out.</div>
+<h3>Correlative (in pairs)</h3>
+<p>either…or, neither…nor, both…and, not only…but also</p>
+<div class="ex"><strong>Either</strong> you come, <strong>or</strong> you call.</div>
+`},
+    {id:'voice',title:'Active & Passive Voice',html:`
+<h2>Active and Passive Voice</h2>
+<h3>Active</h3>
+<p>The subject does the action.</p>
+<div class="form">Subject + Verb + Object</div>
+<div class="ex"><strong>The teacher</strong> wrote <strong>the letter</strong>.</div>
+<h3>Passive</h3>
+<p>The action is done to the subject.</p>
+<div class="form">Object + be + V3 + by + Subject</div>
+<div class="ex"><strong>The letter</strong> was written <strong>by the teacher</strong>.</div>
+<h3>Passive forms by tense</h3>
+<table>
+<tr><th>Tense</th><th>Passive Form</th></tr>
+<tr><td>Present Simple</td><td>is/am/are + V3 — The book is read.</td></tr>
+<tr><td>Past Simple</td><td>was/were + V3 — The book was read.</td></tr>
+<tr><td>Future Simple</td><td>will be + V3 — The book will be read.</td></tr>
+<tr><td>Present Perfect</td><td>has/have been + V3 — The book has been read.</td></tr>
+</table>
+`},
+    {id:'reported',title:'Reported Speech',html:`
+<h2>Direct & Reported Speech</h2>
+<p>Direct speech uses the speaker's exact words. Reported speech tells what they said.</p>
+<div class="ex"><strong>Direct:</strong> She said, "I am happy."<br><strong>Reported:</strong> She said that she was happy.</div>
+<h3>Tense changes</h3>
+<table>
+<tr><th>Direct</th><th>Reported</th></tr>
+<tr><td>Present Simple → </td><td>Past Simple</td></tr>
+<tr><td>Present Continuous → </td><td>Past Continuous</td></tr>
+<tr><td>Present Perfect → </td><td>Past Perfect</td></tr>
+<tr><td>Past Simple → </td><td>Past Perfect</td></tr>
+<tr><td>will → </td><td>would</td></tr>
+<tr><td>can → </td><td>could</td></tr>
+<tr><td>may → </td><td>might</td></tr>
+</table>
+<h3>Word changes</h3>
+<p>now → then, today → that day, tomorrow → the next day, yesterday → the previous day, here → there, this → that</p>
+`},
+    {id:'sentences',title:'Sentence Types',html:`
+<h2>Sentence Types</h2>
+<h3>By function</h3>
+<ul>
+<li><strong>Declarative</strong> — gives information. <em>I study at DSEL.</em></li>
+<li><strong>Interrogative</strong> — asks a question. <em>Do you study at DSEL?</em></li>
+<li><strong>Imperative</strong> — gives a command. <em>Open your book.</em></li>
+<li><strong>Exclamatory</strong> — expresses emotion. <em>What a beautiful day!</em></li>
+</ul>
+<h3>By structure</h3>
+<ul>
+<li><strong>Simple</strong> — one independent clause. <em>I speak English.</em></li>
+<li><strong>Compound</strong> — two independent clauses. <em>I speak English, and she speaks Hindi.</em></li>
+<li><strong>Complex</strong> — one independent + one dependent clause. <em>I speak English because it is useful.</em></li>
+<li><strong>Compound-Complex</strong> — at least two independent + one dependent. <em>I speak English because it is useful, and I practise daily.</em></li>
+</ul>
+`},
+    {id:'subject-verb',title:'Subject-Verb Agreement',html:`
+<h2>Subject-Verb Agreement</h2>
+<p>The verb must agree with its subject in number (singular/plural).</p>
+<div class="ex">He <strong>speaks</strong> English. (singular)</div>
+<div class="ex">They <strong>speak</strong> English. (plural)</div>
+<h3>Common rules</h3>
+<ul>
+<li>Two singular subjects joined by "and" → plural verb. <em>Ravi and Mohan are friends.</em></li>
+<li>"Either…or" / "neither…nor" → verb agrees with the nearest subject.</li>
+<li>Collective nouns (team, family) → usually singular.</li>
+<li>"Each, every, everyone, somebody" → singular verb.</li>
+</ul>
+`},
+    {id:'punctuation',title:'Punctuation',html:`
+<h2>Punctuation Marks</h2>
+<table>
+<tr><th>Mark</th><th>Use</th></tr>
+<tr><td>. (full stop)</td><td>End of statement</td></tr>
+<tr><td>? (question mark)</td><td>End of question</td></tr>
+<tr><td>! (exclamation)</td><td>Strong emotion</td></tr>
+<tr><td>, (comma)</td><td>Pause, list, before "and/but"</td></tr>
+<tr><td>; (semicolon)</td><td>Connects related independent clauses</td></tr>
+<tr><td>: (colon)</td><td>Introduces list or explanation</td></tr>
+<tr><td>" " (quotation marks)</td><td>Direct speech, titles</td></tr>
+<tr><td>' (apostrophe)</td><td>Possession, contractions (don't, it's)</td></tr>
+<tr><td>- (hyphen)</td><td>Compound words</td></tr>
+</table>
+`},
+    {id:'common',title:'Common Mistakes',html:`
+<h2>Common Mistakes by Hindi Speakers</h2>
+<table>
+<tr><th>Wrong</th><th>Correct</th></tr>
+<tr><td>I am having a pen.</td><td>I have a pen.</td></tr>
+<tr><td>He is knowing me.</td><td>He knows me.</td></tr>
+<tr><td>I am understanding.</td><td>I understand.</td></tr>
+<tr><td>What is your good name?</td><td>What is your name?</td></tr>
+<tr><td>One of my friend</td><td>One of my friends</td></tr>
+<tr><td>Discuss about it</td><td>Discuss it</td></tr>
+<tr><td>Return back</td><td>Return</td></tr>
+<tr><td>Cousin brother</td><td>Cousin</td></tr>
+<tr><td>I am loving it (incorrect in formal)</td><td>I love it</td></tr>
+<tr><td>Mention about</td><td>Mention</td></tr>
+</table>
+`}
+  ];
+  var nav = document.getElementById('gnav');
+  var content = document.getElementById('gcontent');
+  nav.innerHTML = topics.map((t,i) => '<a href="#'+t.id+'" data-id="'+t.id+'">'+t.title+'</a>').join('');
+  function show(id){
+    var t = topics.find(x => x.id === id) || topics[0];
+    content.innerHTML = '<div class="gtopic">' + t.html + '</div>';
+    nav.querySelectorAll('a').forEach(a => a.classList.toggle('on', a.dataset.id === t.id));
+    history.replaceState(null, '', '#' + t.id);
+    window.scrollTo({top: 0, behavior: 'instant'});
+  }
+  nav.addEventListener('click', e => {
+    var a = e.target.closest('a'); if (!a) return;
+    e.preventDefault(); show(a.dataset.id);
+  });
+  show(location.hash.slice(1) || 'parts');
+})();
+</script>
+<script src="/js/chat-widget.js?v=5"></script>
+</body></html>

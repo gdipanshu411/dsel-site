@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rule Book — DSEL</title>
+<link rel="icon" href="/img/original/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/css/style.css?v=5">
+<script>(function(){var s=localStorage.getItem('dsel-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));})();</script>
+</head>
+<body>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head">
+    <div class="drawer-avatar" id="drawerAvatar">G</div>
+    <div class="drawer-user"><strong id="drawerUserName">Guest</strong><small id="drawerUserMail">Sign in to access your account</small></div>
+    <button class="drawer-close" id="drawerClose" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="drawer-section" id="drawerAuthBlock">
+    <div class="drawer-label">Account</div>
+    <a class="dlink" href="/login.html"><i class="bi bi-box-arrow-in-right"></i> Login<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/register.html"><i class="bi bi-person-plus-fill"></i> Sign Up<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section" id="drawerUserBlock" style="display:none">
+    <div class="drawer-label">My Profile</div>
+    <a class="dlink" href="/profile.html"><i class="bi bi-person-circle"></i> View Profile<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/my-courses.html"><i class="bi bi-mortarboard-fill"></i> My Courses<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/progress.html"><i class="bi bi-graph-up"></i> Progress<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/certificates.html"><i class="bi bi-award-fill"></i> Certificates<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+    <div class="drawer-section">
+    <div class="drawer-label">Books &amp; Study Material</div>
+    <a class="dlink" href="/books.html"><i class="bi bi-collection-fill"></i> All Books &amp; PDFs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Subscription</div>
+    <a class="dlink" href="/courses.html"><i class="bi bi-stars"></i> My Plan<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/billing.html"><i class="bi bi-receipt"></i> Billing &amp; Payments<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Preferences</div>
+    <button class="dlink" id="drawerThemeToggle"><i class="bi bi-moon-stars-fill"></i> <span id="drawerThemeLabel">Dark Mode</span><span class="arrow"><i class="bi bi-chevron-right"></i></span></button>
+    <a class="dlink" href="/settings.html#language"><i class="bi bi-translate"></i> Language<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/notifications.html"><i class="bi bi-bell-fill"></i> Notifications<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/settings.html#privacy"><i class="bi bi-shield-lock-fill"></i> Privacy<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/settings.html"><i class="bi bi-gear-fill"></i> Settings<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Support</div>
+    <a class="dlink" href="/contact.html"><i class="bi bi-headset"></i> Contact Us<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp Help<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/about.html"><i class="bi bi-info-circle-fill"></i> About<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <button class="dlink" id="drawerLogout" style="display:none;color:#dc2626"><i class="bi bi-box-arrow-right" style="color:#dc2626"></i> Logout<span class="arrow"><i class="bi bi-chevron-right"></i></span></button>
+  </div>
+  <div class="drawer-foot">© <span class="year"></span> The Dream School of English Language · DSEL</div>
+</aside>
+
+<div class="topbar"><div class="container"><div><i class="bi bi-geo-alt"></i> Stadium Road, Sidhi, MP — 486661</div><div><a href="tel:+918770462942"><i class="bi bi-telephone"></i> +91 8770462942</a></div></div></div>
+<header class="header"><div class="container nav">
+<div class="header-left"><button class="drawer-toggle" id="drawerToggle" aria-label="Open menu"><i class="bi bi-list"></i></button><a class="brand" href="/"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo"><span class="brand-name"><span class="full">The Dream School of English Language <span style="color:var(--brand)">(DSEL)</span></span><small>Sidhi · Madhya Pradesh — since 2011</small></span></a></div>
+<button class="menu-toggle" aria-label="Open menu"><i class="bi bi-list"></i></button>
+<ul class="menu"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/courses.html">Courses</a></li><li><a href="/activities.html">Activities</a></li><li><a href="/news.html">News</a></li><li><a href="/events.html">Events</a></li><li><a href="/tests.html">Tests</a></li><li><a href="/contact.html">Contact</a></li></ul>
+<div class="nav-cta"><a href="/login.html" class="btn btn-ghost">Login</a><a href="/register.html" class="btn btn-primary">Sign Up</a></div>
+</div></header>
+
+<main style="padding:50px 0">
+  <div class="container" style="max-width:980px">
+    <div class="crumbs"><a href="/">Home</a> · <a href="/books.html">Books</a> · Rule Book</div>
+    <h1 style="margin-bottom:10px">DSEL Rule Book</h1>
+    <p style="color:var(--ink-soft);margin-bottom:20px">Speaking rules, classroom rules, and the DSEL learning code. Read once. Practice every day.</p>
+
+    <div class="card" style="padding:0;overflow:hidden;margin-bottom:30px">
+      <div style="padding:20px 26px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:14px"><i class="bi bi-file-earmark-pdf-fill" style="font-size:1.6rem;color:#dc2626"></i><div><strong style="font-size:1.1rem;color:var(--ink)">DSEL Notes (Official PDF)</strong><br><small style="color:var(--muted)">Complete institute notes — ~1.4 MB</small></div></div>
+        <div class="flex" style="gap:8px"><a href="/pdf/dsel-notes.pdf" target="_blank" class="btn btn-ghost"><i class="bi bi-box-arrow-up-right"></i> Open</a><a href="/pdf/dsel-notes.pdf" download class="btn btn-primary"><i class="bi bi-download"></i> Download</a></div>
+      </div>
+      <iframe src="/pdf/dsel-notes.pdf#toolbar=1" style="width:100%;height:720px;border:none;display:block;background:var(--bg-alt)" title="DSEL Notes PDF"></iframe>
+    </div>
+
+    <section class="card" style="padding:32px;margin-bottom:24px">
+      <h2 style="display:flex;align-items:center;gap:12px"><i class="bi bi-mic-fill" style="color:var(--brand)"></i> Speaking Rules</h2>
+      <ol style="line-height:2;padding-left:22px;font-size:1.02rem">
+        <li><strong>Speak English from day one.</strong> Mistakes are part of learning — never wait until "you are ready."</li>
+        <li><strong>Speak slowly, clearly, and confidently.</strong> Speed comes after clarity.</li>
+        <li><strong>Think in English.</strong> Avoid translating from Hindi — start with simple sentences.</li>
+        <li><strong>Read aloud daily.</strong> 10 minutes a day improves pronunciation faster than anything.</li>
+        <li><strong>Repeat new words 3 times.</strong> Once silently, once aloud, once in a sentence.</li>
+        <li><strong>Use complete sentences.</strong> Avoid one-word answers in class.</li>
+        <li><strong>Listen first, speak second.</strong> Watch English videos with subtitles to train your ear.</li>
+        <li><strong>Don't fear mistakes.</strong> Mistakes mean you are trying — and trying means you are learning.</li>
+        <li><strong>Practice with a partner.</strong> Find one classmate to speak only English with for 10 minutes daily.</li>
+        <li><strong>Record yourself.</strong> Once a week, record a 1-minute speech and listen back.</li>
+      </ol>
+    </section>
+
+    <section class="card" style="padding:32px;margin-bottom:24px">
+      <h2 style="display:flex;align-items:center;gap:12px"><i class="bi bi-people-fill" style="color:var(--brand)"></i> Classroom Rules</h2>
+      <ol style="line-height:2;padding-left:22px;font-size:1.02rem">
+        <li><strong>Be on time.</strong> Reach the classroom 5 minutes before the batch starts.</li>
+        <li><strong>Carry your notebook and pen every day.</strong> No exceptions.</li>
+        <li><strong>Phones on silent.</strong> Use them only when the teacher allows.</li>
+        <li><strong>Respect every classmate.</strong> Beginners are learning. So are you.</li>
+        <li><strong>Never laugh at someone's mistake.</strong> One day, that will be you.</li>
+        <li><strong>Ask questions.</strong> A doubt unasked stays a doubt forever.</li>
+        <li><strong>Participate in every activity.</strong> GD, debate, role-play, public speaking.</li>
+        <li><strong>Inform if you'll be absent.</strong> A simple WhatsApp message is enough.</li>
+        <li><strong>Maintain cleanliness.</strong> Keep the classroom and materials tidy.</li>
+        <li><strong>No copying.</strong> Tests are for measuring your own progress.</li>
+      </ol>
+    </section>
+
+    <section class="card" style="padding:32px;margin-bottom:24px">
+      <h2 style="display:flex;align-items:center;gap:12px"><i class="bi bi-house-fill" style="color:var(--brand)"></i> Practice-at-Home Rules</h2>
+      <ol style="line-height:2;padding-left:22px;font-size:1.02rem">
+        <li><strong>Speak English at home.</strong> Even 10 minutes a day with a sibling, parent, or friend.</li>
+        <li><strong>Watch one English video daily.</strong> Pick a topic you enjoy — sports, science, films.</li>
+        <li><strong>Read one news article daily.</strong> Read it aloud after the silent reading.</li>
+        <li><strong>Maintain a vocabulary diary.</strong> Write 5 new words every day with their meanings and a sentence each.</li>
+        <li><strong>Revise your notes.</strong> Spend 15 minutes reviewing what you learned in class.</li>
+        <li><strong>Listen to English songs/podcasts</strong> while travelling or doing chores.</li>
+        <li><strong>Set a weekly speaking goal.</strong> "I will speak only English for 30 minutes on Sunday."</li>
+      </ol>
+    </section>
+
+    <section class="card" style="padding:32px;margin-bottom:24px">
+      <h2 style="display:flex;align-items:center;gap:12px"><i class="bi bi-trophy-fill" style="color:var(--brand)"></i> Test & Assessment Rules</h2>
+      <ol style="line-height:2;padding-left:22px;font-size:1.02rem">
+        <li><strong>Tests are for you, not against you.</strong> They show your progress, not your worth.</li>
+        <li><strong>No public ranking.</strong> We never compare students publicly.</li>
+        <li><strong>Speaking-first scoring.</strong> Confidence and clarity are weighed before grammar.</li>
+        <li><strong>Retake any test.</strong> If you didn't do well, take it again — no penalty.</li>
+        <li><strong>One-on-one feedback.</strong> Every test ends with a private conversation about what to improve.</li>
+        <li><strong>Final assessment is comprehensive.</strong> It covers everything from speaking to interview prep.</li>
+      </ol>
+    </section>
+
+    <section class="card" style="padding:32px;margin-bottom:24px;background:linear-gradient(135deg,var(--brand),#0a6b96);color:#fff;border:none">
+      <h2 style="color:#fff;display:flex;align-items:center;gap:12px"><i class="bi bi-stars"></i> The DSEL Learning Code</h2>
+      <ol style="line-height:2;padding-left:22px;font-size:1.05rem;color:rgba(255,255,255,.95)">
+        <li><strong>Practice over theory.</strong> Speaking improves with daily speaking — never with reading rules alone.</li>
+        <li><strong>Confidence before correctness.</strong> Get the words out first; perfection comes with time.</li>
+        <li><strong>Friendliness above all.</strong> The classroom is a safe space. We never embarrass anyone.</li>
+        <li><strong>One year of support.</strong> The course ends, but your access to practice doesn't.</li>
+        <li><strong>Word of mouth is our only marketing.</strong> Your progress is our reputation. Take it seriously.</li>
+      </ol>
+    </section>
+
+    <div class="text-center mt-4"><a href="/contact.html" class="btn btn-primary btn-lg">Have questions?</a></div>
+  </div>
+</main>
+<a class="fab-wa" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+<script src="/js/main.js?v=5"></script>
+<script src="/js/chat-widget.js?v=5"></script>
+</body></html>

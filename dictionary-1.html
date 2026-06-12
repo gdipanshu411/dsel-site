@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dictionary-1 — DSEL</title>
+<link rel="icon" href="/img/original/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/css/style.css?v=5">
+<script>(function(){var s=localStorage.getItem('dsel-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));})();</script>
+</head>
+<body>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head">
+    <div class="drawer-avatar" id="drawerAvatar">G</div>
+    <div class="drawer-user"><strong id="drawerUserName">Guest</strong><small id="drawerUserMail">Sign in to access your account</small></div>
+    <button class="drawer-close" id="drawerClose" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="drawer-section" id="drawerAuthBlock">
+    <div class="drawer-label">Account</div>
+    <a class="dlink" href="/login.html"><i class="bi bi-box-arrow-in-right"></i> Login<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/register.html"><i class="bi bi-person-plus-fill"></i> Sign Up<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section" id="drawerUserBlock" style="display:none">
+    <div class="drawer-label">My Profile</div>
+    <a class="dlink" href="/profile.html"><i class="bi bi-person-circle"></i> View Profile<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/my-courses.html"><i class="bi bi-mortarboard-fill"></i> My Courses<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/progress.html"><i class="bi bi-graph-up"></i> Progress<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/certificates.html"><i class="bi bi-award-fill"></i> Certificates<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+    <div class="drawer-section">
+    <div class="drawer-label">Books &amp; Study Material</div>
+    <a class="dlink" href="/books.html"><i class="bi bi-collection-fill"></i> All Books &amp; PDFs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Subscription</div>
+    <a class="dlink" href="/courses.html"><i class="bi bi-stars"></i> My Plan<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/billing.html"><i class="bi bi-receipt"></i> Billing &amp; Payments<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Preferences</div>
+    <button class="dlink" id="drawerThemeToggle"><i class="bi bi-moon-stars-fill"></i> <span id="drawerThemeLabel">Dark Mode</span><span class="arrow"><i class="bi bi-chevron-right"></i></span></button>
+    <a class="dlink" href="/settings.html#language"><i class="bi bi-translate"></i> Language<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/notifications.html"><i class="bi bi-bell-fill"></i> Notifications<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/settings.html#privacy"><i class="bi bi-shield-lock-fill"></i> Privacy<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/settings.html"><i class="bi bi-gear-fill"></i> Settings<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Support</div>
+    <a class="dlink" href="/contact.html"><i class="bi bi-headset"></i> Contact Us<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp Help<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/about.html"><i class="bi bi-info-circle-fill"></i> About<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <button class="dlink" id="drawerLogout" style="display:none;color:#dc2626"><i class="bi bi-box-arrow-right" style="color:#dc2626"></i> Logout<span class="arrow"><i class="bi bi-chevron-right"></i></span></button>
+  </div>
+  <div class="drawer-foot">© <span class="year"></span> The Dream School of English Language · DSEL</div>
+</aside>
+
+<div class="topbar"><div class="container"><div><i class="bi bi-geo-alt"></i> Stadium Road, Sidhi, MP — 486661</div><div><a href="tel:+918770462942"><i class="bi bi-telephone"></i> +91 8770462942</a></div></div></div>
+<header class="header"><div class="container nav">
+<div class="header-left"><button class="drawer-toggle" id="drawerToggle" aria-label="Open menu"><i class="bi bi-list"></i></button><a class="brand" href="/"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo"><span class="brand-name"><span class="full">The Dream School of English Language <span style="color:var(--brand)">(DSEL)</span></span><small>Sidhi · Madhya Pradesh — since 2011</small></span></a></div>
+<button class="menu-toggle" aria-label="Open menu"><i class="bi bi-list"></i></button>
+<ul class="menu"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/courses.html">Courses</a></li><li><a href="/activities.html">Activities</a></li><li><a href="/news.html">News</a></li><li><a href="/events.html">Events</a></li><li><a href="/tests.html">Tests</a></li><li><a href="/contact.html">Contact</a></li></ul>
+<div class="nav-cta"><a href="/login.html" class="btn btn-ghost">Login</a><a href="/register.html" class="btn btn-primary">Sign Up</a></div>
+</div></header>
+
+<main style="padding:50px 0">
+  <div class="container" style="max-width:980px">
+    <div class="crumbs"><a href="/">Home</a> · <a href="/books.html">Books</a> · Dictionary-1</div>
+    <h1 style="margin-bottom:10px">Dictionary-1</h1>
+    <p style="color:var(--ink-soft);margin-bottom:24px">English words with meanings, pronunciations, and example sentences. Type any word to look it up live.</p>
+
+    <div class="card" style="padding:24px;margin-bottom:24px">
+      <form id="dictForm" style="display:flex;gap:10px;flex-wrap:wrap">
+        <input id="dictInput" type="text" placeholder="Type any English word…" autocomplete="off" style="flex:1;min-width:240px;padding:14px 18px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit;font-size:1.05rem">
+        <button type="submit" class="btn btn-primary"><i class="bi bi-search"></i> Look Up</button>
+      </form>
+      <div id="quickPicks" style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap"></div>
+    </div>
+
+    <div id="dictResult"></div>
+
+    <h2 style="margin:40px 0 18px">Common Words A–Z</h2>
+    <div id="alphaNav" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:24px"></div>
+    <div id="wordList"></div>
+  </div>
+</main>
+
+<style>
+.entry{background:var(--card-bg);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:18px}
+.entry h3{margin:0;font-size:1.6rem;color:var(--ink);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.entry .pron{color:var(--muted);font-size:1rem;font-weight:500;font-family:Georgia,serif}
+.entry .pos{display:inline-block;padding:3px 10px;background:var(--bg-alt);color:var(--brand);border-radius:999px;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.entry .meaning{margin:14px 0;padding:14px;background:var(--bg-alt);border-radius:10px}
+.entry .meaning strong{color:var(--brand);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;font-weight:800}
+.entry .meaning p{margin:6px 0 0;color:var(--ink)}
+.entry .example{color:var(--ink-soft);font-style:italic;margin-top:6px;padding-left:14px;border-left:3px solid var(--accent)}
+.entry .audio{background:var(--brand);color:#fff;border:none;width:36px;height:36px;border-radius:50%;cursor:pointer;display:inline-grid;place-items:center}
+.entry .audio:hover{background:var(--brand-dark)}
+.alpha-btn{padding:8px 12px;background:var(--card-bg);border:1px solid var(--line);border-radius:8px;cursor:pointer;font-weight:700;color:var(--ink);transition:var(--t)}
+.alpha-btn:hover,.alpha-btn.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.word-row{display:grid;grid-template-columns:1fr 2fr;gap:18px;padding:14px 18px;border-bottom:1px solid var(--line);align-items:start}
+.word-row strong{color:var(--ink);font-size:1.05rem}
+.word-row span{color:var(--ink-soft)}
+@media (max-width:600px){.word-row{grid-template-columns:1fr;gap:4px}}
+.qp{padding:6px 12px;background:var(--bg-alt);border:1px solid var(--line);border-radius:999px;cursor:pointer;font-size:.85rem;color:var(--ink-soft);transition:var(--t)}
+.qp:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
+</style>
+
+<a class="fab-wa" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+<script src="/js/main.js?v=5"></script>
+<script src="/js/dictionary-data.js?v=4"></script>
+<script>
+(function(){
+  var form = document.getElementById('dictForm');
+  var input = document.getElementById('dictInput');
+  var result = document.getElementById('dictResult');
+
+  // Quick picks
+  var picks = ['ambition','beautiful','character','determination','effort','focus','generous','honest','important','journey','knowledge','leadership','motivation','nature','opportunity'];
+  document.getElementById('quickPicks').innerHTML = picks.map(w => '<button class="qp" data-w="'+w+'">'+w+'</button>').join('');
+  document.getElementById('quickPicks').addEventListener('click', e => {
+    var b = e.target.closest('.qp'); if (!b) return;
+    input.value = b.dataset.w; form.dispatchEvent(new Event('submit'));
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    var w = input.value.trim().toLowerCase();
+    if (!w) return;
+    result.innerHTML = '<div class="entry" style="text-align:center;color:var(--muted)"><i class="bi bi-hourglass-split"></i> Looking up "'+w+'"…</div>';
+    try {
+      var res = await fetch('https://api.dictionaryapi.dev/api/v2/entries/en/' + encodeURIComponent(w));
+      if (!res.ok) throw new Error('not found');
+      var data = await res.json();
+      result.innerHTML = data.map(renderEntry).join('');
+    } catch(err) {
+      result.innerHTML = '<div class="entry" style="text-align:center"><i class="bi bi-emoji-frown" style="font-size:2rem;color:var(--muted)"></i><p>No definition found for <strong>"'+w+'"</strong>. Check the spelling and try again.</p></div>';
+    }
+  });
+
+  function renderEntry(d){
+    var pron = (d.phonetics && d.phonetics.find(p => p.text)) || {};
+    var audio = (d.phonetics && d.phonetics.find(p => p.audio)) || {};
+    var html = '<div class="entry"><h3>'+d.word + (pron.text ? ' <span class="pron">'+pron.text+'</span>' : '') + (audio.audio ? ' <button class="audio" onclick="new Audio(\''+audio.audio+'\').play()" title="Hear pronunciation"><i class="bi bi-volume-up-fill"></i></button>' : '') + '</h3>';
+    (d.meanings||[]).forEach(m => {
+      html += '<div class="meaning"><span class="pos">'+m.partOfSpeech+'</span>';
+      (m.definitions||[]).slice(0,3).forEach((def,i) => {
+        html += '<p><strong>'+(i+1)+'.</strong> '+def.definition+'</p>';
+        if (def.example) html += '<div class="example">"'+def.example+'"</div>';
+      });
+      if (m.synonyms && m.synonyms.length) html += '<p style="margin-top:10px"><strong>Synonyms:</strong> '+m.synonyms.slice(0,6).join(', ')+'</p>';
+      html += '</div>';
+    });
+    html += '</div>';
+    return html;
+  }
+
+  // Alphabet nav + word list
+  var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  document.getElementById('alphaNav').innerHTML = letters.map(l => '<button class="alpha-btn" data-l="'+l+'">'+l+'</button>').join('');
+
+  function renderLetter(l){
+    var words = (window.DICT_DATA||{})[l] || [];
+    document.querySelectorAll('.alpha-btn').forEach(b => b.classList.toggle('on', b.dataset.l === l));
+    var list = document.getElementById('wordList');
+    if (!words.length) {
+      list.innerHTML = '<p style="color:var(--muted);text-align:center;padding:30px">Use the search box above to look up any word starting with "'+l+'".</p>';
+      return;
+    }
+    list.innerHTML = '<div class="card" style="padding:0;overflow:hidden">' + words.map(w => '<div class="word-row"><strong>'+w[0]+'</strong><span>'+w[1]+'</span></div>').join('') + '</div>';
+  }
+
+  document.getElementById('alphaNav').addEventListener('click', e => {
+    var b = e.target.closest('.alpha-btn'); if (!b) return;
+    renderLetter(b.dataset.l);
+    document.getElementById('wordList').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  renderLetter('A');
+})();
+</script>
+<script src="/js/chat-widget.js?v=5"></script>
+</body></html>

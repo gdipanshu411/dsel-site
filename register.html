@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Register — The Dream (DSEL) Sidhi</title>
+<meta name="description" content="Create your DSEL student account. Register to enroll in spoken English courses, batches, and updates.">
+<link rel="canonical" href="https://thedreamsidhi.com/register.html">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/css/style.css?v=5">
+<script>(function(){var s=localStorage.getItem('dsel-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));})();</script>
+</head>
+<body>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head">
+    <div class="drawer-avatar" id="drawerAvatar">G</div>
+    <div class="drawer-user"><strong id="drawerUserName">Guest</strong><small id="drawerUserMail">Sign in to access your account</small></div>
+    <button class="drawer-close" id="drawerClose" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+  </div>
+  <div class="drawer-section" id="drawerAuthBlock">
+    <div class="drawer-label">Account</div>
+    <a class="dlink" href="/login.html"><i class="bi bi-box-arrow-in-right"></i> Login<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/register.html"><i class="bi bi-person-plus-fill"></i> Sign Up<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section" id="drawerUserBlock" style="display:none">
+    <div class="drawer-label">My Profile</div>
+    <a class="dlink" href="/profile.html"><i class="bi bi-person-circle"></i> View Profile<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/my-courses.html"><i class="bi bi-mortarboard-fill"></i> My Courses<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/progress.html"><i class="bi bi-graph-up"></i> Progress<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/certificates.html"><i class="bi bi-award-fill"></i> Certificates<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+    <div class="drawer-section">
+    <div class="drawer-label">Books &amp; Study Material</div>
+    <a class="dlink" href="/books.html"><i class="bi bi-collection-fill"></i> All Books &amp; PDFs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Subscription</div>
+    <a class="dlink" href="/courses.html"><i class="bi bi-stars"></i> My Plan<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/billing.html"><i class="bi bi-receipt"></i> Billing &amp; Payments<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Preferences</div>
+    <button class="dlink" id="drawerThemeToggle"><i class="bi bi-moon-stars-fill"></i> <span id="drawerThemeLabel">Dark Mode</span><span class="arrow"><i class="bi bi-chevron-right"></i></span></button>
+    <a class="dlink" href="/settings.html#language"><i class="bi bi-translate"></i> Language<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/notifications.html"><i class="bi bi-bell-fill"></i> Notifications<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/settings.html#privacy"><i class="bi bi-shield-lock-fill"></i> Privacy<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/settings.html"><i class="bi bi-gear-fill"></i> Settings<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Support</div>
+    <a class="dlink" href="/contact.html"><i class="bi bi-headset"></i> Contact Us<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp Help<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/about.html"><i class="bi bi-info-circle-fill"></i> About<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <button class="dlink" id="drawerLogout" style="display:none;color:#dc2626"><i class="bi bi-box-arrow-right" style="color:#dc2626"></i> Logout<span class="arrow"><i class="bi bi-chevron-right"></i></span></button>
+  </div>
+  <div class="drawer-foot">© <span class="year"></span> The Dream School of English Language · DSEL</div>
+</aside>
+
+<header class="header"><div class="container nav">
+<div class="header-left"><button class="drawer-toggle" id="drawerToggle" aria-label="Open menu"><i class="bi bi-list"></i></button><a class="brand" href="/"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo"><span class="brand-name"><span class="full">The Dream School of English Language <span style="color:var(--brand)">(DSEL)</span></span><small>Sidhi · Madhya Pradesh — since 2011</small></span></a></div>
+<button class="menu-toggle" aria-label="Open menu"><i class="bi bi-list"></i></button>
+<ul class="menu"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/courses.html">Courses</a></li><li><a href="/activities.html">Activities</a></li><li><a href="/contact.html">Contact</a></li></ul>
+<div class="nav-cta"><a href="/login.html" class="btn btn-ghost">Login</a></div>
+</div></header>
+
+<main class="auth-wrap">
+  <div class="auth-card wide">
+    <h1>Create your account</h1>
+    <p class="sub">A few quick details to register. We'll confirm your seat over WhatsApp.</p>
+
+    <div id="reg-error" style="display:none;background:rgba(220,38,38,.12);color:#dc2626;padding:14px 16px;border-radius:12px;margin-bottom:18px;font-weight:600;border:1px solid rgba(220,38,38,.3)"></div>
+    <div id="reg-success" style="display:none;background:rgba(22,163,74,.12);color:#16a34a;padding:14px 16px;border-radius:12px;margin-bottom:18px;font-weight:600;border:1px solid rgba(22,163,74,.3)">
+      <i class="bi bi-check-circle-fill"></i> Registration successful! Redirecting to your profile...
+    </div>
+
+    <form id="register-form" class="form">
+      <div class="row-2">
+        <div class="field"><label>Full name *</label><input name="name" required placeholder="Your full name"></div>
+        <div class="field"><label>Email *</label><input name="email" type="email" required placeholder="you@example.com"></div>
+      </div>
+      <div class="row-2">
+        <div class="field"><label>Mobile number *</label><input name="mobile" type="tel" required placeholder="+91 9XXXXXXXXX" pattern="[0-9+\s\-]{10,15}"></div>
+        <div class="field"><label>Gender *</label>
+          <select name="gender" required>
+            <option value="">Select…</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+            <option>Prefer not to say</option>
+          </select>
+        </div>
+      </div>
+      <div class="row-2">
+        <div class="field"><label>City *</label><input name="city" required value="Sidhi" placeholder="Your city"></div>
+        <div class="field"><label>Profession *</label>
+          <select name="profession" required>
+            <option value="">Select…</option>
+            <option>School Student</option>
+            <option>College Student</option>
+            <option>Job Seeker</option>
+            <option>Working Professional</option>
+            <option>Government Job Aspirant</option>
+            <option>Homemaker</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label>School / College / Company name</label><input name="institution" placeholder="Where you study or work"></div>
+      <div class="field"><label>Course interested in *</label>
+        <select name="course" required>
+          <option value="Spoken English Foundation">Spoken English Foundation (₹4,500)</option>
+          <option value="Interview & GD Mastery">Interview & GD Mastery</option>
+          <option value="Public Speaking & Debate">Public Speaking & Debate</option>
+          <option value="Not sure / Free level check">Not sure — book free level check</option>
+        </select>
+      </div>
+      <div class="row-2">
+        <div class="field"><label>Password *</label><input name="password" type="password" required minlength="6" placeholder="Min 6 characters"></div>
+        <div class="field"><label>Confirm password *</label><input name="confirm" type="password" required minlength="6" placeholder="Re-enter password"></div>
+      </div>
+      <label class="checkbox"><input type="checkbox" required> I agree to be contacted on WhatsApp / phone for course updates.</label>
+      <button type="submit" class="btn btn-primary btn-lg" style="justify-content:center"><i class="bi bi-person-plus-fill"></i> Create Account & Reserve Seat</button>
+      <div class="divider">or</div>
+      <a href="https://wa.me/918770462942?text=Hi%2C%20I%20want%20to%20register%20for%20the%20DSEL%20course." target="_blank" rel="noopener" class="btn btn-wa btn-lg" style="justify-content:center"><i class="bi bi-whatsapp"></i> Register on WhatsApp</a>
+    </form>
+    <p class="auth-foot">Already have an account? <a href="/login.html">Login</a></p>
+  </div>
+</main>
+
+<a class="fab-wa" href="https://wa.me/918770462942" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+<script src="/js/main.js?v=5"></script>
+<script src="/js/chat-widget.js?v=5"></script>
+</body></html>
