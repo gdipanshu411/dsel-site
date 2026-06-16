@@ -1,391 +1,82 @@
-// Dictionary data — common English words A-Z with meanings
+// Dictionary data — extensive English words A-Z with meanings
+// Live API handles any word not in this list
 window.DICT_DATA = {
   A: [
-    ['abandon','to leave completely; to give up'],
-    ['ability','the power or skill to do something'],
-    ['absent','not present; missing'],
-    ['accept','to receive willingly'],
-    ['accident','an unexpected and unfortunate event'],
-    ['accurate','correct in every detail; exact'],
-    ['achieve','to successfully complete something'],
-    ['active','full of energy; busy'],
-    ['admire','to respect and approve of someone or something'],
-    ['advice','a suggestion about what to do'],
-    ['afraid','feeling fear; worried'],
-    ['agree','to have the same opinion'],
-    ['ambition','a strong desire to achieve something'],
-    ['ancient','very old; from a long time ago'],
-    ['anger','strong feeling of displeasure'],
-    ['answer','a reply to a question'],
-    ['appear','to come into sight; to seem'],
-    ['arrive','to reach a place'],
-    ['attempt','to try to do something'],
-    ['attention','careful thinking or watching']
+    ['abandon','to leave completely; to give up'],['ability','the power or skill to do something'],['absent','not present; missing'],['absolute','complete; total; without exception'],['absorb','to take in or soak up'],['abundant','existing in large quantities'],['abuse','to use wrongly or treat badly'],['accept','to receive willingly'],['access','the ability to enter or use'],['accident','an unexpected and unfortunate event'],['accommodate','to provide space or make fit'],['accompany','to go along with'],['accomplish','to succeed in doing'],['accord','agreement; harmony'],['account','a record; an explanation'],['accumulate','to gather over time'],['accurate','correct in every detail; exact'],['accuse','to charge with wrongdoing'],['achieve','to successfully complete something'],['acknowledge','to admit or recognise'],['acquire','to gain or obtain'],['active','full of energy; busy'],['activity','something done for a purpose'],['actual','real; existing'],['adapt','to change to fit a new condition'],['adequate','enough; sufficient'],['adjust','to change slightly to fit'],['admire','to respect and approve of'],['admit','to confess or allow entry'],['adopt','to take and use as one\'s own'],['advance','to move forward; progress'],['advantage','a favourable condition'],['adventure','an exciting experience'],['advice','a suggestion about what to do'],['advise','to give advice'],['affair','a matter or event'],['affect','to influence or change'],['afford','to have enough money for'],['afraid','feeling fear; worried'],['agency','an organisation that provides a service'],['agenda','a list of items to discuss'],['agree','to have the same opinion'],['ahead','in front; in advance'],['aim','goal; to direct'],['alert','watchful; warning'],['alike','similar'],['alive','living; full of life'],['allow','to permit'],['allure','to attract'],['ally','a partner; supporter'],['alone','without others'],['alter','to change'],['amaze','to fill with wonder'],['ambition','a strong desire to achieve something'],['amount','quantity; total'],['ample','enough; plenty'],['amuse','to entertain'],['analyze','to examine in detail'],['ancient','very old; from a long time ago'],['anger','strong feeling of displeasure'],['announce','to declare publicly'],['annoy','to irritate'],['answer','reply; response'],['anxious','worried; eager'],['apologize','to express regret'],['appear','to come into sight; to seem'],['apply','to put to use; to request formally'],['appreciate','to value; to be thankful for'],['approach','to come near'],['appropriate','suitable'],['approve','to agree with; to accept officially'],['arch','a curved structure'],['arena','a place of contest'],['argue','to disagree in words'],['arise','to come up'],['arouse','to stir up'],['arrange','to put in order'],['arrest','to take into custody'],['arrive','to reach a place'],['ashamed','feeling guilt'],['aside','to one side'],['aspect','a part or feature'],['aspire','to have ambition'],['assemble','to bring together'],['assert','to state firmly'],['assess','to evaluate'],['assist','to help'],['assume','to suppose without proof'],['assure','to promise; remove doubt'],['astonish','to amaze greatly'],['attach','to fasten'],['attain','to reach'],['attempt','to try to do something'],['attend','to be present at'],['attention','careful thinking or watching'],['attitude','way of thinking or feeling'],['attract','to draw towards'],['authority','power; expertise'],['available','ready for use'],['avenue','a wide street'],['average','typical; midpoint'],['avert','to turn away; to prevent'],['avoid','to keep away from'],['await','to wait for'],['awake','not asleep'],['award','a prize'],['aware','having knowledge of'],['awe','wonder mixed with respect'],['awful','very bad'],['awkward','clumsy; uncomfortable']
   ],
   B: [
-    ['balance','an even distribution of weight'],
-    ['battle','a fight between armies or groups'],
-    ['beautiful','pleasing the senses or mind aesthetically'],
-    ['begin','to start something'],
-    ['behavior','the way one acts or conducts oneself'],
-    ['believe','to accept as true'],
-    ['beneath','below or under'],
-    ['benefit','something good that helps you'],
-    ['blame','to hold responsible for a fault'],
-    ['bold','showing courage; confident'],
-    ['borrow','to take and use something with intent to return it'],
-    ['brave','having courage; not afraid'],
-    ['breath','air taken into the lungs'],
-    ['bright','full of light; intelligent'],
-    ['build','to construct by putting parts together'],
-    ['burden','a heavy load; something difficult to bear']
+    ['back','rear part'],['baggage','luggage'],['balance','an even distribution of weight'],['ban','to forbid'],['band','a musical group; a strip'],['banish','to send away'],['banner','a flag'],['barely','only just'],['bare','without covering'],['bargain','an agreement for low price'],['barrier','an obstacle'],['base','foundation; bottom'],['basic','fundamental'],['basis','foundation'],['battle','a fight between armies or groups'],['bear','to carry; to endure'],['beat','to strike repeatedly'],['beautiful','pleasing the senses or mind aesthetically'],['become','to come to be'],['beg','to ask earnestly'],['begin','to start something'],['behavior','the way one acts'],['behind','at the back of'],['believe','to accept as true'],['belong','to be the property of'],['bend','to curve'],['beneath','under; below'],['benefit','something good that helps'],['besides','in addition to'],['betray','to be unfaithful'],['better','of higher quality'],['beyond','further than'],['bias','prejudice'],['bid','to offer; to command'],['bind','to tie'],['birth','being born'],['bitter','sharp taste; resentful'],['blade','sharp edge'],['blame','to hold responsible for a fault'],['blank','empty; without writing'],['blaze','to burn brightly'],['bleak','gloomy; bare'],['bless','to wish well to'],['blind','unable to see'],['bliss','perfect happiness'],['blunder','a stupid mistake'],['blush','to redden in face'],['boast','to talk proudly'],['bold','showing courage; confident'],['bond','connection; tie'],['boost','to lift; to increase'],['border','edge; boundary'],['boring','dull; not interesting'],['borrow','to take with intent to return'],['bother','to disturb'],['bound','obliged; tied'],['brand','a mark; trade name'],['brave','having courage; not afraid'],['breach','a break; violation'],['break','to separate by force'],['breath','air taken into lungs'],['breed','to produce offspring'],['brief','short'],['bright','full of light; intelligent'],['brilliant','very bright; very clever'],['brink','edge'],['brisk','quick; energetic'],['broad','wide'],['broaden','to widen'],['broken','damaged; not working'],['brutal','very cruel'],['budget','plan for spending'],['build','to construct'],['burden','a heavy load'],['burst','to break open suddenly'],['busy','active; occupied']
   ],
   C: [
-    ['calm','peaceful; not excited or worried'],
-    ['capable','having the ability to do something'],
-    ['careful','giving attention to avoid mistakes'],
-    ['careless','not paying enough attention'],
-    ['celebrate','to mark a happy occasion'],
-    ['challenge','a difficult task; to invite to compete'],
-    ['change','to make or become different'],
-    ['character','the qualities that make a person unique'],
-    ['charity','help given to those in need'],
-    ['cheerful','noticeably happy and optimistic'],
-    ['choose','to select from options'],
-    ['clever','quick to understand or think; smart'],
-    ['comfort','a state of physical ease'],
-    ['common','occurring or happening often'],
-    ['confident','feeling sure of oneself'],
-    ['contain','to hold or include within'],
-    ['continue','to keep doing something'],
-    ['courage','the ability to face fear or danger'],
-    ['create','to make something new'],
-    ['curious','eager to know or learn']
+    ['cage','enclosure'],['calm','peaceful; not excited'],['cancel','to call off'],['candid','frank; honest'],['cap','head covering; limit'],['capable','having the ability'],['capacity','ability to hold'],['capture','to take by force'],['careful','giving attention to avoid mistakes'],['careless','not paying attention'],['carry','to hold and move'],['cast','to throw'],['casual','informal; relaxed'],['catch','to get hold of'],['cause','to make happen; reason'],['caution','care; warning'],['cease','to stop'],['celebrate','to mark a happy occasion'],['certain','sure; specific'],['challenge','a difficult task'],['change','to make different'],['chaos','complete disorder'],['character','qualities that make a person unique'],['charge','to ask payment; to attack'],['charity','help given to those in need'],['charm','attractiveness'],['chart','a map or table'],['cheap','low in cost'],['cheat','to deceive for personal gain'],['check','to verify'],['cheer','shout of joy'],['cheerful','noticeably happy'],['cherish','to hold dear'],['chief','main; head person'],['choice','option'],['choose','to select from options'],['chronic','long-lasting'],['circle','round shape'],['cite','to mention as example'],['claim','to demand as a right'],['clarify','to make clearer'],['clash','to conflict'],['classic','standard; excellent'],['clean','free from dirt'],['clear','easy to see; obvious'],['clever','quick to understand; smart'],['client','a customer'],['climate','weather pattern'],['cling','to hold tightly'],['close','near; to shut'],['clue','a hint'],['clumsy','awkward'],['cluster','a small group'],['clutch','to grip tightly'],['coast','seashore'],['code','rules; symbol system'],['cold','low temperature'],['collapse','to fall down'],['colleague','a co-worker'],['collect','to gather'],['column','a vertical line'],['combat','to fight'],['combine','to join together'],['comfort','a state of physical ease'],['command','an order'],['comment','to give an opinion'],['commit','to do; to pledge'],['common','occurring often'],['communicate','to share information'],['compact','small and tight'],['compare','to examine differences'],['compassion','sympathy'],['compete','to take part in a contest'],['complain','to express discontent'],['complete','having all parts; finished'],['complex','complicated'],['compose','to make up; to write'],['compound','combined'],['concentrate','to focus the mind'],['concept','an idea'],['concern','worry; matter of interest'],['conclude','to bring to an end'],['condemn','to express strong disapproval'],['condition','state; requirement'],['conduct','behaviour; to lead'],['confess','to admit'],['confident','feeling sure of oneself'],['confine','to restrict'],['confirm','to verify'],['conflict','a disagreement'],['confront','to face'],['confuse','to make unclear'],['connect','to join'],['conscious','aware'],['consent','agreement'],['consequence','a result'],['conserve','to preserve'],['consider','to think about carefully'],['consist','to be made of'],['constant','unchanging'],['construct','to build'],['consult','to seek advice'],['consume','to use up'],['contact','to communicate with'],['contain','to hold within'],['contempt','disrespect'],['content','satisfied'],['contest','a competition'],['continue','to keep doing'],['contract','an agreement'],['contrary','opposite'],['contrast','to show differences'],['contribute','to give as a share'],['control','power to direct'],['convert','to change form'],['convey','to communicate'],['convince','to make believe'],['cope','to deal with effectively'],['core','the centre'],['correct','accurate; to fix'],['corrupt','dishonest'],['count','to find total number'],['courage','ability to face fear'],['courteous','polite'],['create','to make something new'],['creative','full of new ideas'],['credit','praise; trust in payment'],['crime','an act forbidden by law'],['crisis','an emergency'],['critic','one who judges'],['critical','vital; finding fault'],['criticize','to find fault with'],['crowd','a large group'],['cruel','causing pain without sorrow'],['crush','to press hard'],['cure','to heal'],['curious','eager to know'],['custom','tradition; usual practice']
   ],
   D: [
-    ['danger','possibility of harm'],
-    ['daring','willing to do bold things'],
-    ['decide','to make a choice'],
-    ['delay','to make late; to postpone'],
-    ['delicate','easily damaged; fine in texture'],
-    ['delight','great pleasure or joy'],
-    ['demand','to ask firmly for something'],
-    ['describe','to give details about something'],
-    ['desire','a strong wish for something'],
-    ['destroy','to ruin completely'],
-    ['determine','to decide firmly; to find out'],
-    ['develop','to grow or cause to grow'],
-    ['differ','to be unlike; to disagree'],
-    ['difficult','not easy; hard'],
-    ['discover','to find something for the first time'],
-    ['discuss','to talk about with others'],
-    ['distance','the amount of space between two points'],
-    ['divide','to separate into parts'],
-    ['doubt','a feeling of uncertainty'],
-    ['dream','thoughts during sleep; an aspiration']
+    ['daily','every day'],['damage','to cause harm'],['danger','possibility of harm'],['daring','willing to do bold things'],['dawn','first light of day'],['deal','agreement; to give out'],['debate','formal discussion'],['debt','what is owed'],['decade','ten years'],['decay','to rot'],['decent','proper; respectable'],['decide','to make a choice'],['decision','a conclusion reached'],['declare','to state formally'],['decline','to refuse politely'],['decorate','to make beautiful'],['dedicate','to devote'],['deep','far down or far in'],['defeat','to win against; loss'],['defect','a fault'],['defend','to protect'],['define','to explain meaning'],['delay','to make late'],['delete','to remove'],['delicate','easily damaged'],['delight','great pleasure'],['deliver','to take to a place'],['demand','to ask firmly'],['deny','to refuse to admit'],['depart','to leave'],['depend','to rely on'],['describe','to give details about'],['deserve','to be worthy of'],['design','to plan; create'],['desire','a strong wish'],['despair','complete loss of hope'],['despite','in spite of'],['destiny','fate'],['destroy','to ruin completely'],['detail','small part'],['detect','to discover'],['determine','to decide firmly'],['develop','to grow'],['device','a tool or gadget'],['devote','to give time/energy to'],['diary','daily personal record'],['differ','to be unlike'],['difficult','not easy; hard'],['dignity','self-respect'],['diligent','hard-working'],['direct','straight; to guide'],['disagree','to have different opinion'],['disappear','to vanish'],['disappoint','to fail expectations'],['disaster','sudden great misfortune'],['discover','to find for first time'],['discuss','to talk about with others'],['disgust','strong dislike'],['dismiss','to send away'],['display','to show'],['dispute','an argument'],['distance','space between two points'],['distant','far away'],['distinct','clearly different'],['distract','to draw attention away'],['disturb','to interrupt'],['divide','to separate into parts'],['dizzy','feeling unsteady'],['donate','to give'],['doubt','a feeling of uncertainty'],['drag','to pull along'],['dramatic','very noticeable; theatrical'],['drastic','extreme'],['draw','to make a picture; to pull'],['dread','great fear'],['dream','thoughts during sleep; aspiration'],['drift','to be carried slowly'],['drive','to operate vehicle; energy'],['drop','to fall'],['drown','to die under water'],['dull','not bright; boring'],['durable','long-lasting'],['duty','responsibility']
   ],
   E: [
-    ['eager','wanting to do something very much'],
-    ['earn','to receive money in exchange for work'],
-    ['effort','a determined attempt; hard work'],
-    ['elegant','graceful and stylish'],
-    ['emotion','a strong feeling'],
-    ['employ','to give work to someone'],
-    ['empty','containing nothing'],
-    ['encourage','to give support or confidence'],
-    ['enemy','a person who is hostile to another'],
-    ['enjoy','to take pleasure in'],
-    ['enough','as much as needed'],
-    ['ensure','to make certain'],
-    ['enter','to come or go into'],
-    ['envy','jealousy of what another has'],
-    ['escape','to break free from'],
-    ['excite','to cause enthusiasm'],
-    ['expect','to think something will happen'],
-    ['explain','to make clear by description'],
-    ['explore','to travel or examine in detail'],
-    ['express','to show feelings or thoughts']
+    ['eager','wanting very much'],['earn','to receive money for work'],['earnest','serious; sincere'],['easy','not difficult'],['economic','related to wealth/business'],['edge','outer limit'],['edit','to revise text'],['educate','to teach'],['effect','result'],['effort','a determined attempt'],['elaborate','detailed'],['elastic','able to stretch'],['elect','to choose by vote'],['elegant','graceful and stylish'],['eliminate','to remove completely'],['embarrass','to cause shame'],['embrace','to hug; accept'],['emerge','to come out'],['emotion','a strong feeling'],['employ','to give work to'],['empty','containing nothing'],['enable','to make possible'],['encourage','to give support'],['end','final part'],['endless','having no end'],['endure','to bear hardship'],['enemy','one hostile to another'],['energetic','full of energy'],['energy','strength to do work'],['engage','to occupy; to promise marriage'],['enhance','to improve'],['enjoy','to take pleasure in'],['enormous','very large'],['enough','as much as needed'],['enrol','to register'],['ensure','to make certain'],['enter','to come into'],['entire','complete'],['envious','feeling envy'],['envy','jealousy'],['equal','same in amount'],['equip','to provide'],['error','a mistake'],['escape','to break free'],['essential','absolutely necessary'],['establish','to set up'],['estimate','to make a rough calculation'],['eternal','lasting forever'],['ethical','morally right'],['evaluate','to judge'],['eventually','in the end'],['evident','clearly seen'],['evil','wicked'],['evolve','to develop gradually'],['exact','precise'],['examine','to inspect closely'],['example','a sample'],['exceed','to go beyond'],['excel','to be very good'],['except','not including'],['exchange','to give and receive'],['excite','to cause enthusiasm'],['exclude','to leave out'],['excuse','an explanation for fault'],['execute','to carry out'],['exhaust','to use up'],['exhibit','to show publicly'],['exist','to be real'],['expand','to make larger'],['expect','to think will happen'],['expedient','convenient'],['expense','cost'],['expensive','costing a lot'],['experience','knowledge from doing'],['explain','to make clear'],['explicit','clearly stated'],['explore','to travel and examine'],['expose','to uncover'],['express','to show feelings/thoughts'],['extend','to make longer'],['extensive','large in size or amount'],['external','outside'],['extreme','very great']
   ],
   F: [
-    ['failure','lack of success'],
-    ['faith','strong belief or trust'],
-    ['familiar','well-known; commonly seen'],
-    ['fancy','elaborate; ornate'],
-    ['fascinate','to attract strongly'],
-    ['fear','an unpleasant emotion caused by danger'],
-    ['fierce','violent or aggressive'],
-    ['fluent','able to speak smoothly and easily'],
-    ['focus','center of attention'],
-    ['follow','to go after; to obey'],
-    ['foolish','lacking good sense'],
-    ['forgive','to stop being angry about something'],
-    ['fortune','luck; great wealth'],
-    ['frank','honest and straightforward'],
-    ['fresh','newly made; not stale'],
-    ['friendly','kind and pleasant'],
-    ['fulfill','to bring to completion'],
-    ['funny','causing laughter; strange'],
-    ['furious','extremely angry'],
-    ['future','time still to come']
+    ['fabricate','to construct; to invent'],['face','front of head; to confront'],['facility','ease; building for activity'],['factor','element contributing'],['fade','to lose colour'],['fail','to be unsuccessful'],['failure','lack of success'],['faint','weak; lose consciousness'],['fair','just; light-coloured'],['faith','strong belief or trust'],['faithful','loyal'],['fake','not real'],['fall','to drop down'],['false','not true'],['fame','being known widely'],['familiar','well-known'],['famous','widely known'],['fancy','elaborate; ornate'],['fantastic','very good'],['fascinate','to attract strongly'],['fate','destiny'],['fault','a mistake; defect'],['favor','approval; act of kindness'],['favorite','most liked'],['fear','unpleasant emotion of danger'],['feasible','possible'],['feature','part; characteristic'],['feeble','very weak'],['feeling','emotion'],['fellow','a man; companion'],['female','woman'],['feminine','of women'],['fertile','able to produce'],['festive','joyful'],['fetch','to go and bring'],['fierce','violent or aggressive'],['figure','number; shape'],['fill','to make full'],['final','last'],['finally','at last'],['finance','money management'],['fine','very good; thin'],['finish','to complete'],['fire','flame; to dismiss'],['firm','solid; company'],['fit','suitable; healthy'],['fix','to repair'],['flame','burning gas'],['flat','level; even'],['flatter','to praise excessively'],['flavor','taste'],['flaw','a fault'],['flexible','able to bend; adaptable'],['flicker','to flutter'],['flock','a group of birds/sheep'],['flood','overflow of water'],['flourish','to grow well'],['flow','steady movement'],['fluent','able to speak smoothly'],['focus','center of attention'],['fog','thick mist'],['fold','to bend over'],['follow','to go after; to obey'],['fond','having liking for'],['fool','a silly person'],['foolish','lacking good sense'],['foreign','from another country'],['foretell','to predict'],['forbid','to order not to do'],['force','strength; pressure'],['forecast','to predict'],['foresee','to see in advance'],['forge','to make; to fake'],['forget','to fail to remember'],['forgive','to stop being angry about'],['form','shape; type'],['formal','official'],['fortunate','lucky'],['fortune','luck; great wealth'],['frank','honest; straightforward'],['fraud','deception'],['free','at liberty; no cost'],['freeze','to harden by cold'],['frequent','happening often'],['fresh','newly made'],['friction','rubbing'],['friendly','kind and pleasant'],['fright','sudden fear'],['frighten','to make afraid'],['front','part facing forward'],['frustrate','to prevent succeeding'],['fulfill','to bring to completion'],['fume','smoke'],['function','purpose; to work'],['fundamental','basic; essential'],['funny','causing laughter'],['furious','extremely angry'],['further','additional']
   ],
   G: [
-    ['gain','to obtain or acquire'],
-    ['gather','to collect; to come together'],
-    ['generous','willing to give freely'],
-    ['gentle','mild; kind'],
-    ['genuine','real, not fake; sincere'],
-    ['glance','a brief look'],
-    ['glory','great honor or fame'],
-    ['govern','to rule or control'],
-    ['gradual','happening slowly over time'],
-    ['grateful','feeling thankful'],
-    ['greedy','wanting more than one needs'],
-    ['greet','to welcome someone'],
-    ['grief','deep sorrow'],
-    ['guarantee','a formal promise'],
-    ['guess','to estimate without sure knowledge'],
-    ['guide','to lead or direct'],
-    ['guilty','responsible for a wrong']
+    ['gain','to obtain or acquire'],['gallop','to run very fast'],['gap','a space between'],['gather','to collect'],['gaze','to look steadily'],['gear','equipment'],['gem','a precious stone'],['general','common to most'],['generate','to produce'],['generous','willing to give freely'],['genius','great mental ability'],['gentle','mild; kind'],['genuine','real; sincere'],['gigantic','enormous'],['glad','happy'],['glance','a brief look'],['glare','to stare angrily'],['gleam','a faint light'],['glide','to move smoothly'],['gloomy','dark; sad'],['glorious','magnificent'],['glory','great honour'],['glow','to shine warmly'],['govern','to rule'],['grace','elegance; mercy'],['gradual','slow over time'],['graceful','having grace'],['gracious','kindly'],['grand','large; magnificent'],['grant','to give formally'],['grasp','to seize firmly; understand'],['grateful','feeling thankful'],['grave','serious; tomb'],['greed','strong desire for more'],['greet','to welcome someone'],['grief','deep sorrow'],['grim','stern'],['grip','a tight hold'],['groan','to make low painful sound'],['grow','to develop'],['guarantee','a formal promise'],['guard','to protect'],['guess','to estimate'],['guide','to lead or direct'],['guilty','responsible for wrong']
   ],
   H: [
-    ['habit','a regular practice'],
-    ['handle','to manage or deal with'],
-    ['happen','to occur; to take place'],
-    ['hardly','almost not at all'],
-    ['harm','to injure or damage'],
-    ['hate','to dislike intensely'],
-    ['healthy','in good physical condition'],
-    ['hesitate','to pause before acting'],
-    ['hide','to keep out of sight'],
-    ['honest','truthful and sincere'],
-    ['honor','great respect'],
-    ['hope','to wish for something'],
-    ['humble','not proud; modest'],
-    ['humor','the quality of being amusing'],
-    ['hunger','a need for food']
+    ['habit','a regular practice'],['halt','to stop'],['hammer','striking tool'],['handle','to manage; to deal with'],['handsome','good-looking'],['happen','to occur; take place'],['happy','feeling pleased'],['harass','to trouble repeatedly'],['hardly','almost not at all'],['hardship','difficulty'],['harm','to injure or damage'],['harsh','rough; severe'],['harvest','to gather crops'],['haste','speed; hurry'],['hate','to dislike intensely'],['haunt','to visit (as ghost)'],['hazard','a danger'],['headline','main news title'],['healthy','in good condition'],['heap','a pile'],['hearten','to encourage'],['heaven','paradise; sky'],['heavy','having great weight'],['hectic','very busy'],['heel','back of foot'],['height','how tall'],['heir','one who inherits'],['hence','therefore'],['herald','to announce'],['heritage','tradition handed down'],['hesitate','to pause before acting'],['hide','to keep out of sight'],['hill','small mountain'],['hint','a clue'],['hire','to employ'],['hobby','leisure activity'],['hoist','to lift'],['hold','to grasp'],['hollow','empty inside'],['honest','truthful and sincere'],['honor','great respect'],['hope','to wish for something'],['hopeless','without hope'],['horror','great fear'],['hostile','unfriendly'],['huge','very large'],['humble','not proud; modest'],['humid','moist'],['humor','quality of being amusing'],['hunger','need for food'],['hunt','to chase for food'],['hurry','to move quickly'],['hurt','to cause pain'],['hush','silence'],['hut','small simple house']
   ],
   I: [
-    ['idea','a thought or suggestion'],
-    ['identify','to recognize or name'],
-    ['ignore','to refuse to take notice'],
-    ['imagine','to form a mental picture'],
-    ['imitate','to copy'],
-    ['important','of great significance'],
-    ['improve','to make better'],
-    ['include','to make part of a whole'],
-    ['increase','to become greater'],
-    ['indeed','really; in fact'],
-    ['indicate','to show or point out'],
-    ['influence','the capacity to have an effect'],
-    ['inform','to give knowledge to'],
-    ['inquire','to ask for information'],
-    ['inspire','to fill with enthusiasm'],
-    ['instant','a very short time'],
-    ['intend','to plan to do'],
-    ['interest','curiosity about something'],
-    ['invite','to ask someone to come'],
-    ['involve','to include as a necessary part']
+    ['ice','frozen water'],['idea','a thought or suggestion'],['ideal','perfect'],['identify','to recognize or name'],['idle','not working; lazy'],['ignite','to set fire to'],['ignorant','lacking knowledge'],['ignore','to refuse to take notice'],['ill','sick'],['illegal','against the law'],['illusion','a false idea'],['illustrate','to give example'],['imagine','to form a mental picture'],['imitate','to copy'],['immediate','happening at once'],['immense','huge'],['immune','protected'],['impact','strong effect'],['impair','to weaken'],['impatient','restless'],['imply','to suggest'],['important','of great significance'],['impose','to force on'],['impress','to have strong effect'],['improve','to make better'],['impulse','sudden urge'],['incident','an event'],['include','to make part of a whole'],['income','money received'],['increase','to become greater'],['indeed','really; in fact'],['independent','not controlled by others'],['indicate','to show or point out'],['individual','single person'],['industry','manufacturing; hard work'],['inevitable','certain to happen'],['infant','a baby'],['infect','to spread disease'],['infer','to conclude'],['inferior','lower quality'],['infinite','endless'],['inflame','to make worse'],['influence','capacity to have an effect'],['inform','to give knowledge to'],['ingredient','part of a mixture'],['inhabit','to live in'],['inherit','to receive from ancestors'],['initial','first'],['injure','to harm'],['innocent','not guilty'],['innovative','creative'],['inquire','to ask for information'],['insane','mad'],['insect','small bug'],['insert','to put inside'],['insight','understanding'],['insist','to demand firmly'],['inspire','to fill with enthusiasm'],['install','to set up'],['instant','a very short time'],['instead','as alternative'],['instinct','natural feeling'],['institute','an organisation'],['instruct','to teach; order'],['intact','whole'],['intellect','the mind'],['intend','to plan to do'],['intense','very strong'],['interact','to act on each other'],['interest','curiosity about something'],['interfere','to come between'],['internal','inner'],['interpret','to explain meaning'],['interrupt','to stop briefly'],['intimate','close; personal'],['introduce','to make known'],['intuition','natural understanding'],['invade','to enter by force'],['invent','to create something new'],['invest','to put money in'],['invite','to ask someone to come'],['involve','to include as necessary part'],['issue','a topic; to give out']
   ],
   J: [
-    ['jealous','feeling envy'],
-    ['journey','an act of travelling'],
-    ['joyful','full of happiness'],
-    ['judge','to form an opinion'],
-    ['justice','fair treatment']
+    ['jail','prison'],['jam','to block; preserve'],['jealous','feeling envy'],['jeer','to mock'],['jest','a joke'],['jewel','a precious stone'],['job','a task; employment'],['join','to connect; unite'],['joke','something said to amuse'],['journey','an act of travelling'],['joy','great happiness'],['joyful','full of happiness'],['judge','to form an opinion'],['junction','a point of joining'],['justice','fair treatment'],['justify','to show as right']
   ],
   K: [
-    ['keen','eager; sharp'],
-    ['kind','friendly and helpful'],
-    ['knowledge','information and understanding']
+    ['keen','eager; sharp'],['keep','to hold; retain'],['key','for opening; main'],['kick','to strike with foot'],['kid','a child; goat'],['kill','to end life'],['kind','friendly and helpful'],['kindle','to start fire'],['kingdom','land ruled by king'],['kit','set of tools'],['kneel','to go down on knees'],['knock','to strike'],['knot','tied loop'],['know','to have knowledge'],['knowledge','information and understanding']
   ],
   L: [
-    ['labor','work, especially hard physical work'],
-    ['language','a system of communication'],
-    ['lately','recently'],
-    ['lazy','unwilling to work or use energy'],
-    ['lead','to guide or direct'],
-    ['leadership','the ability to lead'],
-    ['learn','to gain knowledge'],
-    ['legend','a story from the past'],
-    ['lend','to give temporarily'],
-    ['liberty','freedom'],
-    ['lift','to raise to a higher position'],
-    ['likely','probably going to happen'],
-    ['listen','to give attention to sound'],
-    ['lively','full of energy'],
-    ['lonely','sad from being alone'],
-    ['lovely','very beautiful or pleasant'],
-    ['loyal','firm in support']
+    ['labor','hard physical work'],['lack','absence of something'],['lag','to fall behind'],['land','ground; to arrive on ground'],['language','a system of communication'],['large','big'],['last','final; to continue'],['lately','recently'],['latter','second of two'],['laugh','to express joy'],['launch','to start; to send forth'],['lavish','generous; luxurious'],['lawful','allowed by law'],['lazy','unwilling to work'],['lead','to guide or direct'],['leader','one who guides'],['leadership','the ability to lead'],['lean','to bend; thin'],['leap','to jump'],['learn','to gain knowledge'],['legal','related to law'],['legend','a story from the past'],['lend','to give temporarily'],['lengthy','long'],['less','smaller amount'],['lesson','something learned'],['liable','responsible'],['liberal','open-minded'],['liberty','freedom'],['lie','to tell untruth; recline'],['lift','to raise'],['light','illumination; not heavy'],['likely','probably'],['limit','boundary'],['linger','to stay long'],['link','connection'],['liquid','not solid; fluid'],['list','a series of items'],['listen','to give attention to sound'],['literal','word for word'],['lively','full of energy'],['load','what is carried'],['local','of a place'],['locate','to find'],['lonely','sad from being alone'],['long','great in length'],['loose','not tight'],['lose','to fail to keep'],['loud','making a lot of sound'],['lovely','very beautiful'],['low','not high'],['lower','to make less'],['loyal','firm in support'],['luck','good fortune'],['luxury','extreme comfort']
   ],
   M: [
-    ['manage','to be in control of'],
-    ['mature','fully grown or developed'],
-    ['meaning','what is intended to be expressed'],
-    ['memory','the ability to remember'],
-    ['mention','to refer to briefly'],
-    ['mercy','kindness shown to someone'],
-    ['method','a way of doing something'],
-    ['mighty','very powerful'],
-    ['mistake','an error'],
-    ['modern','of present times'],
-    ['modest','humble; not boastful'],
-    ['motivate','to give a reason to act'],
-    ['motivation','the reason for action'],
-    ['mystery','something not understood']
+    ['machine','a device'],['mad','angry; insane'],['magic','mysterious art'],['magnify','to make larger'],['main','principal'],['maintain','to keep up'],['major','greater; main'],['manage','to be in control of'],['mandatory','required'],['manner','way of doing'],['manual','done by hand'],['manufacture','to make in large quantities'],['mark','a sign; to make a mark'],['marvel','to wonder'],['mask','a face cover'],['master','an expert; to control'],['match','to be alike; a contest'],['mature','fully grown'],['maximum','greatest'],['meadow','a grassy field'],['meager','small in amount'],['mean','to indicate; unkind'],['meaning','what is intended to express'],['meanwhile','at the same time'],['measure','to determine size'],['meddle','to interfere'],['mediate','to settle dispute'],['medium','middle'],['meet','to come together'],['melt','to turn liquid by heat'],['memory','the ability to remember'],['mend','to repair'],['mention','to refer to briefly'],['merciful','full of mercy'],['mercy','kindness shown'],['mere','only'],['merit','worth'],['method','a way of doing something'],['mighty','very powerful'],['mild','gentle'],['mingle','to mix with'],['minimum','smallest'],['minor','smaller; less important'],['miracle','wonderful event'],['mischief','playful misbehaviour'],['miserable','very unhappy'],['misery','great unhappiness'],['mislead','to deceive'],['mistake','an error'],['mock','to laugh at'],['modern','of present times'],['modest','humble; not boastful'],['modify','to change slightly'],['moisture','small amount of water'],['monitor','to watch'],['mood','state of feeling'],['moral','right; ethical'],['motion','movement'],['motive','reason for action'],['motivate','to give a reason to act'],['mount','to climb up'],['mourn','to feel sadness for loss'],['multiple','many'],['multiply','to increase'],['murder','unlawful killing'],['murmur','soft low sound'],['mutual','shared by both'],['mystery','something not understood']
   ],
   N: [
-    ['narrow','small in width'],
-    ['nature','the physical world; basic qualities'],
-    ['necessary','required; needed'],
-    ['neglect','to fail to care for'],
-    ['nervous','easily worried; anxious'],
-    ['neutral','not taking sides'],
-    ['noble','having high moral qualities'],
-    ['notice','to become aware of'],
-    ['notion','an idea or belief']
+    ['narrate','to tell a story'],['narrow','small in width'],['native','of one\'s birth place'],['nature','physical world; basic qualities'],['naughty','badly behaved'],['near','close'],['nearly','almost'],['necessary','required; needed'],['neglect','to fail to care for'],['negotiate','to discuss to reach agreement'],['neighbor','one who lives nearby'],['nervous','easily worried'],['nestle','to settle comfortably'],['neutral','not taking sides'],['nightmare','bad dream'],['nimble','quick and light'],['noble','having high moral qualities'],['noise','unwanted sound'],['nominate','to propose'],['nonsense','words without sense'],['notable','worthy of note'],['note','a short record'],['notice','to become aware of'],['notion','an idea or belief'],['nourish','to feed'],['novel','new; a book'],['novice','a beginner'],['nuisance','annoyance'],['numerous','many']
   ],
   O: [
-    ['obey','to follow orders'],
-    ['object','a thing; to disagree'],
-    ['observe','to watch carefully'],
-    ['obtain','to get possession of'],
-    ['obvious','easily seen or understood'],
-    ['offer','to present for acceptance'],
-    ['opinion','a personal view'],
-    ['opportunity','a chance for advancement'],
-    ['oppose','to disagree with'],
-    ['order','an instruction; to arrange']
+    ['obey','to follow orders'],['object','a thing; to disagree'],['oblige','to make obligated'],['obscure','unclear'],['observe','to watch carefully'],['obstacle','something in the way'],['obstinate','stubborn'],['obtain','to get possession of'],['obvious','easily seen'],['occasion','a particular time'],['occupy','to fill space'],['occur','to happen'],['odd','strange; not even'],['odor','a smell'],['offend','to upset'],['offer','to present for acceptance'],['often','frequently'],['omit','to leave out'],['ongoing','continuing'],['only','single'],['operate','to work; to perform surgery'],['opinion','a personal view'],['opponent','one against another'],['opportunity','a chance for advancement'],['oppose','to disagree with'],['optimistic','hopeful'],['option','a choice'],['order','an instruction'],['ordinary','common'],['organize','to arrange'],['origin','beginning'],['otherwise','in another way'],['outcome','result'],['outline','main features'],['outstanding','excellent'],['overcome','to defeat'],['overlook','to fail to see'],['overtake','to pass'],['owe','to be in debt'],['own','to possess']
   ],
   P: [
-    ['patience','calm endurance'],
-    ['peaceful','free from disturbance'],
-    ['perfect','having no flaws'],
-    ['perform','to carry out an action'],
-    ['permit','to allow'],
-    ['persuade','to convince someone'],
-    ['polite','having good manners'],
-    ['popular','liked by many'],
-    ['positive','confident; favorable'],
-    ['possess','to have or own'],
-    ['practice','repeated activity to gain skill'],
-    ['praise','to express approval'],
-    ['prefer','to like one thing more'],
-    ['prepare','to make ready'],
-    ['present','existing now; a gift'],
-    ['preserve','to keep in original state'],
-    ['pretend','to act as if'],
-    ['prevent','to stop from happening'],
-    ['pride','a feeling of self-respect'],
-    ['progress','forward movement'],
-    ['promise','a declaration to do something'],
-    ['prove','to show truth of'],
-    ['punish','to inflict penalty for offense']
+    ['pace','speed of walking'],['pacify','to calm'],['pain','suffering'],['painful','causing pain'],['palace','large royal house'],['pale','light in colour'],['pamper','to indulge'],['panic','sudden great fear'],['paradise','heaven'],['paragraph','part of writing'],['pardon','to forgive'],['parent','mother or father'],['part','a portion'],['partial','not complete; biased'],['participate','to take part'],['particular','specific'],['partner','one who shares'],['passage','a route; a piece of writing'],['passion','strong emotion'],['passive','not active'],['patience','calm endurance'],['pause','a brief stop'],['peaceful','free from disturbance'],['peculiar','strange'],['perceive','to understand'],['perfect','having no flaws'],['perform','to carry out an action'],['period','length of time'],['perish','to die'],['permanent','lasting'],['permit','to allow'],['perplex','to puzzle'],['persist','to continue firmly'],['persuade','to convince someone'],['pessimistic','expecting worst'],['petty','small; trivial'],['pity','sorrow for misfortune'],['plain','simple; clear'],['plan','an arrangement'],['pleasant','agreeable'],['plenty','more than enough'],['plot','a plan; story line'],['plunge','to dive in'],['point','a sharp end; idea'],['polite','having good manners'],['pollute','to make dirty'],['ponder','to think deeply'],['popular','liked by many'],['portion','a part'],['portray','to represent'],['positive','confident; favorable'],['possess','to have or own'],['possible','able to be done'],['postpone','to delay'],['pour','to cause to flow'],['poverty','being poor'],['practice','repeated activity'],['praise','to express approval'],['preach','to teach religion'],['precious','of great value'],['precise','exact'],['predict','to say in advance'],['prefer','to like one thing more'],['prepare','to make ready'],['present','existing now; a gift'],['preserve','to keep in original state'],['pressure','force; mental stress'],['pretend','to act as if'],['prevent','to stop from happening'],['previous','earlier'],['priceless','very valuable'],['pride','feeling of self-respect'],['principal','main; head of school'],['principle','rule of conduct'],['priority','what comes first'],['private','not public'],['privilege','special right'],['probable','likely'],['proceed','to go forward'],['process','series of actions'],['proclaim','to announce'],['profess','to declare openly'],['profit','financial gain'],['profound','very deep'],['progress','forward movement'],['prohibit','to forbid'],['promise','a declaration to do'],['promote','to advance'],['prompt','quick; on time'],['proof','evidence'],['proper','correct; suitable'],['propose','to suggest; to ask in marriage'],['prosper','to succeed'],['protect','to keep safe'],['protest','to object'],['proud','feeling pride'],['prove','to show truth of'],['provide','to supply'],['prudent','wise; careful'],['public','of all people'],['publish','to make public'],['punctual','on time'],['punish','to inflict penalty'],['purchase','to buy'],['pure','clean; without mixture'],['purpose','reason for action'],['pursue','to chase']
   ],
   Q: [
-    ['quality','a characteristic or feature'],
-    ['quarrel','a heated argument'],
-    ['quiet','making little noise'],
-    ['quote','to repeat words from another']
+    ['quaint','attractively old-fashioned'],['quake','to shake'],['qualify','to be eligible'],['quality','a characteristic'],['quantity','amount; number'],['quarrel','a heated argument'],['quaver','to tremble'],['queer','strange'],['quench','to satisfy thirst'],['query','a question'],['quest','a search'],['queue','a line of people'],['quick','fast'],['quiet','making little noise'],['quit','to leave'],['quiver','to tremble'],['quote','to repeat words from another']
   ],
   R: [
-    ['rapid','very fast'],
-    ['rare','uncommon'],
-    ['react','to respond to something'],
-    ['realize','to become aware of'],
-    ['reason','a cause or explanation'],
-    ['recall','to remember'],
-    ['recover','to return to normal'],
-    ['refuse','to decline'],
-    ['regret','to feel sorry about'],
-    ['regular','occurring at fixed intervals'],
-    ['reject','to refuse to accept'],
-    ['relax','to become less tense'],
-    ['relief','reduction of discomfort'],
-    ['remind','to cause to remember'],
-    ['repeat','to do or say again'],
-    ['replace','to put back; to substitute'],
-    ['require','to need; to demand'],
-    ['respect','to admire deeply'],
-    ['respond','to react'],
-    ['responsible','having a duty'],
-    ['result','an outcome'],
-    ['reveal','to make known'],
-    ['reward','a benefit given for service']
+    ['race','a contest of speed'],['radiate','to give off light'],['rage','violent anger'],['raise','to lift'],['rally','to gather'],['rapid','very fast'],['rare','uncommon'],['rash','too hasty'],['rate','speed; price'],['rather','preferably'],['rational','sensible'],['raw','uncooked'],['reach','to arrive at'],['react','to respond'],['ready','prepared'],['real','true; not imaginary'],['realize','to become aware of'],['rear','back'],['reason','a cause'],['reasonable','sensible'],['rebel','to rise against'],['recall','to remember'],['receive','to get'],['recent','happened lately'],['reckon','to count; estimate'],['recognize','to identify'],['recommend','to suggest'],['record','to register; written account'],['recover','to return to normal'],['reduce','to make less'],['refer','to direct attention to'],['reflect','to think; to throw back'],['reform','to improve'],['refresh','to renew'],['refuse','to decline'],['regard','to consider'],['region','an area'],['register','to record'],['regret','to feel sorry about'],['regular','occurring at fixed intervals'],['reject','to refuse to accept'],['rejoice','to feel joy'],['relate','to tell; connect'],['relax','to become less tense'],['release','to set free'],['relevant','related; appropriate'],['reliable','trustworthy'],['relief','reduction of discomfort'],['rely','to depend on'],['remain','to stay'],['remark','a comment'],['remarkable','worthy of attention'],['remedy','a cure'],['remember','to keep in mind'],['remind','to cause to remember'],['remote','far away'],['remove','to take away'],['render','to give'],['renew','to make new again'],['renounce','to give up'],['renown','fame'],['repair','to fix'],['repeat','to do or say again'],['replace','to put back; to substitute'],['reply','to answer'],['report','an account'],['represent','to stand for'],['reproach','to blame'],['request','to ask politely'],['require','to need'],['rescue','to save'],['research','careful study'],['resemble','to look like'],['resent','to feel anger'],['reserve','to keep for later'],['resign','to give up post'],['resist','to oppose'],['resolve','to settle; decide firmly'],['respect','to admire deeply'],['respond','to react'],['responsible','having a duty'],['rest','sleep; remainder'],['restore','to bring back'],['restrict','to limit'],['result','an outcome'],['retain','to keep'],['retire','to stop working'],['retreat','to draw back'],['reveal','to make known'],['revenge','retaliation'],['reverse','to turn back'],['review','to examine again'],['revise','to change'],['reward','a benefit given for service'],['rich','wealthy'],['ridiculous','silly'],['rigid','stiff'],['ripe','ready to eat'],['rise','to go up'],['risk','possibility of loss'],['rival','a competitor'],['roam','to wander'],['rob','to take by force'],['robust','strong'],['rough','not smooth'],['route','a way taken'],['routine','regular procedure'],['rude','impolite'],['ruin','to spoil'],['rumor','unverified story'],['rush','to hurry']
   ],
   S: [
-    ['safe','protected from danger'],
-    ['satisfy','to meet expectations'],
-    ['scarce','rare; in short supply'],
-    ['seldom','not often'],
-    ['sense','a feeling; meaning'],
-    ['serious','of grave importance'],
-    ['shame','a painful feeling of humiliation'],
-    ['silent','making no sound'],
-    ['similar','resembling without being identical'],
-    ['simple','easy; not complex'],
-    ['sincere','genuine; honest'],
-    ['skill','an ability acquired by training'],
-    ['solid','firm and stable'],
-    ['solution','an answer to a problem'],
-    ['solve','to find an answer to'],
-    ['sorrow','deep sadness'],
-    ['steady','firm in position; not changing'],
-    ['strength','physical or moral power'],
-    ['strict','demanding obedience'],
-    ['struggle','to make great effort'],
-    ['stubborn','refusing to change'],
-    ['succeed','to achieve a goal'],
-    ['success','the accomplishment of an aim'],
-    ['suffer','to experience pain'],
-    ['suggest','to propose for consideration'],
-    ['surprise','to cause unexpected wonder']
+    ['sacred','holy'],['sacrifice','to give up'],['sad','unhappy'],['safe','protected from danger'],['salute','to greet formally'],['satisfy','to meet expectations'],['scan','to look quickly'],['scarce','rare'],['scarcely','almost not'],['scatter','to spread widely'],['scene','a place; sight'],['scent','a smell'],['scheme','a plan'],['scold','to find fault loudly'],['scope','range'],['scorn','to despise'],['scratch','to scrape'],['screech','to make sharp sound'],['secret','hidden; private'],['secure','safe; to obtain'],['seek','to search'],['seize','to grab'],['seldom','not often'],['select','to choose'],['sense','a feeling; meaning'],['sensible','having good sense'],['sensitive','easily affected'],['serene','calm'],['serious','of grave importance'],['settle','to decide; to live'],['several','more than two'],['severe','very serious'],['shake','to move quickly'],['shallow','not deep'],['shame','painful feeling of humiliation'],['share','to divide; portion'],['sharp','having a fine edge'],['shed','to drop; small building'],['shelter','protection'],['shield','to protect'],['shocking','very surprising'],['shore','seashore'],['shrewd','clever'],['shrink','to become smaller'],['silent','making no sound'],['silly','foolish'],['similar','resembling'],['simple','easy; not complex'],['sincere','genuine; honest'],['site','a location'],['situation','condition; circumstances'],['skill','an ability acquired by training'],['slender','thin; slim'],['slight','small'],['slip','to slide'],['slope','an inclined surface'],['slow','not fast'],['smart','intelligent'],['smile','to look happy'],['smooth','having even surface'],['snatch','to grab quickly'],['sober','not drunk; serious'],['soft','not hard'],['solid','firm and stable'],['solitary','alone'],['solution','an answer to a problem'],['solve','to find an answer to'],['sometimes','at times'],['soothe','to calm'],['sorrow','deep sadness'],['source','origin'],['spare','extra'],['special','unique'],['specific','particular'],['speed','rate of motion'],['spell','to form word; magic'],['spend','to use up money/time'],['splendid','magnificent'],['spoil','to ruin'],['spread','to extend'],['stable','steady'],['staff','employees; pole'],['stage','a platform; phase'],['stale','no longer fresh'],['stand','to be upright'],['stare','to look fixedly'],['startle','to surprise'],['starve','to suffer hunger'],['state','condition; nation'],['steady','firm in position'],['steal','to take dishonestly'],['steep','sharply rising'],['stern','strict'],['stiff','not easily bent'],['still','quiet; even now'],['stir','to mix; to move'],['stout','strong; thick'],['strange','unusual'],['strangle','to choke'],['strategy','a plan'],['stream','a small river'],['strength','physical or moral power'],['strict','demanding obedience'],['strike','to hit'],['strive','to try hard'],['strong','having power'],['structure','arrangement of parts'],['struggle','to make great effort'],['stubborn','refusing to change'],['stun','to shock'],['stupid','lacking intelligence'],['sturdy','strong'],['style','a way; fashion'],['subdue','to overcome'],['subject','topic; one ruled'],['submit','to surrender'],['succeed','to achieve a goal'],['success','accomplishment of an aim'],['sudden','happening unexpectedly'],['suffer','to experience pain'],['sufficient','enough'],['suggest','to propose'],['suit','to be appropriate'],['summary','brief account'],['superior','higher in rank'],['supply','to provide'],['support','to hold up; to back'],['suppose','to assume'],['suppress','to hold back'],['supreme','highest'],['sure','certain'],['surge','to rise suddenly'],['surpass','to be greater than'],['surprise','to cause unexpected wonder'],['surrender','to give up'],['suspect','to think guilty'],['suspend','to hang; pause'],['sustain','to keep going'],['sweep','to clean with broom'],['sweet','pleasant taste'],['swift','fast'],['swiftly','quickly'],['swing','to move back and forth'],['symbol','a sign']
   ],
   T: [
-    ['talent','a natural ability'],
-    ['target','an object aimed at'],
-    ['teach','to give instruction'],
-    ['tender','gentle; loving'],
-    ['terrible','very bad'],
-    ['threat','a statement of intent to harm'],
-    ['thrive','to grow vigorously'],
-    ['tough','strong; not easily broken'],
-    ['tradition','a long-established custom'],
-    ['transform','to change in form'],
-    ['treat','to behave toward in a way'],
-    ['trust','firm belief in reliability'],
-    ['truth','that which is true']
+    ['tackle','to deal with'],['tact','sensitivity'],['talent','a natural ability'],['tame','not wild'],['target','an object aimed at'],['task','work to be done'],['taste','flavour'],['teach','to give instruction'],['team','group working together'],['tear','to rip; eye drop'],['tedious','boring'],['tell','to say'],['temper','mood; anger'],['tempt','to entice'],['tend','to be inclined'],['tender','gentle; loving'],['tense','strained'],['terrible','very bad'],['terror','great fear'],['testify','to give evidence'],['thaw','to melt'],['theme','a subject'],['theory','an idea or belief'],['thick','wide; not thin'],['thin','not thick'],['thirst','need for drink'],['thorough','complete'],['thoughtful','considerate'],['threat','statement of intent to harm'],['thrill','great excitement'],['thrive','to grow vigorously'],['thrust','to push'],['tidy','neat'],['tight','firmly fixed'],['timid','shy'],['tiny','very small'],['tolerate','to allow; bear'],['tomb','a grave'],['toss','to throw'],['total','the whole'],['tough','strong; difficult'],['trace','small amount; to follow'],['trade','exchange of goods'],['tradition','a long-established custom'],['tragic','very sad'],['tranquil','calm'],['transform','to change in form'],['translate','to change to another language'],['trap','to catch'],['treasure','wealth'],['treat','to behave toward'],['tremble','to shake'],['tremendous','very great'],['trend','general direction'],['trial','a test'],['triumph','victory'],['true','factual'],['trust','firm belief in reliability'],['truth','that which is true'],['typical','common']
   ],
   U: [
-    ['ugly','unpleasant in appearance'],
-    ['understand','to grasp the meaning of'],
-    ['unique','being the only one of its kind'],
-    ['urgent','requiring immediate attention'],
-    ['useful','able to be used helpfully']
+    ['ugly','unpleasant in appearance'],['ultimate','final; greatest'],['unable','not able'],['unaware','not knowing'],['unbearable','hard to endure'],['uncertain','not sure'],['uncommon','not usual'],['undergo','to experience'],['undertake','to begin'],['understand','to grasp the meaning of'],['unfair','not just'],['unfold','to open out'],['uniform','same; clothing'],['unique','being the only one of its kind'],['unite','to join together'],['universe','everything that exists'],['unknown','not known'],['until','up to the time'],['urge','to push for'],['urgent','requiring immediate attention'],['useful','able to be used helpfully'],['usual','normal'],['utilize','to make use of'],['utmost','greatest'],['utter','to say']
   ],
   V: [
-    ['valuable','having great worth'],
-    ['various','of different kinds'],
-    ['victory','an act of defeating an enemy'],
-    ['violent','using physical force'],
-    ['virtue','behavior showing high moral standards']
+    ['vacant','empty'],['vacate','to leave empty'],['vague','not clear'],['valid','having force; sound'],['valuable','having great worth'],['value','worth'],['vanish','to disappear'],['vanity','being too proud'],['various','of different kinds'],['vary','to differ'],['vast','very large'],['venture','risky undertaking'],['verify','to prove true'],['verse','poetry'],['veteran','experienced person'],['victim','one who suffers'],['victory','an act of defeating'],['view','to see; opinion'],['vigorous','full of energy'],['violate','to break (rule)'],['violent','using physical force'],['virtue','high moral standard'],['visible','able to be seen'],['vision','sight; foresight'],['visit','to go to see'],['vital','essential'],['vivid','bright; lifelike'],['vocation','a profession'],['voluntary','of one\'s own will'],['vow','solemn promise']
   ],
   W: [
-    ['waste','to use carelessly'],
-    ['weak','lacking strength'],
-    ['wealth','an abundance of valuable possessions'],
-    ['weary','very tired'],
-    ['welcome','to greet warmly'],
-    ['willing','ready to do something'],
-    ['wisdom','the quality of having experience and knowledge'],
-    ['wonder','to feel curiosity']
+    ['wag','to move side to side'],['wage','payment'],['wail','to cry loudly'],['wander','to roam'],['warn','to caution'],['waste','to use carelessly'],['weak','lacking strength'],['wealth','abundance of valuable possessions'],['weary','very tired'],['weep','to cry'],['weigh','to measure weight'],['welcome','to greet warmly'],['whim','sudden idea'],['whisper','to speak very softly'],['whole','entire'],['wholly','completely'],['wicked','evil'],['wide','broad'],['wild','not tame'],['willing','ready to do something'],['wise','having wisdom'],['wisdom','quality of having experience and knowledge'],['withdraw','to take back'],['wonder','to feel curiosity'],['worry','to feel anxious'],['worship','to honor as god'],['worth','value'],['wound','injury to body'],['wreck','to destroy'],['wretched','very unhappy']
   ],
-  X: [],
+  X: [
+    ['xenophobia','fear of foreigners'],['x-ray','high energy radiation']
+  ],
   Y: [
-    ['yearn','to have an intense feeling of longing'],
-    ['yield','to produce; to give way']
+    ['yawn','to open mouth from tiredness'],['yearn','to have intense longing'],['yell','to shout'],['yield','to produce; give way'],['youth','being young; young person']
   ],
   Z: [
-    ['zeal','great energy or enthusiasm'],
-    ['zone','an area distinguished from surrounding parts']
+    ['zeal','great energy or enthusiasm'],['zealous','very enthusiastic'],['zenith','highest point'],['zone','an area distinguished from surrounding parts']
   ]
 };

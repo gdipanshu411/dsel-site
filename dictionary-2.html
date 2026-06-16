@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<link rel="stylesheet" href="/css/style.css?v=5">
+<link rel="stylesheet" href="/css/style.css?v=12">
 <script>(function(){var s=localStorage.getItem('dsel-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));})();</script>
 </head>
 <body>
@@ -33,6 +33,17 @@
     <div class="drawer-section">
     <div class="drawer-label">Books &amp; Study Material</div>
     <a class="dlink" href="/books.html"><i class="bi bi-collection-fill"></i> All Books &amp; PDFs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/idioms-phrasal.html"><i class="bi bi-chat-square-quote-fill"></i> Idioms &amp; Phrasal Verbs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Speaking Resources</div>
+    <a class="dlink" href="/slang.html"><i class="bi bi-emoji-sunglasses-fill"></i> Slang &amp; Gen-Z Words<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/tongue-twisters.html"><i class="bi bi-mic-fill"></i> Tongue Twisters<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/phonetics.html"><i class="bi bi-soundwave"></i> Phonetic Chart<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Learning Path</div>
+    <a class="dlink" href="/roadmap.html"><i class="bi bi-signpost-split-fill"></i> Roadmap to Learn English<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
   </div>
   <div class="drawer-section">
     <div class="drawer-label">Subscription</div>
@@ -50,6 +61,7 @@
   <div class="drawer-section">
     <div class="drawer-label">Support</div>
     <a class="dlink" href="/contact.html"><i class="bi bi-headset"></i> Contact Us<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/feedback.html"><i class="bi bi-chat-quote-fill"></i> Feedback &amp; Comments<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
     <a class="dlink" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp Help<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
     <a class="dlink" href="/about.html"><i class="bi bi-info-circle-fill"></i> About<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
     <button class="dlink" id="drawerLogout" style="display:none;color:#dc2626"><i class="bi bi-box-arrow-right" style="color:#dc2626"></i> Logout<span class="arrow"><i class="bi bi-chevron-right"></i></span></button>
@@ -57,13 +69,13 @@
   <div class="drawer-foot">© <span class="year"></span> The Dream School of English Language · DSEL</div>
 </aside>
 
-<div class="topbar"><div class="container"><div><i class="bi bi-geo-alt"></i> Stadium Road, Sidhi, MP — 486661</div><div><a href="tel:+918770462942"><i class="bi bi-telephone"></i> +91 8770462942</a></div></div></div>
-<header class="header"><div class="container nav">
-<div class="header-left"><button class="drawer-toggle" id="drawerToggle" aria-label="Open menu"><i class="bi bi-list"></i></button><a class="brand" href="/"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo"><span class="brand-name"><span class="full">The Dream School of English Language <span style="color:var(--brand)">(DSEL)</span></span><small>Sidhi · Madhya Pradesh — since 2011</small></span></a></div>
-<button class="menu-toggle" aria-label="Open menu"><i class="bi bi-list"></i></button>
-<ul class="menu"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/courses.html">Courses</a></li><li><a href="/activities.html">Activities</a></li><li><a href="/news.html">News</a></li><li><a href="/events.html">Events</a></li><li><a href="/tests.html">Tests</a></li><li><a href="/contact.html">Contact</a></li></ul>
-<div class="nav-cta"><a href="/login.html" class="btn btn-ghost">Login</a><a href="/register.html" class="btn btn-primary">Sign Up</a></div>
-</div></header>
+<header class="header">
+  <div class="container nav">
+    <div class="header-left"><button class="drawer-toggle" id="drawerToggle" aria-label="Open menu"><i class="bi bi-list"></i></button><a class="brand" href="/"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo"><span class="brand-name"><span class="full">The Dream School of English Language <span style="color:var(--brand)">(DSEL)</span></span><small><i class="bi bi-geo-alt-fill"></i> Stadium Road, Sidhi, MP — 486661 · Since 2011</small></span></a></div>
+    <div class="header-right"><button class="menu-toggle" aria-label="Open navigation"><i class="bi bi-list"></i></button><div class="nav-cta"><span class="auth-pill"><a href="/login.html">Login</a><span class="sep">/</span><a class="signup" href="/register.html">Sign Up</a></span></div></div>
+  </div>
+  <div class="header-row2"><div class="container"><ul class="menu"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/courses.html">Courses</a></li><li><a href="/activities.html">Activities</a></li><li><a href="/news.html">News</a></li><li><a href="/events.html">Events</a></li><li><a href="/tests.html">Tests</a></li><li><a href="/contact.html">Contact</a></li></ul></div></div>
+</header>
 
 <main style="padding:50px 0">
   <div class="container" style="max-width:1080px">
@@ -105,8 +117,8 @@
 </style>
 
 <a class="fab-wa" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
-<script src="/js/main.js?v=5"></script>
-<script src="/js/verb-data.js?v=4"></script>
+<script src="/js/main.js?v=12"></script>
+<script src="/js/verb-data.js?v=11"></script>
 <script>
 (function(){
   var tbody = document.querySelector('#verbTable tbody');
@@ -119,5 +131,6 @@
   document.getElementById('vSearch').addEventListener('input', e => render(e.target.value));
 })();
 </script>
-<script src="/js/chat-widget.js?v=5"></script>
+<script src="/js/chat-widget.js?v=13"></script>
+<script src="/js/voice-assistant.js?v=1"></script>
 </body></html>

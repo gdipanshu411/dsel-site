@@ -1,5 +1,5 @@
 // Vercel serverless function — DSEL AI Assistant powered by Gemini
-// Supports text + image + PDF attachments via Gemini multimodal.
+// Features: retry-with-backoff for 429s, in-memory response cache, character personality support
 // Endpoint: POST /api/chat
 // Env var: GEMINI_API_KEY
 
@@ -34,13 +34,86 @@ RULES:
 - If asked something unrelated to English/DSEL, politely redirect.
 - Mix English and Hindi if the student writes in Hindi/Hinglish. Otherwise clear simple English.
 - Never invent facts about DSEL not in this prompt. If unsure, say "Please WhatsApp the institute at +91 8770462942 for that."
-- Never ask for passwords or payment details.`;
+- Never ask for passwords or payment details.
+- If the first user message contains [Instruction for this reply only: ...], adopt that personality for this reply while still following all DSEL rules above.`;
 
 export const config = {
   api: {
     bodyParser: { sizeLimit: '15mb' }
   }
 };
+
+// ═══════════════════════════════════════
+//  IN-MEMORY RESPONSE CACHE
+//  Max 100 entries, 5-minute TTL
+// ═══════════════════════════════════════
+const cache = new Map();
+const CACHE_MAX = 100;
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+
+function cleanCache() {
+  const now = Date.now();
+  for (const [key, entry] of cache) {
+    if (now - entry.ts > CACHE_TTL) cache.delete(key);
+  }
+  // Evict oldest if over limit
+  if (cache.size > CACHE_MAX) {
+    const oldest = [...cache.entries()].sort((a, b) => a[1].ts - b[1].ts);
+    for (let i = 0; i < cache.size - CACHE_MAX; i++) {
+      cache.delete(oldest[i][0]);
+    }
+  }
+}
+
+function getCache(key) {
+  const entry = cache.get(key);
+  if (!entry) return null;
+  if (Date.now() - entry.ts > CACHE_TTL) { cache.delete(key); return null; }
+  return entry.value;
+}
+
+function setCache(key, value) {
+  cleanCache();
+  cache.set(key, { value, ts: Date.now() });
+}
+
+// ═══════════════════════════════════════
+//  GEMINI CALL WITH RETRY
+//  Retries up to 2 times on 429 with exponential backoff
+// ═══════════════════════════════════════
+async function callGeminiWithRetry(url, body, maxRetries = 2) {
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    const r = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body
+    });
+
+    if (r.status === 429 && attempt < maxRetries) {
+      // Exponential backoff: ~1s, ~2s, plus jitter
+      const delay = Math.pow(2, attempt) * 1000 + Math.floor(Math.random() * 500);
+      await new Promise(res => setTimeout(res, delay));
+      continue;
+    }
+
+    return r;
+  }
+  // All retries exhausted — return last response (which will be 429)
+  return fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body });
+}
+
+// ═══════════════════════════════════════
+//  SIMPLE HASH for cache key
+// ═══════════════════════════════════════
+function simpleHash(str) {
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) {
+    const chr = str.charCodeAt(i);
+    hash = ((hash << 5) - hash) + chr;
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash.toString(36);
+}
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -72,7 +145,7 @@ export default async function handler(req, res) {
   // Build Gemini contents
   const contents = [
     { role: 'user', parts: [{ text: SYSTEM_PROMPT }] },
-    { role: 'model', parts: [{ text: 'Understood. I will help with DSEL info, English practice, grammar, and analyze images or PDFs students upload.' }] }
+    { role: 'model', parts: [{ text: 'Understood. I will help with DSEL info, English practice, grammar, and analyze images or PDFs students upload. I will also adopt any personality instruction given in the first user message.' }] }
   ];
   for (const m of recent) {
     const parts = [];
@@ -94,26 +167,36 @@ export default async function handler(req, res) {
     });
   }
 
+  // Generate cache key from text-only parts of the last 2 messages
+  const cacheKeyParts = recent.slice(-2)
+    .filter(m => m.content && !m.attachments)
+    .map(m => m.role + ':' + m.content);
+  const cacheKey = simpleHash(cacheKeyParts.join('|'));
+
+  // Check cache first
+  const cached = getCache(cacheKey);
+  if (cached) {
+    return res.status(200).json({ reply: cached, cached: true });
+  }
+
   try {
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${encodeURIComponent(apiKey)}`;
-    const r = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents,
-        generationConfig: {
-          temperature: 0.7,
-          maxOutputTokens: 600,
-          topP: 0.95
-        },
-        safetySettings: [
-          { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_ONLY_HIGH' },
-          { category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_ONLY_HIGH' },
-          { category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT', threshold: 'BLOCK_ONLY_HIGH' },
-          { category: 'HARM_CATEGORY_DANGEROUS_CONTENT', threshold: 'BLOCK_ONLY_HIGH' }
-        ]
-      })
+    const reqBody = JSON.stringify({
+      contents,
+      generationConfig: {
+        temperature: 0.7,
+        maxOutputTokens: 600,
+        topP: 0.95
+      },
+      safetySettings: [
+        { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_ONLY_HIGH' },
+        { category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_ONLY_HIGH' },
+        { category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT', threshold: 'BLOCK_ONLY_HIGH' },
+        { category: 'HARM_CATEGORY_DANGEROUS_CONTENT', threshold: 'BLOCK_ONLY_HIGH' }
+      ]
     });
+
+    const r = await callGeminiWithRetry(url, reqBody);
 
     if (!r.ok) {
       const errText = await r.text().catch(() => '');
@@ -130,6 +213,9 @@ export default async function handler(req, res) {
     const data = await r.json();
     const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim()
       || "I am not sure how to answer that. Could you ask differently, or message us on WhatsApp at +91 8770462942?";
+
+    // Cache the response
+    setCache(cacheKey, reply);
 
     return res.status(200).json({ reply });
   } catch (err) {

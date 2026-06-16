@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Phonetics & Pronunciation — DSEL</title>
+<link rel="icon" href="/img/original/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/css/style.css?v=12">
+<script>(function(){var s=localStorage.getItem('dsel-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));})();</script>
+</head>
+<body>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><div class="drawer-avatar" id="drawerAvatar">G</div><div class="drawer-user"><strong id="drawerUserName">Guest</strong><small id="drawerUserMail">Sign in to access your account</small></div><button class="drawer-close" id="drawerClose"><i class="bi bi-x-lg"></i></button></div>
+  <div class="drawer-section" id="drawerAuthBlock"><div class="drawer-label">Account</div><a class="dlink" href="/login.html"><i class="bi bi-box-arrow-in-right"></i> Login<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/register.html"><i class="bi bi-person-plus-fill"></i> Sign Up<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section" id="drawerUserBlock" style="display:none"><div class="drawer-label">My Profile</div><a class="dlink" href="/profile.html"><i class="bi bi-person-circle"></i> View Profile<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/my-courses.html"><i class="bi bi-mortarboard-fill"></i> My Courses<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/progress.html"><i class="bi bi-graph-up"></i> Progress<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/certificates.html"><i class="bi bi-award-fill"></i> Certificates<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Books &amp; Study Material</div><a class="dlink" href="/books.html"><i class="bi bi-collection-fill"></i> All Books &amp; PDFs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/idioms-phrasal.html"><i class="bi bi-chat-square-quote-fill"></i> Idioms &amp; Phrasal Verbs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Speaking Resources</div><a class="dlink" href="/slang.html"><i class="bi bi-emoji-sunglasses-fill"></i> Slang &amp; Gen-Z Words<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/tongue-twisters.html"><i class="bi bi-mic-fill"></i> Tongue Twisters<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/phonetics.html"><i class="bi bi-soundwave"></i> Phonetic Chart<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Learning Path</div><a class="dlink" href="/roadmap.html"><i class="bi bi-signpost-split-fill"></i> Roadmap to Learn English<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Subscription</div><a class="dlink" href="/courses.html"><i class="bi bi-stars"></i> My Plan<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/billing.html"><i class="bi bi-receipt"></i> Billing &amp; Payments<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Preferences</div><button class="dlink" id="drawerThemeToggle"><i class="bi bi-moon-stars-fill"></i> <span id="drawerThemeLabel">Dark Mode</span><span class="arrow"><i class="bi bi-chevron-right"></i></span></button><a class="dlink" href="/settings.html#language"><i class="bi bi-translate"></i> Language<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/notifications.html"><i class="bi bi-bell-fill"></i> Notifications<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/settings.html"><i class="bi bi-gear-fill"></i> Settings<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Support</div><a class="dlink" href="/contact.html"><i class="bi bi-headset"></i> Contact Us<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/feedback.html"><i class="bi bi-chat-quote-fill"></i> Feedback &amp; Comments<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp Help<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><button class="dlink" id="drawerLogout" style="display:none;color:#dc2626"><i class="bi bi-box-arrow-right" style="color:#dc2626"></i> Logout<span class="arrow"><i class="bi bi-chevron-right"></i></span></button></div>
+  <div class="drawer-foot">© <span class="year"></span> The Dream School of English Language · DSEL</div>
+</aside>
+
+<header class="header">
+  <div class="container nav">
+    <div class="header-left"><button class="drawer-toggle" id="drawerToggle" aria-label="Open menu"><i class="bi bi-list"></i></button><a class="brand" href="/"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo"><span class="brand-name"><span class="full">The Dream School of English Language <span style="color:var(--brand)">(DSEL)</span></span><small><i class="bi bi-geo-alt-fill"></i> Stadium Road, Sidhi, MP — 486661 · Since 2011</small></span></a></div>
+    <div class="header-right"><button class="menu-toggle" aria-label="Open navigation"><i class="bi bi-list"></i></button><div class="nav-cta"><span class="auth-pill"><a href="/login.html">Login</a><span class="sep">/</span><a class="signup" href="/register.html">Sign Up</a></span></div></div>
+  </div>
+  <div class="header-row2"><div class="container"><ul class="menu"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/courses.html">Courses</a></li><li><a href="/activities.html">Activities</a></li><li><a href="/news.html">News</a></li><li><a href="/events.html">Events</a></li><li><a href="/tests.html">Tests</a></li><li><a href="/contact.html">Contact</a></li></ul></div></div>
+</header>
+<main style="padding:50px 0">
+  <div class="container" style="max-width:1080px">
+    <div class="crumbs"><a href="/">Home</a> · Phonetics</div>
+    <h1 style="margin-bottom:10px">Phonetic Chart &amp; Pronunciation</h1>
+    <p style="color:var(--ink-soft);margin-bottom:24px">English has 44 sounds (phonemes). The IPA (International Phonetic Alphabet) shows them clearly. Click any sound to hear it.</p>
+
+    <h2 style="margin:30px 0 16px"><i class="bi bi-soundwave" style="color:var(--brand)"></i> Vowels — Short (7 sounds)</h2>
+    <div class="phgrid" id="vshort"></div>
+
+    <h2 style="margin:30px 0 16px"><i class="bi bi-soundwave" style="color:var(--brand)"></i> Vowels — Long (5 sounds)</h2>
+    <div class="phgrid" id="vlong"></div>
+
+    <h2 style="margin:30px 0 16px"><i class="bi bi-soundwave" style="color:#c97a00"></i> Diphthongs (8 sounds — gliding vowels)</h2>
+    <p style="color:var(--ink-soft);margin-bottom:14px">A diphthong is a vowel sound that glides from one position to another. Two vowel sounds in a single syllable.</p>
+    <div class="phgrid" id="diph"></div>
+
+    <h2 style="margin:30px 0 16px"><i class="bi bi-soundwave" style="color:var(--success)"></i> Consonants — Voiced (15 sounds)</h2>
+    <div class="phgrid" id="cvoiced"></div>
+
+    <h2 style="margin:30px 0 16px"><i class="bi bi-soundwave" style="color:#8b5cf6"></i> Consonants — Voiceless (9 sounds)</h2>
+    <div class="phgrid" id="cvoiceless"></div>
+
+    <div class="card" style="padding:32px;margin-top:40px">
+      <h2>Word Stress &amp; Sentence Stress</h2>
+      <h3>Word Stress</h3>
+      <p>Every English word with 2+ syllables has one stressed syllable (louder, longer, clearer).</p>
+      <ul>
+        <li><strong>'photograph</strong> (1st syllable) → pho-to-graph</li>
+        <li><strong>pho'tographer</strong> (2nd syllable) → pho-tog-ra-pher</li>
+        <li><strong>photo'graphic</strong> (3rd syllable) → pho-to-graph-ic</li>
+      </ul>
+      <h3>Common Stress Patterns</h3>
+      <ul>
+        <li><strong>2-syllable nouns/adjectives</strong>: usually stress on 1st → 'doctor, 'happy, 'mother</li>
+        <li><strong>2-syllable verbs/prepositions</strong>: usually stress on 2nd → de'cide, ar'rive, be'tween</li>
+        <li><strong>Words ending in -tion, -sion, -cian</strong>: stress on syllable before → educ'ation, deci'sion</li>
+        <li><strong>Words ending in -ic, -ical</strong>: stress on syllable before → fan'tastic, eco'nomic</li>
+        <li><strong>Compound nouns</strong>: stress on first part → 'bookshop, 'football, 'classroom</li>
+      </ul>
+      <h3>Sentence Stress</h3>
+      <p>In a sentence, content words (nouns, verbs, adjectives, adverbs) are stressed. Function words (a, the, in, of, and) are usually unstressed.</p>
+      <p><em>"<strong>Ravi went</strong> to the <strong>shop</strong> to <strong>buy bread</strong>."</em></p>
+    </div>
+
+    <div class="card" style="padding:32px;margin-top:24px">
+      <h2>Common Indian-English Pronunciation Mistakes</h2>
+      <table style="width:100%;border-collapse:collapse;margin-top:14px">
+        <tr style="background:var(--bg-alt)"><th style="padding:10px 14px;text-align:left;border:1px solid var(--line)">Word</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--line)">Wrong</th><th style="padding:10px 14px;text-align:left;border:1px solid var(--line)">Right</th></tr>
+        <tr><td style="padding:10px 14px;border:1px solid var(--line)">v vs w</td><td style="padding:10px 14px;border:1px solid var(--line)">"wery" / "vell"</td><td style="padding:10px 14px;border:1px solid var(--line)">very (lip-teeth) / well (lips round)</td></tr>
+        <tr><td style="padding:10px 14px;border:1px solid var(--line)">th</td><td style="padding:10px 14px;border:1px solid var(--line)">"tin" / "dis"</td><td style="padding:10px 14px;border:1px solid var(--line)">thin / this (tongue tip touches teeth)</td></tr>
+        <tr><td style="padding:10px 14px;border:1px solid var(--line)">schedule</td><td style="padding:10px 14px;border:1px solid var(--line)">"shed-yool"</td><td style="padding:10px 14px;border:1px solid var(--line)">"sked-yool" (US) / "shed-yool" (UK)</td></tr>
+        <tr><td style="padding:10px 14px;border:1px solid var(--line)">colonel</td><td style="padding:10px 14px;border:1px solid var(--line)">"co-lo-nel"</td><td style="padding:10px 14px;border:1px solid var(--line)">"ker-nel"</td></tr>
+        <tr><td style="padding:10px 14px;border:1px solid var(--line)">comfortable</td><td style="padding:10px 14px;border:1px solid var(--line)">"com-for-table"</td><td style="padding:10px 14px;border:1px solid var(--line)">"comf-ter-bull"</td></tr>
+        <tr><td style="padding:10px 14px;border:1px solid var(--line)">vegetable</td><td style="padding:10px 14px;border:1px solid var(--line)">"ve-ge-ta-ble"</td><td style="padding:10px 14px;border:1px solid var(--line)">"vej-ta-bull"</td></tr>
+        <tr><td style="padding:10px 14px;border:1px solid var(--line)">February</td><td style="padding:10px 14px;border:1px solid var(--line)">"Feb-ru-ary"</td><td style="padding:10px 14px;border:1px solid var(--line)">"Feb-yoo-airy"</td></tr>
+        <tr><td style="padding:10px 14px;border:1px solid var(--line)">pronunciation</td><td style="padding:10px 14px;border:1px solid var(--line)">"pro-noun-ciation"</td><td style="padding:10px 14px;border:1px solid var(--line)">"pro-nun-ci-ation"</td></tr>
+      </table>
+    </div>
+  </div>
+</main>
+<style>
+.phgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.ph{background:var(--card-bg);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center;cursor:pointer;transition:.15s}
+.ph:hover{border-color:var(--brand);transform:translateY(-2px);box-shadow:var(--shadow-sm)}
+.ph .sym{font-family:Georgia,serif;font-size:1.6rem;font-weight:800;color:var(--brand);margin-bottom:4px}
+.ph .ex{font-size:.92rem;color:var(--ink);font-weight:700}
+.ph small{display:block;color:var(--muted);font-size:.78rem;margin-top:2px}
+</style>
+<a class="fab-wa" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+<script src="/js/main.js?v=12"></script>
+<script src="/js/chat-widget.js?v=13"></script>
+<script src="/js/voice-assistant.js?v=1"></script>
+<script>
+const PH = {
+  vshort: [
+    ['ɪ','sit','ship'],['e','bed','red'],['æ','cat','bag'],['ʌ','cup','luck'],['ɒ','hot','box'],['ʊ','put','book'],['ə','about','sofa']
+  ],
+  vlong: [
+    ['iː','see','tree'],['ɑː','car','far'],['ɔː','door','call'],['uː','blue','two'],['ɜː','her','bird']
+  ],
+  diph: [
+    ['eɪ','say','day'],['aɪ','my','time'],['ɔɪ','boy','toy'],['əʊ','go','no'],['aʊ','now','how'],['ɪə','here','beer'],['eə','where','hair'],['ʊə','tour','poor']
+  ],
+  cvoiced: [
+    ['b','ball','baby'],['d','dog','red'],['g','go','egg'],['v','very','live'],['ð','this','mother'],['z','zoo','buzz'],['ʒ','vision','measure'],['dʒ','jam','bridge'],['m','man','time'],['n','now','run'],['ŋ','sing','song'],['l','look','tell'],['r','red','very'],['j','yes','you'],['w','we','want']
+  ],
+  cvoiceless: [
+    ['p','pen','stop'],['t','top','cat'],['k','cat','book'],['f','fan','off'],['θ','think','bath'],['s','see','bus'],['ʃ','shop','wish'],['tʃ','chair','watch'],['h','hat','behind']
+  ]
+};
+function render(id){
+  document.getElementById(id).innerHTML = PH[id].map(p =>
+    '<div class="ph" data-w="'+p[1]+'"><div class="sym">/'+p[0]+'/</div><div class="ex">'+p[1]+'</div><small>'+p[2]+'</small></div>'
+  ).join('');
+}
+Object.keys(PH).forEach(render);
+document.body.addEventListener('click', e => {
+  const c = e.target.closest('.ph'); if (!c) return;
+  if ('speechSynthesis' in window) {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(c.dataset.w);
+    u.rate = 0.7; u.lang = 'en-US';
+    speechSynthesis.speak(u);
+  }
+});
+</script>
+</body></html>

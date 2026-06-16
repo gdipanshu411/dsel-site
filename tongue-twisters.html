@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tongue Twisters — DSEL</title>
+<link rel="icon" href="/img/original/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/css/style.css?v=12">
+<script>(function(){var s=localStorage.getItem('dsel-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));})();</script>
+</head>
+<body>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><div class="drawer-avatar" id="drawerAvatar">G</div><div class="drawer-user"><strong id="drawerUserName">Guest</strong><small id="drawerUserMail">Sign in to access your account</small></div><button class="drawer-close" id="drawerClose"><i class="bi bi-x-lg"></i></button></div>
+  <div class="drawer-section" id="drawerAuthBlock"><div class="drawer-label">Account</div><a class="dlink" href="/login.html"><i class="bi bi-box-arrow-in-right"></i> Login<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/register.html"><i class="bi bi-person-plus-fill"></i> Sign Up<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section" id="drawerUserBlock" style="display:none"><div class="drawer-label">My Profile</div><a class="dlink" href="/profile.html"><i class="bi bi-person-circle"></i> View Profile<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/my-courses.html"><i class="bi bi-mortarboard-fill"></i> My Courses<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/progress.html"><i class="bi bi-graph-up"></i> Progress<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/certificates.html"><i class="bi bi-award-fill"></i> Certificates<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Books &amp; Study Material</div><a class="dlink" href="/books.html"><i class="bi bi-collection-fill"></i> All Books &amp; PDFs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/idioms-phrasal.html"><i class="bi bi-chat-square-quote-fill"></i> Idioms &amp; Phrasal Verbs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Speaking Resources</div><a class="dlink" href="/slang.html"><i class="bi bi-emoji-sunglasses-fill"></i> Slang &amp; Gen-Z Words<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/tongue-twisters.html"><i class="bi bi-mic-fill"></i> Tongue Twisters<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/phonetics.html"><i class="bi bi-soundwave"></i> Phonetic Chart<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Learning Path</div><a class="dlink" href="/roadmap.html"><i class="bi bi-signpost-split-fill"></i> Roadmap to Learn English<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Subscription</div><a class="dlink" href="/courses.html"><i class="bi bi-stars"></i> My Plan<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/billing.html"><i class="bi bi-receipt"></i> Billing &amp; Payments<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Preferences</div><button class="dlink" id="drawerThemeToggle"><i class="bi bi-moon-stars-fill"></i> <span id="drawerThemeLabel">Dark Mode</span><span class="arrow"><i class="bi bi-chevron-right"></i></span></button><a class="dlink" href="/settings.html#language"><i class="bi bi-translate"></i> Language<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/notifications.html"><i class="bi bi-bell-fill"></i> Notifications<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/settings.html"><i class="bi bi-gear-fill"></i> Settings<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Support</div><a class="dlink" href="/contact.html"><i class="bi bi-headset"></i> Contact Us<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/feedback.html"><i class="bi bi-chat-quote-fill"></i> Feedback &amp; Comments<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp Help<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><button class="dlink" id="drawerLogout" style="display:none;color:#dc2626"><i class="bi bi-box-arrow-right" style="color:#dc2626"></i> Logout<span class="arrow"><i class="bi bi-chevron-right"></i></span></button></div>
+  <div class="drawer-foot">© <span class="year"></span> The Dream School of English Language · DSEL</div>
+</aside>
+
+<header class="header">
+  <div class="container nav">
+    <div class="header-left"><button class="drawer-toggle" id="drawerToggle" aria-label="Open menu"><i class="bi bi-list"></i></button><a class="brand" href="/"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo"><span class="brand-name"><span class="full">The Dream School of English Language <span style="color:var(--brand)">(DSEL)</span></span><small><i class="bi bi-geo-alt-fill"></i> Stadium Road, Sidhi, MP — 486661 · Since 2011</small></span></a></div>
+    <div class="header-right"><button class="menu-toggle" aria-label="Open navigation"><i class="bi bi-list"></i></button><div class="nav-cta"><span class="auth-pill"><a href="/login.html">Login</a><span class="sep">/</span><a class="signup" href="/register.html">Sign Up</a></span></div></div>
+  </div>
+  <div class="header-row2"><div class="container"><ul class="menu"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/courses.html">Courses</a></li><li><a href="/activities.html">Activities</a></li><li><a href="/news.html">News</a></li><li><a href="/events.html">Events</a></li><li><a href="/tests.html">Tests</a></li><li><a href="/contact.html">Contact</a></li></ul></div></div>
+</header>
+<main style="padding:50px 0">
+  <div class="container" style="max-width:980px">
+    <div class="crumbs"><a href="/">Home</a> · Tongue Twisters</div>
+    <h1 style="margin-bottom:10px">Tongue Twisters</h1>
+    <p style="color:var(--ink-soft);margin-bottom:24px">Tongue twisters improve pronunciation, fluency, and clarity. Practice slowly first, then build up speed. Great warm-up before any speaking class.</p>
+
+    <div class="card" style="padding:20px 24px;margin-bottom:24px;background:var(--bg-alt)">
+      <strong style="display:block;margin-bottom:8px"><i class="bi bi-lightbulb-fill" style="color:var(--accent)"></i> How to Practice</strong>
+      <ol style="margin:0;padding-left:22px;line-height:1.85">
+        <li>Read it slowly, word by word.</li>
+        <li>Repeat 3 times at slow pace.</li>
+        <li>Increase speed gradually — 5 times faster.</li>
+        <li>Try saying it 3 times in a row without mistakes.</li>
+        <li>Record yourself and listen back.</li>
+      </ol>
+    </div>
+
+    <h2 style="margin:30px 0 16px"><i class="bi bi-1-circle-fill" style="color:var(--brand)"></i> Easy (for beginners)</h2>
+    <div id="easy"></div>
+
+    <h2 style="margin:30px 0 16px"><i class="bi bi-2-circle-fill" style="color:#c97a00"></i> Medium</h2>
+    <div id="medium"></div>
+
+    <h2 style="margin:30px 0 16px"><i class="bi bi-3-circle-fill" style="color:#dc2626"></i> Hard (challenge!)</h2>
+    <div id="hard"></div>
+  </div>
+</main>
+<style>
+.tt{background:var(--card-bg);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin-bottom:14px;display:flex;align-items:center;gap:14px}
+.tt p{margin:0;font-size:1.05rem;color:var(--ink);font-weight:600;line-height:1.55;flex:1;font-family:'Plus Jakarta Sans',sans-serif}
+.tt button{background:var(--brand);color:#fff;border:none;width:42px;height:42px;border-radius:50%;cursor:pointer;flex-shrink:0;display:grid;place-items:center;font-size:1.05rem;transition:.15s}
+.tt button:hover{transform:scale(1.07)}
+</style>
+<a class="fab-wa" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+<script src="/js/main.js?v=12"></script>
+<script src="/js/chat-widget.js?v=13"></script>
+<script src="/js/voice-assistant.js?v=1"></script>
+<script>
+const TT = {
+  easy: [
+    "She sells seashells by the seashore.",
+    "Red lorry, yellow lorry. Red lorry, yellow lorry.",
+    "Fuzzy Wuzzy was a bear. Fuzzy Wuzzy had no hair.",
+    "Toy boat. Toy boat. Toy boat.",
+    "I scream, you scream, we all scream for ice cream.",
+    "Black bug bit a big black bear.",
+    "A proper copper coffee pot.",
+    "Six slimy snails sailed silently.",
+    "Sheep should sleep in a shed.",
+    "Eleven benevolent elephants.",
+    "Truly rural.",
+    "Unique New York.",
+    "Friendly fleas and fireflies.",
+    "Sneaky snakes slither south.",
+    "Three thin thinkers thinking thick thoughts."
+  ],
+  medium: [
+    "Peter Piper picked a peck of pickled peppers. A peck of pickled peppers Peter Piper picked. If Peter Piper picked a peck of pickled peppers, where's the peck of pickled peppers Peter Piper picked?",
+    "How much wood would a woodchuck chuck if a woodchuck could chuck wood? He would chuck, he would, as much as he could, and chuck as much wood as a woodchuck would, if a woodchuck could chuck wood.",
+    "Betty Botter bought some butter, but she said the butter's bitter. If I put it in my batter, it will make my batter bitter, but a bit of better butter will make my batter better.",
+    "I saw Susie sitting in a shoe shine shop. Where she sits she shines, and where she shines she sits.",
+    "Can you can a can as a canner can can a can?",
+    "A skunk sat on a stump and thunk the stump stunk, but the stump thunk the skunk stunk.",
+    "Six sleek swans swam swiftly southwards.",
+    "Fresh French fried fly fritters.",
+    "How can a clam cram in a clean cream can?",
+    "Surely Sylvia swims! shrieked Sammy, surprised. Some show-off! Sylvia swam swiftly.",
+    "Specific Pacific. Specific Pacific. Pacific specific.",
+    "A big black bug bit a big black dog on his big black nose.",
+    "Whether the weather be fine, or whether the weather be not. Whether the weather be cold, or whether the weather be hot. We'll weather the weather, whatever the weather, whether we like it or not.",
+    "If two witches would watch two watches, which witch would watch which watch?",
+    "Six sticky skeletons. Six sticky skeletons. Six sticky skeletons."
+  ],
+  hard: [
+    "The sixth sick sheikh's sixth sheep's sick.",
+    "Pad kid poured curd pulled cod.",
+    "Imagine an imaginary menagerie manager imagining managing an imaginary menagerie.",
+    "Eleven benevolent elephants. Eleven benevolent elephants. Eleven benevolent elephants.",
+    "Rolling red wagons. Rolling red wagons. Rolling red wagons.",
+    "Irish wristwatch, Swiss wristwatch. Irish wristwatch, Swiss wristwatch.",
+    "Brisk brave brigadiers brandished broad bright blades, blunderbusses, and bludgeons — balancing them badly.",
+    "I slit a sheet, a sheet I slit, and on the slitted sheet I sit.",
+    "If you must cross a coarse cross cow across a crowded cow crossing, cross the cross coarse cow across the crowded cow crossing carefully.",
+    "The thirty-three thieves thought that they thrilled the throne throughout Thursday.",
+    "Wayne went to Wales to watch walruses. Wayne went to Wales to watch walruses.",
+    "She stood on the balcony inexplicably mimicking him hiccupping, and amicably welcoming him in.",
+    "Singing Sammy sung songs on sinking sand.",
+    "Rolling red wagons rolling rapidly. Rolling red wagons rolling rapidly.",
+    "Lesser leather never weathered wetter weather better."
+  ]
+};
+function render(id){
+  document.getElementById(id).innerHTML = TT[id].map((t,i) =>
+    '<div class="tt"><p>'+t.replace(/'/g,'&#39;')+'</p><button class="say" data-t="'+i+'-'+id+'" title="Listen"><i class="bi bi-volume-up-fill"></i></button></div>'
+  ).join('');
+}
+['easy','medium','hard'].forEach(render);
+document.body.addEventListener('click', e => {
+  const b = e.target.closest('.say'); if (!b) return;
+  const [i,id] = b.dataset.t.split('-');
+  const text = TT[id][+i];
+  if ('speechSynthesis' in window) {
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85; u.lang = 'en-US';
+    speechSynthesis.speak(u);
+  }
+});
+</script>
+</body></html>

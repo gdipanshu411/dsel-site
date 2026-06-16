@@ -7,34 +7,6 @@
   root.setAttribute('data-theme', initial);
 })();
 
-// Hindi translation: hook page-level switch via Google Translate
-(function(){
-  var lang = (JSON.parse(localStorage.getItem('dsel-prefs') || '{}')).lang;
-  if (lang === 'hi' || lang === 'en-hi') {
-    // Inject the Google Translate widget after DOM ready
-    document.addEventListener('DOMContentLoaded', function(){
-      if (document.getElementById('google_translate_element')) return;
-      var div = document.createElement('div');
-      div.id = 'google_translate_element';
-      div.style.cssText = 'position:fixed;top:80px;right:20px;z-index:60;background:var(--card-bg);padding:6px 10px;border-radius:8px;box-shadow:var(--shadow);border:1px solid var(--line)';
-      document.body.appendChild(div);
-      window.googleTranslateElementInit = function(){
-        new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'hi,en',layout:google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-        // Auto-trigger Hindi
-        if (lang === 'hi') {
-          setTimeout(function(){
-            var sel = document.querySelector('#google_translate_element select');
-            if (sel) { sel.value = 'hi'; sel.dispatchEvent(new Event('change')); }
-          }, 800);
-        }
-      };
-      var s = document.createElement('script');
-      s.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-      document.body.appendChild(s);
-    });
-  }
-})();
-
 // Google Sheet webhook URL (paste your Apps Script Web App URL)
 const SHEET_WEBHOOK_URL = '';
 function postToSheet(payload) {

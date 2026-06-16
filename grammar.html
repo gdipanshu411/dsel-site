@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<link rel="stylesheet" href="/css/style.css?v=5">
+<link rel="stylesheet" href="/css/style.css?v=12">
 <script>(function(){var s=localStorage.getItem('dsel-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));})();</script>
 </head>
 <body>
@@ -33,6 +33,17 @@
     <div class="drawer-section">
     <div class="drawer-label">Books &amp; Study Material</div>
     <a class="dlink" href="/books.html"><i class="bi bi-collection-fill"></i> All Books &amp; PDFs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/idioms-phrasal.html"><i class="bi bi-chat-square-quote-fill"></i> Idioms &amp; Phrasal Verbs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Speaking Resources</div>
+    <a class="dlink" href="/slang.html"><i class="bi bi-emoji-sunglasses-fill"></i> Slang &amp; Gen-Z Words<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/tongue-twisters.html"><i class="bi bi-mic-fill"></i> Tongue Twisters<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/phonetics.html"><i class="bi bi-soundwave"></i> Phonetic Chart<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+  </div>
+  <div class="drawer-section">
+    <div class="drawer-label">Learning Path</div>
+    <a class="dlink" href="/roadmap.html"><i class="bi bi-signpost-split-fill"></i> Roadmap to Learn English<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
   </div>
   <div class="drawer-section">
     <div class="drawer-label">Subscription</div>
@@ -50,6 +61,7 @@
   <div class="drawer-section">
     <div class="drawer-label">Support</div>
     <a class="dlink" href="/contact.html"><i class="bi bi-headset"></i> Contact Us<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
+    <a class="dlink" href="/feedback.html"><i class="bi bi-chat-quote-fill"></i> Feedback &amp; Comments<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
     <a class="dlink" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp Help<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
     <a class="dlink" href="/about.html"><i class="bi bi-info-circle-fill"></i> About<span class="arrow"><i class="bi bi-chevron-right"></i></span></a>
     <button class="dlink" id="drawerLogout" style="display:none;color:#dc2626"><i class="bi bi-box-arrow-right" style="color:#dc2626"></i> Logout<span class="arrow"><i class="bi bi-chevron-right"></i></span></button>
@@ -57,13 +69,13 @@
   <div class="drawer-foot">© <span class="year"></span> The Dream School of English Language · DSEL</div>
 </aside>
 
-<div class="topbar"><div class="container"><div><i class="bi bi-geo-alt"></i> Stadium Road, Sidhi, MP — 486661</div><div><a href="tel:+918770462942"><i class="bi bi-telephone"></i> +91 8770462942</a></div></div></div>
-<header class="header"><div class="container nav">
-<div class="header-left"><button class="drawer-toggle" id="drawerToggle" aria-label="Open menu"><i class="bi bi-list"></i></button><a class="brand" href="/"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo"><span class="brand-name"><span class="full">The Dream School of English Language <span style="color:var(--brand)">(DSEL)</span></span><small>Sidhi · Madhya Pradesh — since 2011</small></span></a></div>
-<button class="menu-toggle" aria-label="Open menu"><i class="bi bi-list"></i></button>
-<ul class="menu"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/courses.html">Courses</a></li><li><a href="/activities.html">Activities</a></li><li><a href="/news.html">News</a></li><li><a href="/events.html">Events</a></li><li><a href="/tests.html">Tests</a></li><li><a href="/contact.html">Contact</a></li></ul>
-<div class="nav-cta"><a href="/login.html" class="btn btn-ghost">Login</a><a href="/register.html" class="btn btn-primary">Sign Up</a></div>
-</div></header>
+<header class="header">
+  <div class="container nav">
+    <div class="header-left"><button class="drawer-toggle" id="drawerToggle" aria-label="Open menu"><i class="bi bi-list"></i></button><a class="brand" href="/"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo"><span class="brand-name"><span class="full">The Dream School of English Language <span style="color:var(--brand)">(DSEL)</span></span><small><i class="bi bi-geo-alt-fill"></i> Stadium Road, Sidhi, MP — 486661 · Since 2011</small></span></a></div>
+    <div class="header-right"><button class="menu-toggle" aria-label="Open navigation"><i class="bi bi-list"></i></button><div class="nav-cta"><span class="auth-pill"><a href="/login.html">Login</a><span class="sep">/</span><a class="signup" href="/register.html">Sign Up</a></span></div></div>
+  </div>
+  <div class="header-row2"><div class="container"><ul class="menu"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/courses.html">Courses</a></li><li><a href="/activities.html">Activities</a></li><li><a href="/news.html">News</a></li><li><a href="/events.html">Events</a></li><li><a href="/tests.html">Tests</a></li><li><a href="/contact.html">Contact</a></li></ul></div></div>
+</header>
 
 <main style="padding:50px 0">
   <div class="container" style="max-width:1080px">
@@ -101,7 +113,7 @@
 </style>
 
 <a class="fab-wa" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
-<script src="/js/main.js?v=5"></script>
+<script src="/js/main.js?v=12"></script>
 <script>
 (function(){
   var topics = [
@@ -384,6 +396,351 @@
 <tr><td>I am loving it (incorrect in formal)</td><td>I love it</td></tr>
 <tr><td>Mention about</td><td>Mention</td></tr>
 </table>
+`},
+    {id:'nouns',title:'Nouns (Detailed)',html:`
+<h2>Nouns — Detailed</h2>
+<p>A noun is a word that names a person, place, thing, or idea.</p>
+<h3>Types of Nouns</h3>
+<table>
+<tr><th>Type</th><th>Meaning</th><th>Examples</th></tr>
+<tr><td>Common</td><td>General names</td><td>boy, school, country</td></tr>
+<tr><td>Proper</td><td>Specific names (capital letter)</td><td>Ravi, Sidhi, India</td></tr>
+<tr><td>Collective</td><td>Group of things</td><td>team, class, herd, family</td></tr>
+<tr><td>Abstract</td><td>Idea or feeling</td><td>love, freedom, courage</td></tr>
+<tr><td>Material</td><td>Substance</td><td>gold, water, wood</td></tr>
+<tr><td>Countable</td><td>Can be counted</td><td>book, pen, chair</td></tr>
+<tr><td>Uncountable</td><td>Cannot be counted</td><td>milk, sugar, advice</td></tr>
+</table>
+<h3>Singular &amp; Plural</h3>
+<ul>
+<li>Add <strong>-s</strong>: book → books, pen → pens</li>
+<li>Add <strong>-es</strong> after s, ss, sh, ch, x: bus → buses, box → boxes</li>
+<li>Words ending in consonant + y → change y to <strong>-ies</strong>: city → cities, story → stories</li>
+<li>Words ending in <strong>-f / -fe</strong> → change to <strong>-ves</strong>: leaf → leaves, knife → knives</li>
+<li>Irregular plurals: man → men, woman → women, child → children, foot → feet, tooth → teeth, mouse → mice</li>
+<li>Same form: sheep → sheep, fish → fish, deer → deer</li>
+</ul>
+<h3>Possessive Form</h3>
+<ul>
+<li>Singular: add <strong>'s</strong> → Ravi's book, the boy's bag</li>
+<li>Plural ending in s: add <strong>'</strong> only → boys' books, the students' room</li>
+<li>Plural not ending in s: add <strong>'s</strong> → children's toys, men's shoes</li>
+</ul>
+`},
+    {id:'pronouns',title:'Pronouns (All Types)',html:`
+<h2>Pronouns — All Types</h2>
+<p>Pronouns replace nouns to avoid repetition.</p>
+<h3>Personal Pronouns</h3>
+<table>
+<tr><th>Person</th><th>Subject</th><th>Object</th><th>Possessive</th><th>Reflexive</th></tr>
+<tr><td>1st singular</td><td>I</td><td>me</td><td>my / mine</td><td>myself</td></tr>
+<tr><td>2nd</td><td>you</td><td>you</td><td>your / yours</td><td>yourself</td></tr>
+<tr><td>3rd masculine</td><td>he</td><td>him</td><td>his</td><td>himself</td></tr>
+<tr><td>3rd feminine</td><td>she</td><td>her</td><td>her / hers</td><td>herself</td></tr>
+<tr><td>3rd neuter</td><td>it</td><td>it</td><td>its</td><td>itself</td></tr>
+<tr><td>1st plural</td><td>we</td><td>us</td><td>our / ours</td><td>ourselves</td></tr>
+<tr><td>3rd plural</td><td>they</td><td>them</td><td>their / theirs</td><td>themselves</td></tr>
+</table>
+<h3>Demonstrative Pronouns</h3>
+<p><strong>this, that, these, those</strong> — point to specific things.</p>
+<div class="ex"><strong>This</strong> is my book. <strong>Those</strong> are my friends.</div>
+<h3>Interrogative Pronouns</h3>
+<p><strong>who, whom, whose, which, what</strong> — used in questions.</p>
+<div class="ex"><strong>Who</strong> is at the door? <strong>What</strong> do you want?</div>
+<h3>Indefinite Pronouns</h3>
+<p>someone, anyone, everyone, nobody, something, anything, nothing, all, some, many, few, several</p>
+<div class="ex"><strong>Someone</strong> is calling you. <strong>Nothing</strong> is impossible.</div>
+<h3>Relative Pronouns</h3>
+<p><strong>who, whom, whose, which, that</strong> — connect clauses.</p>
+<div class="ex">The man <strong>who</strong> called me is my uncle. The book <strong>that</strong> you gave me is great.</div>
+`},
+    {id:'adverbs',title:'Adverbs (Detailed)',html:`
+<h2>Adverbs — Detailed</h2>
+<p>Adverbs modify verbs, adjectives, or other adverbs. They tell <strong>how, when, where, how often, to what degree</strong>.</p>
+<h3>Types of Adverbs</h3>
+<table>
+<tr><th>Type</th><th>Question</th><th>Examples</th></tr>
+<tr><td>Manner</td><td>How?</td><td>quickly, slowly, well, badly, carefully</td></tr>
+<tr><td>Time</td><td>When?</td><td>now, today, yesterday, soon, already, still</td></tr>
+<tr><td>Place</td><td>Where?</td><td>here, there, everywhere, inside, outside</td></tr>
+<tr><td>Frequency</td><td>How often?</td><td>always, often, sometimes, rarely, never</td></tr>
+<tr><td>Degree</td><td>How much?</td><td>very, too, quite, almost, completely</td></tr>
+</table>
+<h3>Forming Adverbs</h3>
+<ul>
+<li>Most: adjective + <strong>-ly</strong> → quick → quickly, careful → carefully</li>
+<li>Words ending in -y: change y to i + ly → easy → easily, happy → happily</li>
+<li>Words ending in -le: change to -ly → simple → simply, gentle → gently</li>
+<li>Words ending in -ic: add -ally → tragic → tragically</li>
+<li>Irregular: good → well, fast → fast, hard → hard, late → late</li>
+</ul>
+<h3>Position</h3>
+<ul>
+<li><strong>Adverb of frequency</strong> goes <em>before</em> the main verb but <em>after</em> "be": <em>I always come on time. She is always late.</em></li>
+<li><strong>Adverb of manner</strong> usually goes <em>after</em> the verb or object: <em>He runs quickly. She speaks English fluently.</em></li>
+<li><strong>Time adverbs</strong> usually go at the end or beginning: <em>I will come tomorrow. Yesterday, I went home.</em></li>
+</ul>
+`},
+    {id:'comparison',title:'Comparison (Comparative & Superlative)',html:`
+<h2>Comparative &amp; Superlative</h2>
+<p>Used to compare two or more things.</p>
+<h3>Three Forms</h3>
+<table>
+<tr><th>Positive</th><th>Comparative (2 things)</th><th>Superlative (3+ things)</th></tr>
+<tr><td>tall</td><td>taller</td><td>tallest</td></tr>
+<tr><td>big</td><td>bigger</td><td>biggest</td></tr>
+<tr><td>happy</td><td>happier</td><td>happiest</td></tr>
+<tr><td>beautiful</td><td>more beautiful</td><td>most beautiful</td></tr>
+<tr><td>good</td><td>better</td><td>best</td></tr>
+<tr><td>bad</td><td>worse</td><td>worst</td></tr>
+<tr><td>much / many</td><td>more</td><td>most</td></tr>
+<tr><td>little</td><td>less</td><td>least</td></tr>
+<tr><td>far</td><td>farther / further</td><td>farthest / furthest</td></tr>
+</table>
+<h3>Rules</h3>
+<ul>
+<li><strong>Short adjectives</strong> (1 syllable): add <strong>-er / -est</strong> → fast → faster → fastest</li>
+<li><strong>Ending in -e</strong>: just add -r / -st → large → larger → largest</li>
+<li><strong>Ending in consonant + y</strong>: change y to i, add -er/-est → happy → happier → happiest</li>
+<li><strong>Short words ending in vowel + consonant</strong>: double the consonant → big → bigger → biggest</li>
+<li><strong>Long adjectives</strong> (2+ syllables): use <strong>more / most</strong> → beautiful → more beautiful → most beautiful</li>
+</ul>
+<h3>Common Patterns</h3>
+<div class="ex">Ravi is <strong>taller than</strong> Mohan.</div>
+<div class="ex">She is <strong>the smartest</strong> student in the class.</div>
+<div class="ex">English is <strong>more useful than</strong> I expected.</div>
+<div class="ex">This is <strong>the most interesting</strong> book I have read.</div>
+<h3>Equal Comparison</h3>
+<p>Use <strong>as ... as</strong> for equal comparison.</p>
+<div class="ex">He is <strong>as tall as</strong> his brother.</div>
+<div class="ex">She is <strong>not as fast as</strong> me.</div>
+`},
+    {id:'conditionals',title:'Conditionals (If-Sentences)',html:`
+<h2>Conditional Sentences (If-Clauses)</h2>
+<p>Used to talk about possible situations and their results.</p>
+<h3>Type 0 — General Truths</h3>
+<div class="form">If + Present Simple, Present Simple</div>
+<div class="ex"><strong>If</strong> you heat ice, it <strong>melts</strong>.</div>
+<div class="ex"><strong>If</strong> it <strong>rains</strong>, the ground <strong>gets</strong> wet.</div>
+<h3>Type 1 — Real Future</h3>
+<div class="form">If + Present Simple, will + V1</div>
+<p>Used for likely future events.</p>
+<div class="ex"><strong>If</strong> you <strong>study</strong>, you <strong>will pass</strong>.</div>
+<div class="ex"><strong>If</strong> it rains tomorrow, we <strong>will stay</strong> home.</div>
+<h3>Type 2 — Unreal / Imaginary</h3>
+<div class="form">If + Past Simple, would + V1</div>
+<p>Used for imaginary or unlikely situations.</p>
+<div class="ex"><strong>If</strong> I <strong>were</strong> rich, I <strong>would help</strong> the poor.</div>
+<div class="ex"><strong>If</strong> she <strong>spoke</strong> English, she <strong>would get</strong> the job.</div>
+<h3>Type 3 — Past Imaginary (Regret)</h3>
+<div class="form">If + Past Perfect, would have + V3</div>
+<p>Used for things that did not happen.</p>
+<div class="ex"><strong>If</strong> you <strong>had studied</strong>, you <strong>would have passed</strong>.</div>
+<div class="ex"><strong>If</strong> I <strong>had known</strong>, I <strong>would have told</strong> you.</div>
+<h3>Mixed</h3>
+<div class="ex">If I <strong>had studied</strong> harder (past), I <strong>would be</strong> a doctor now (present).</div>
+`},
+    {id:'gerund-infinitive',title:'Gerunds & Infinitives',html:`
+<h2>Gerunds &amp; Infinitives</h2>
+<h3>Gerund (V-ing as a noun)</h3>
+<p>The -ing form of a verb used as a noun.</p>
+<div class="ex"><strong>Swimming</strong> is good exercise. <em>(subject)</em></div>
+<div class="ex">I love <strong>reading</strong>. <em>(object)</em></div>
+<div class="ex">He is good at <strong>singing</strong>. <em>(after preposition)</em></div>
+<h3>Infinitive (to + V1)</h3>
+<div class="ex">I want <strong>to learn</strong> English.</div>
+<div class="ex">It is hard <strong>to forget</strong> her.</div>
+<h3>Verbs Followed by Gerund (-ing)</h3>
+<p>enjoy, avoid, finish, mind, suggest, practice, keep, stop, miss, deny, admit, consider, imagine</p>
+<div class="ex">I enjoy <strong>watching</strong> films. (NOT to watch)</div>
+<h3>Verbs Followed by Infinitive (to + V1)</h3>
+<p>want, decide, hope, plan, expect, agree, refuse, learn, promise, offer, choose, manage, fail, seem</p>
+<div class="ex">She decided <strong>to study</strong>. (NOT studying)</div>
+<h3>Verbs With Either</h3>
+<p>begin, start, continue, like, love, hate, prefer — meaning is the same.</p>
+<div class="ex">It started <strong>raining</strong> / It started <strong>to rain</strong>.</div>
+<h3>Common Confusion</h3>
+<table>
+<tr><th>Verb + -ing</th><th>Verb + to V1</th></tr>
+<tr><td>Stop <strong>smoking</strong> (quit smoking)</td><td>Stop <strong>to smoke</strong> (pause to smoke)</td></tr>
+<tr><td>Remember <strong>locking</strong> (you locked, recall)</td><td>Remember <strong>to lock</strong> (don't forget)</td></tr>
+<tr><td>Try <strong>opening</strong> (experiment)</td><td>Try <strong>to open</strong> (make effort)</td></tr>
+</table>
+`},
+    {id:'phrasal-verbs',title:'Phrasal Verbs',html:`
+<h2>Phrasal Verbs</h2>
+<p>Verb + preposition or adverb that creates a new meaning. Very common in spoken English.</p>
+<h3>Most Useful Phrasal Verbs</h3>
+<table>
+<tr><th>Phrasal Verb</th><th>Meaning</th><th>Example</th></tr>
+<tr><td>break down</td><td>stop working; lose control</td><td>The car broke down. She broke down crying.</td></tr>
+<tr><td>bring up</td><td>raise (a topic / a child)</td><td>Don't bring up that topic.</td></tr>
+<tr><td>call off</td><td>cancel</td><td>They called off the match.</td></tr>
+<tr><td>carry on</td><td>continue</td><td>Carry on with your work.</td></tr>
+<tr><td>come across</td><td>find by chance</td><td>I came across an old photo.</td></tr>
+<tr><td>find out</td><td>discover</td><td>I will find out the truth.</td></tr>
+<tr><td>get along</td><td>have good relations</td><td>I get along with my classmates.</td></tr>
+<tr><td>get up</td><td>rise from bed</td><td>I get up at 6.</td></tr>
+<tr><td>give up</td><td>quit; surrender</td><td>Don't give up.</td></tr>
+<tr><td>go on</td><td>continue</td><td>Go on with your speech.</td></tr>
+<tr><td>hand in</td><td>submit</td><td>Hand in your homework.</td></tr>
+<tr><td>hold on</td><td>wait</td><td>Hold on a moment.</td></tr>
+<tr><td>keep on</td><td>continue</td><td>Keep on practicing.</td></tr>
+<tr><td>look after</td><td>take care of</td><td>She looks after her brother.</td></tr>
+<tr><td>look for</td><td>search</td><td>I am looking for my pen.</td></tr>
+<tr><td>look up</td><td>search (in dictionary)</td><td>Look up the word.</td></tr>
+<tr><td>make up</td><td>invent; reconcile</td><td>He made up a story.</td></tr>
+<tr><td>pick up</td><td>lift; collect; learn</td><td>I picked up some Hindi.</td></tr>
+<tr><td>put off</td><td>postpone</td><td>Don't put off till tomorrow.</td></tr>
+<tr><td>put on</td><td>wear</td><td>Put on your jacket.</td></tr>
+<tr><td>run out (of)</td><td>have no more</td><td>We ran out of milk.</td></tr>
+<tr><td>set up</td><td>establish</td><td>He set up a business.</td></tr>
+<tr><td>show up</td><td>arrive</td><td>He didn't show up.</td></tr>
+<tr><td>take off</td><td>remove; airplane departs</td><td>Take off your shoes.</td></tr>
+<tr><td>turn down</td><td>refuse; lower volume</td><td>He turned down the offer.</td></tr>
+<tr><td>turn up</td><td>arrive; raise volume</td><td>She turned up late.</td></tr>
+<tr><td>work out</td><td>exercise; solve</td><td>Let's work out the answer.</td></tr>
+</table>
+`},
+    {id:'questions',title:'Question Formation',html:`
+<h2>How to Form Questions in English</h2>
+<h3>Yes/No Questions</h3>
+<p>Put auxiliary verb (do, does, did, is, am, are, was, were, can, will…) <strong>before</strong> the subject.</p>
+<div class="ex"><strong>Do</strong> you like English? <strong>Did</strong> they come?</div>
+<div class="ex"><strong>Are</strong> you ready? <strong>Was</strong> she happy?</div>
+<div class="ex"><strong>Can</strong> you help me? <strong>Will</strong> he come?</div>
+<h3>Wh-Questions (Open questions)</h3>
+<p>Wh-word + auxiliary + subject + verb</p>
+<table>
+<tr><th>Wh-word</th><th>Asks about</th><th>Example</th></tr>
+<tr><td>What</td><td>thing</td><td>What is your name?</td></tr>
+<tr><td>Who</td><td>person</td><td>Who is calling?</td></tr>
+<tr><td>Whom</td><td>person (object)</td><td>Whom did you meet?</td></tr>
+<tr><td>Whose</td><td>possession</td><td>Whose pen is this?</td></tr>
+<tr><td>Where</td><td>place</td><td>Where do you live?</td></tr>
+<tr><td>When</td><td>time</td><td>When will you come?</td></tr>
+<tr><td>Why</td><td>reason</td><td>Why are you late?</td></tr>
+<tr><td>Which</td><td>choice</td><td>Which book is yours?</td></tr>
+<tr><td>How</td><td>manner / degree</td><td>How are you?</td></tr>
+<tr><td>How many / much</td><td>quantity</td><td>How many books do you have?</td></tr>
+<tr><td>How long</td><td>duration</td><td>How long have you studied?</td></tr>
+<tr><td>How often</td><td>frequency</td><td>How often do you exercise?</td></tr>
+</table>
+<h3>Question Tags</h3>
+<p>Short question added at the end. Positive sentence → negative tag, and vice versa.</p>
+<div class="ex">You are a student, <strong>aren't you</strong>?</div>
+<div class="ex">She doesn't know him, <strong>does she</strong>?</div>
+<div class="ex">He will come, <strong>won't he</strong>?</div>
+<div class="ex">They have finished, <strong>haven't they</strong>?</div>
+`},
+    {id:'determiners',title:'Determiners',html:`
+<h2>Determiners</h2>
+<p>Words placed before a noun to give information about it (definiteness, quantity, possession).</p>
+<h3>Types</h3>
+<table>
+<tr><th>Type</th><th>Examples</th></tr>
+<tr><td>Articles</td><td>a, an, the</td></tr>
+<tr><td>Demonstratives</td><td>this, that, these, those</td></tr>
+<tr><td>Possessives</td><td>my, your, his, her, its, our, their</td></tr>
+<tr><td>Quantifiers</td><td>some, any, much, many, few, little, all, every, each</td></tr>
+<tr><td>Numbers</td><td>one, two, first, second</td></tr>
+<tr><td>Distributives</td><td>each, every, either, neither</td></tr>
+</table>
+<h3>Common Quantifier Rules</h3>
+<ul>
+<li><strong>Many</strong> with countable nouns: many books, many students</li>
+<li><strong>Much</strong> with uncountable nouns: much water, much time</li>
+<li><strong>Few / a few</strong> with countable: a few friends</li>
+<li><strong>Little / a little</strong> with uncountable: a little sugar</li>
+<li><strong>Some</strong> in positive sentences: I have some books.</li>
+<li><strong>Any</strong> in negatives and questions: I don't have any. Do you have any?</li>
+</ul>
+`},
+    {id:'numbers',title:'Numbers, Time & Dates',html:`
+<h2>Numbers, Time &amp; Dates</h2>
+<h3>Cardinal Numbers</h3>
+<p>one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, twenty, thirty, hundred, thousand, lakh, million, crore</p>
+<h3>Ordinal Numbers</h3>
+<p>first (1st), second (2nd), third (3rd), fourth (4th), fifth, sixth, ninth, twelfth, twentieth, thirtieth</p>
+<h3>Telling Time</h3>
+<ul>
+<li>9:00 → "nine o'clock" or "9 a.m." / "9 p.m."</li>
+<li>9:15 → "quarter past nine" or "nine fifteen"</li>
+<li>9:30 → "half past nine"</li>
+<li>9:45 → "quarter to ten"</li>
+<li>9:50 → "ten to ten" or "nine fifty"</li>
+</ul>
+<h3>Dates</h3>
+<ul>
+<li>Written: 15 August 2026 / August 15, 2026</li>
+<li>Spoken: "the fifteenth of August, two thousand twenty-six"</li>
+<li>Days: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday</li>
+<li>Months: January, February, March, April, May, June, July, August, September, October, November, December</li>
+</ul>
+<h3>Useful Time Expressions</h3>
+<p>at noon, at midnight, in the morning, in the evening, at night, on Monday, on the weekend, in summer, in 2026, last week, next month, the day after tomorrow, the day before yesterday</p>
+`},
+    {id:'spelling',title:'Spelling Rules',html:`
+<h2>Common Spelling Rules</h2>
+<h3>Adding -s / -es</h3>
+<ul>
+<li>Most words: add -s → cats, books</li>
+<li>Words ending in s, ss, sh, ch, x, z: add -es → buses, boxes, watches</li>
+<li>Words ending in consonant + y: change y to i, add -es → city → cities</li>
+<li>Words ending in vowel + y: just add -s → boy → boys</li>
+<li>Words ending in -f / -fe: change to -ves → leaf → leaves</li>
+</ul>
+<h3>Adding -ing</h3>
+<ul>
+<li>Drop silent -e: come → coming, write → writing</li>
+<li>Double consonant (CVC): run → running, sit → sitting, swim → swimming</li>
+<li>Words ending in -ie: change to -y, add -ing → die → dying, lie → lying</li>
+</ul>
+<h3>Adding -ed</h3>
+<ul>
+<li>Most: add -ed → walked, cleaned</li>
+<li>Words ending in -e: add only -d → loved, hoped</li>
+<li>Words ending in consonant + y: change y to i, add -ed → cried, tried</li>
+<li>Double consonant (CVC): stop → stopped, plan → planned</li>
+</ul>
+<h3>Common Spelling Mistakes</h3>
+<table>
+<tr><th>Wrong</th><th>Right</th></tr>
+<tr><td>recieve</td><td>receive</td></tr>
+<tr><td>seperate</td><td>separate</td></tr>
+<tr><td>definately</td><td>definitely</td></tr>
+<tr><td>occured</td><td>occurred</td></tr>
+<tr><td>begining</td><td>beginning</td></tr>
+<tr><td>which one is right</td><td>which is correct</td></tr>
+<tr><td>alot</td><td>a lot</td></tr>
+</table>
+`},
+    {id:'idioms',title:'Common Idioms',html:`
+<h2>Common English Idioms</h2>
+<p>Idioms are expressions whose meaning is not literal. They are very common in spoken English.</p>
+<table>
+<tr><th>Idiom</th><th>Meaning</th></tr>
+<tr><td>A piece of cake</td><td>very easy</td></tr>
+<tr><td>Break the ice</td><td>start a conversation</td></tr>
+<tr><td>Once in a blue moon</td><td>very rarely</td></tr>
+<tr><td>Hit the books</td><td>start studying</td></tr>
+<tr><td>Under the weather</td><td>feeling sick</td></tr>
+<tr><td>Cost an arm and a leg</td><td>very expensive</td></tr>
+<tr><td>Bite the bullet</td><td>face a difficult situation bravely</td></tr>
+<tr><td>Spill the beans</td><td>reveal a secret</td></tr>
+<tr><td>Pull someone's leg</td><td>tease someone</td></tr>
+<tr><td>It's raining cats and dogs</td><td>raining heavily</td></tr>
+<tr><td>Best of both worlds</td><td>enjoying two advantages</td></tr>
+<tr><td>Speak of the devil</td><td>the person we are talking about appears</td></tr>
+<tr><td>The ball is in your court</td><td>your decision now</td></tr>
+<tr><td>By the skin of one's teeth</td><td>just barely</td></tr>
+<tr><td>Cut to the chase</td><td>get to the point</td></tr>
+<tr><td>Get cold feet</td><td>become nervous</td></tr>
+<tr><td>Hit the nail on the head</td><td>say something exactly right</td></tr>
+<tr><td>Let the cat out of the bag</td><td>reveal a secret</td></tr>
+<tr><td>Miss the boat</td><td>miss an opportunity</td></tr>
+<tr><td>On the same page</td><td>in agreement</td></tr>
+</table>
 `}
   ];
   var nav = document.getElementById('gnav');
@@ -403,5 +760,6 @@
   show(location.hash.slice(1) || 'parts');
 })();
 </script>
-<script src="/js/chat-widget.js?v=5"></script>
+<script src="/js/chat-widget.js?v=13"></script>
+<script src="/js/voice-assistant.js?v=1"></script>
 </body></html>

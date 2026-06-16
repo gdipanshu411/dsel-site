@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Idioms & Phrasal Verbs — DSEL</title>
+<link rel="icon" href="/img/original/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/css/style.css?v=12">
+<script>(function(){var s=localStorage.getItem('dsel-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));})();</script>
+</head>
+<body>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><div class="drawer-avatar" id="drawerAvatar">G</div><div class="drawer-user"><strong id="drawerUserName">Guest</strong><small id="drawerUserMail">Sign in to access your account</small></div><button class="drawer-close" id="drawerClose"><i class="bi bi-x-lg"></i></button></div>
+  <div class="drawer-section" id="drawerAuthBlock"><div class="drawer-label">Account</div><a class="dlink" href="/login.html"><i class="bi bi-box-arrow-in-right"></i> Login<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/register.html"><i class="bi bi-person-plus-fill"></i> Sign Up<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section" id="drawerUserBlock" style="display:none"><div class="drawer-label">My Profile</div><a class="dlink" href="/profile.html"><i class="bi bi-person-circle"></i> View Profile<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/my-courses.html"><i class="bi bi-mortarboard-fill"></i> My Courses<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/progress.html"><i class="bi bi-graph-up"></i> Progress<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/certificates.html"><i class="bi bi-award-fill"></i> Certificates<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Books &amp; Study Material</div><a class="dlink" href="/books.html"><i class="bi bi-collection-fill"></i> All Books &amp; PDFs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/idioms-phrasal.html"><i class="bi bi-chat-square-quote-fill"></i> Idioms &amp; Phrasal Verbs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Speaking Resources</div><a class="dlink" href="/slang.html"><i class="bi bi-emoji-sunglasses-fill"></i> Slang &amp; Gen-Z Words<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/tongue-twisters.html"><i class="bi bi-mic-fill"></i> Tongue Twisters<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/phonetics.html"><i class="bi bi-soundwave"></i> Phonetic Chart<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Learning Path</div><a class="dlink" href="/roadmap.html"><i class="bi bi-signpost-split-fill"></i> Roadmap to Learn English<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Subscription</div><a class="dlink" href="/courses.html"><i class="bi bi-stars"></i> My Plan<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/billing.html"><i class="bi bi-receipt"></i> Billing &amp; Payments<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Preferences</div><button class="dlink" id="drawerThemeToggle"><i class="bi bi-moon-stars-fill"></i> <span id="drawerThemeLabel">Dark Mode</span><span class="arrow"><i class="bi bi-chevron-right"></i></span></button><a class="dlink" href="/settings.html#language"><i class="bi bi-translate"></i> Language<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/notifications.html"><i class="bi bi-bell-fill"></i> Notifications<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/settings.html"><i class="bi bi-gear-fill"></i> Settings<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Support</div><a class="dlink" href="/contact.html"><i class="bi bi-headset"></i> Contact Us<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/feedback.html"><i class="bi bi-chat-quote-fill"></i> Feedback &amp; Comments<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> WhatsApp Help<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><button class="dlink" id="drawerLogout" style="display:none;color:#dc2626"><i class="bi bi-box-arrow-right" style="color:#dc2626"></i> Logout<span class="arrow"><i class="bi bi-chevron-right"></i></span></button></div>
+  <div class="drawer-foot">© <span class="year"></span> The Dream School of English Language · DSEL</div>
+</aside>
+
+<header class="header">
+  <div class="container nav">
+    <div class="header-left"><button class="drawer-toggle" id="drawerToggle" aria-label="Open menu"><i class="bi bi-list"></i></button><a class="brand" href="/"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo"><span class="brand-name"><span class="full">The Dream School of English Language <span style="color:var(--brand)">(DSEL)</span></span><small><i class="bi bi-geo-alt-fill"></i> Stadium Road, Sidhi, MP — 486661 · Since 2011</small></span></a></div>
+    <div class="header-right"><button class="menu-toggle" aria-label="Open navigation"><i class="bi bi-list"></i></button><div class="nav-cta"><span class="auth-pill"><a href="/login.html">Login</a><span class="sep">/</span><a class="signup" href="/register.html">Sign Up</a></span></div></div>
+  </div>
+  <div class="header-row2"><div class="container"><ul class="menu"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/courses.html">Courses</a></li><li><a href="/activities.html">Activities</a></li><li><a href="/news.html">News</a></li><li><a href="/events.html">Events</a></li><li><a href="/tests.html">Tests</a></li><li><a href="/contact.html">Contact</a></li></ul></div></div>
+</header>
+<main style="padding:50px 0">
+  <div class="container" style="max-width:1080px">
+    <div class="crumbs"><a href="/">Home</a> · <a href="/books.html">Books</a> · Idioms &amp; Phrasal Verbs</div>
+    <h1 style="margin-bottom:10px">Idioms &amp; Phrasal Verbs</h1>
+    <p style="color:var(--ink-soft);margin-bottom:24px">The most common idioms and phrasal verbs used in everyday English. Learn these and your speaking will sound natural.</p>
+
+    <div class="card" style="padding:24px;margin-bottom:24px">
+      <input id="search" type="text" placeholder="Search idiom or phrasal verb…" style="width:100%;padding:14px 18px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit;font-size:1.05rem">
+      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap" id="tabs">
+        <button class="qp on" data-cat="all">All</button>
+        <button class="qp" data-cat="idiom">Idioms</button>
+        <button class="qp" data-cat="phrasal">Phrasal Verbs</button>
+      </div>
+    </div>
+
+    <div id="list"></div>
+  </div>
+</main>
+<style>
+.qp{padding:8px 16px;background:var(--bg-alt);border:1px solid var(--line);border-radius:999px;cursor:pointer;font-size:.85rem;font-weight:600;color:var(--ink-soft);transition:.15s;font-family:inherit}
+.qp:hover,.qp.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.row{display:grid;grid-template-columns:1.1fr 1.6fr 1.6fr;gap:18px;padding:14px 18px;border-bottom:1px solid var(--line);align-items:start}
+.row strong{color:var(--ink);font-size:1.02rem}
+.row .meaning{color:var(--ink-soft)}
+.row .ex{color:var(--muted);font-style:italic}
+.row .pill{flex-shrink:0}
+@media (max-width:780px){.row{grid-template-columns:1fr;gap:6px}}
+</style>
+<a class="fab-wa" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+<script src="/js/main.js?v=12"></script>
+<script src="/js/chat-widget.js?v=13"></script>
+<script src="/js/voice-assistant.js?v=1"></script>
+<script>
+const DATA = [
+  // === Idioms ===
+  ['idiom','A piece of cake','Very easy','That math problem was a piece of cake.'],
+  ['idiom','Break the ice','Start a conversation in social settings','He told a joke to break the ice.'],
+  ['idiom','Once in a blue moon','Very rarely','I see my old friends once in a blue moon.'],
+  ['idiom','Hit the books','Start studying seriously','I have an exam tomorrow, time to hit the books.'],
+  ['idiom','Under the weather','Feeling sick','I am feeling a bit under the weather today.'],
+  ['idiom','Cost an arm and a leg','Very expensive','That phone costs an arm and a leg.'],
+  ['idiom','Bite the bullet','Face a difficult situation bravely','I had to bite the bullet and tell the truth.'],
+  ['idiom','Spill the beans','Reveal a secret','Don\'t spill the beans about the surprise party.'],
+  ['idiom','Pull someone\'s leg','Tease someone playfully','I am just pulling your leg, relax.'],
+  ['idiom','It\'s raining cats and dogs','Raining very heavily','Take an umbrella, it\'s raining cats and dogs.'],
+  ['idiom','Best of both worlds','Enjoying two advantages at once','Working from home gives the best of both worlds.'],
+  ['idiom','Speak of the devil','The person we were just talking about appears','Speak of the devil — here he comes!'],
+  ['idiom','The ball is in your court','It\'s your decision now','I\'ve made my offer; the ball is in your court.'],
+  ['idiom','By the skin of one\'s teeth','Just barely','I passed the exam by the skin of my teeth.'],
+  ['idiom','Cut to the chase','Get to the point','Cut to the chase and tell me what happened.'],
+  ['idiom','Get cold feet','Become nervous before doing something','He got cold feet before the speech.'],
+  ['idiom','Hit the nail on the head','Say something exactly right','You hit the nail on the head with that answer.'],
+  ['idiom','Let the cat out of the bag','Reveal a secret accidentally','He let the cat out of the bag about the new job.'],
+  ['idiom','Miss the boat','Miss an opportunity','I missed the boat on that investment.'],
+  ['idiom','On the same page','In agreement','Make sure we are all on the same page.'],
+  ['idiom','Burn the midnight oil','Work or study late into the night','I burned the midnight oil before the test.'],
+  ['idiom','Beat around the bush','Avoid saying directly','Stop beating around the bush and answer me.'],
+  ['idiom','Cut corners','Do something the cheap or easy way','Don\'t cut corners on quality.'],
+  ['idiom','Down to the wire','Until the very last moment','It came down to the wire at the end of the game.'],
+  ['idiom','Easier said than done','Hard to actually do','Quitting smoking is easier said than done.'],
+  ['idiom','Get out of hand','Get out of control','The party got out of hand last night.'],
+  ['idiom','Go the extra mile','Make a special effort','She always goes the extra mile for her students.'],
+  ['idiom','In the same boat','In the same difficult situation','We are all in the same boat with this problem.'],
+  ['idiom','It\'s not rocket science','It\'s not very difficult','Setting up email is not rocket science.'],
+  ['idiom','Jump on the bandwagon','Join a popular trend','Many people are jumping on the AI bandwagon.'],
+  ['idiom','Keep an eye on','Watch carefully','Keep an eye on the children at the pool.'],
+  ['idiom','Kick the bucket','To die (slang, casual)','He kicked the bucket at the age of 99.'],
+  ['idiom','Last straw','Final problem that breaks patience','That comment was the last straw.'],
+  ['idiom','Make a long story short','To summarize','To make a long story short, we won.'],
+  ['idiom','No pain, no gain','Effort needed for success','Practice English daily — no pain, no gain.'],
+  ['idiom','Off the top of my head','From memory, without checking','Off the top of my head, I don\'t remember the date.'],
+  ['idiom','Out of the blue','Unexpectedly','He called me out of the blue yesterday.'],
+  ['idiom','Pay through the nose','Pay too much','We paid through the nose for those tickets.'],
+  ['idiom','Piece by piece','Gradually','I am learning English piece by piece.'],
+  ['idiom','Read between the lines','Find hidden meaning','You have to read between the lines of his message.'],
+  ['idiom','Ring a bell','Sound familiar','That name rings a bell.'],
+  ['idiom','See eye to eye','Agree completely','We see eye to eye on this matter.'],
+  ['idiom','Steal someone\'s thunder','Take attention away from someone','He stole my thunder by announcing it first.'],
+  ['idiom','Take with a grain of salt','Don\'t fully believe','Take his stories with a grain of salt.'],
+  ['idiom','Two peas in a pod','Very similar people','The twins are like two peas in a pod.'],
+  ['idiom','Up in the air','Uncertain','Our plans are still up in the air.'],
+  ['idiom','Wrap your head around','Understand something difficult','I can\'t wrap my head around this idea.'],
+  ['idiom','Your guess is as good as mine','I don\'t know either','When will the rain stop? Your guess is as good as mine.'],
+  ['idiom','Add fuel to the fire','Make a problem worse','Don\'t argue, you\'ll add fuel to the fire.'],
+  ['idiom','Actions speak louder than words','What you do matters more than what you say','Stop promising — actions speak louder than words.'],
+  ['idiom','All ears','Listening attentively','Tell me your story, I\'m all ears.'],
+  ['idiom','Apple of one\'s eye','Someone very dear','His daughter is the apple of his eye.'],
+  ['idiom','Back to square one','Start over from beginning','The plan failed, back to square one.'],
+  ['idiom','Bend over backwards','Try very hard to help','She bent over backwards to help me.'],
+  ['idiom','Birds of a feather','People with similar interests','Those two are birds of a feather.'],
+  ['idiom','Blessing in disguise','A bad situation that turns out good','Losing that job was a blessing in disguise.'],
+  ['idiom','Cry over spilt milk','Worry about what cannot be changed','It\'s no use crying over spilt milk.'],
+  ['idiom','Devil\'s advocate','Argue the opposite for discussion','Let me play devil\'s advocate for a moment.'],
+  ['idiom','Don\'t judge a book by its cover','Don\'t judge by appearance','He looks rough but is kind — don\'t judge a book by its cover.'],
+  ['idiom','Fish out of water','Feel uncomfortable in a situation','I felt like a fish out of water at the party.'],
+  ['idiom','Hold your horses','Wait, slow down','Hold your horses, let me explain.'],
+  // === Phrasal Verbs ===
+  ['phrasal','break down','Stop working; lose emotional control','The car broke down. / She broke down crying.'],
+  ['phrasal','break up','End a relationship; separate','They broke up last month.'],
+  ['phrasal','bring up','Raise a topic / a child','Don\'t bring up that topic again.'],
+  ['phrasal','call off','Cancel','They called off the match due to rain.'],
+  ['phrasal','call back','Return a phone call','I will call you back later.'],
+  ['phrasal','carry on','Continue','Carry on with your work.'],
+  ['phrasal','catch up','Reach the same level; reconnect','I need to catch up on missed lessons.'],
+  ['phrasal','check in','Register at hotel/airport','We checked in at 3 pm.'],
+  ['phrasal','check out','Leave a hotel; investigate','Check this video out!'],
+  ['phrasal','come across','Find by chance','I came across an old photo.'],
+  ['phrasal','come up with','Think of an idea','She came up with a great plan.'],
+  ['phrasal','count on','Rely on','You can count on me.'],
+  ['phrasal','cut off','Disconnect; stop suddenly','The phone was cut off mid-call.'],
+  ['phrasal','drop off','Deliver; fall asleep','Drop me off at the school.'],
+  ['phrasal','drop out','Quit (school/program)','He dropped out of college.'],
+  ['phrasal','figure out','Understand; solve','I can\'t figure out this problem.'],
+  ['phrasal','find out','Discover','I will find out the truth.'],
+  ['phrasal','get along (with)','Have good relations','I get along with my classmates.'],
+  ['phrasal','get away','Escape','The thief got away.'],
+  ['phrasal','get back','Return','When did you get back?'],
+  ['phrasal','get over','Recover from','It took weeks to get over the flu.'],
+  ['phrasal','get rid of','Throw away','Get rid of those old papers.'],
+  ['phrasal','get up','Rise from bed','I get up at 6 every day.'],
+  ['phrasal','give in','Surrender; yield','Don\'t give in to pressure.'],
+  ['phrasal','give up','Quit','Don\'t give up on your dream.'],
+  ['phrasal','go ahead','Proceed','Go ahead, I\'m listening.'],
+  ['phrasal','go on','Continue; happen','What\'s going on here?'],
+  ['phrasal','go over','Review carefully','Go over the chapter once more.'],
+  ['phrasal','grow up','Become an adult','I grew up in Sidhi.'],
+  ['phrasal','hand in','Submit','Hand in your homework.'],
+  ['phrasal','hand out','Distribute','The teacher handed out worksheets.'],
+  ['phrasal','hang on','Wait','Hang on a moment, please.'],
+  ['phrasal','hold on','Wait; grip','Hold on tight!'],
+  ['phrasal','keep on','Continue','Keep on practicing.'],
+  ['phrasal','keep up','Maintain pace','Keep up the good work.'],
+  ['phrasal','let down','Disappoint','Don\'t let me down.'],
+  ['phrasal','look after','Take care of','She looks after her brother.'],
+  ['phrasal','look forward to','Anticipate with pleasure','I look forward to meeting you.'],
+  ['phrasal','look into','Investigate','We will look into the matter.'],
+  ['phrasal','look out','Be careful','Look out for cars on the road.'],
+  ['phrasal','look up','Search (in dictionary); admire','Look up the meaning of this word.'],
+  ['phrasal','make up','Invent; reconcile; apply makeup','He made up an excuse.'],
+  ['phrasal','make up for','Compensate','Let me make up for my mistake.'],
+  ['phrasal','pass away','Die (polite)','His grandfather passed away last year.'],
+  ['phrasal','pass out','Faint; distribute','He passed out from the heat.'],
+  ['phrasal','pay back','Return money owed','I will pay you back tomorrow.'],
+  ['phrasal','pick up','Lift; collect; learn casually','I picked up some Hindi while traveling.'],
+  ['phrasal','put off','Postpone','Don\'t put off until tomorrow what you can do today.'],
+  ['phrasal','put on','Wear','Put on your jacket, it\'s cold.'],
+  ['phrasal','put up with','Tolerate','I won\'t put up with rude behaviour.'],
+  ['phrasal','run into','Meet by chance','I ran into an old friend yesterday.'],
+  ['phrasal','run out of','Have no more','We ran out of milk.'],
+  ['phrasal','set up','Establish; arrange','He set up his own business.'],
+  ['phrasal','show off','Boast; display proudly','Stop showing off your new phone.'],
+  ['phrasal','show up','Arrive','He didn\'t show up for the meeting.'],
+  ['phrasal','sort out','Organize; resolve','Let\'s sort out this problem.'],
+  ['phrasal','take after','Resemble (parent/relative)','She takes after her mother.'],
+  ['phrasal','take off','Remove; airplane departs; succeed','The flight takes off at 8.'],
+  ['phrasal','take on','Accept (responsibility)','He took on the new project.'],
+  ['phrasal','take over','Assume control','She took over the company.'],
+  ['phrasal','take up','Start a hobby','I took up yoga last year.'],
+  ['phrasal','throw away','Discard','Don\'t throw away that paper.'],
+  ['phrasal','try on','Test wearing','Try on this shirt before buying.'],
+  ['phrasal','turn down','Refuse; lower volume','He turned down the offer.'],
+  ['phrasal','turn off','Stop a device','Turn off the lights, please.'],
+  ['phrasal','turn on','Start a device','Turn on the fan.'],
+  ['phrasal','turn up','Arrive; raise volume','She turned up unannounced.'],
+  ['phrasal','wake up','Stop sleeping','Wake up, it\'s morning!'],
+  ['phrasal','watch out','Be careful','Watch out for the car!'],
+  ['phrasal','work out','Exercise; solve','I work out every morning.'],
+  ['phrasal','write down','Record on paper','Write down the new word.']
+];
+let cat = 'all', q = '';
+function render(){
+  const list = document.getElementById('list');
+  const filtered = DATA.filter(d => (cat === 'all' || d[0] === cat) && (!q || d[1].toLowerCase().includes(q) || d[2].toLowerCase().includes(q)));
+  list.innerHTML = '<div class="card" style="padding:0;overflow:hidden">' + filtered.map(d =>
+    '<div class="row"><div><span class="pill">'+(d[0]==='idiom'?'Idiom':'Phrasal')+'</span><br><strong style="margin-top:6px;display:block">'+d[1]+'</strong></div><div class="meaning">'+d[2]+'</div><div class="ex">'+d[3]+'</div></div>'
+  ).join('') + '</div>' + (filtered.length === 0 ? '<p style="color:var(--muted);text-align:center;padding:30px">No results.</p>' : '<p style="color:var(--muted);text-align:center;margin-top:14px">Showing '+filtered.length+' of '+DATA.length+'</p>');
+}
+document.getElementById('tabs').addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  document.querySelectorAll('#tabs button').forEach(x => x.classList.toggle('on', x === b));
+  cat = b.dataset.cat; render();
+});
+document.getElementById('search').addEventListener('input', e => { q = e.target.value.toLowerCase().trim(); render(); });
+render();
+</script>
+</body></html>

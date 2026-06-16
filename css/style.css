@@ -44,7 +44,7 @@ html[data-theme="dark"]{
   color-scheme:dark;
 }
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scrollbar-gutter:stable}
 body{
   margin:0;font-family:'Plus Jakarta Sans','Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
   color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;
@@ -66,30 +66,63 @@ p{margin:0 0 1em;color:var(--ink-soft);font-size:1.02rem}
 .topbar a{color:#e2e8f0;font-weight:500}
 .topbar a:hover{color:#fff}
 
-/* Header */
+/* Header — single row, brand on left next to drawer */
 .header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--line)}
-.header .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:20px}
-.header-left{display:flex;align-items:center;gap:14px}
-.drawer-toggle{background:var(--card-bg);border:1px solid var(--line);width:48px;height:48px;border-radius:13px;cursor:pointer;color:var(--ink);display:grid;place-items:center;font-size:1.4rem;transition:var(--t);flex-shrink:0}
-.drawer-toggle:hover{border-color:var(--brand);color:var(--brand);background:rgba(11,95,255,.06)}
-html[data-theme="dark"] .drawer-toggle:hover{background:rgba(122,166,255,.12)}
-.brand{display:flex;align-items:center;gap:14px;color:var(--ink);transition:var(--t);text-decoration:none}
-.brand:hover{color:var(--ink);transform:translateY(-1px)}
-.brand-logo{width:60px;height:60px;border-radius:14px;object-fit:cover;background:#fff;box-shadow:var(--shadow-sm);border:1px solid var(--line);flex-shrink:0;padding:4px}
-.brand-name{font-weight:900;line-height:1.15;font-size:1.4rem;letter-spacing:-.02em;color:var(--ink);display:flex;flex-direction:column;gap:2px;white-space:nowrap}
+.header .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:14px}
+.header-left{display:flex;align-items:center;gap:14px;min-width:0;flex:1}
+.header-right{display:flex;align-items:center;gap:8px;justify-content:flex-end;flex-shrink:0}
+.header-row2{border-top:1px solid var(--line);background:transparent}
+.brand{display:flex;align-items:center;gap:14px;color:var(--ink);transition:var(--t);text-decoration:none;min-width:0}
+.brand:hover{color:var(--ink)}
+.brand-logo{width:64px;height:64px;border-radius:14px;object-fit:cover;background:#fff;box-shadow:var(--shadow-sm);border:1px solid var(--line);flex-shrink:0;padding:4px}
+.brand-name{font-weight:900;line-height:1.1;font-size:1.6rem;letter-spacing:-.025em;color:var(--ink);display:flex;flex-direction:column;gap:2px;min-width:0}
 .brand-name .full{display:block}
-.brand-name small{display:block;font-weight:600;color:var(--muted);font-size:.74rem;letter-spacing:.08em;margin-top:4px;text-transform:uppercase;white-space:nowrap}
-@media (max-width:1280px){.brand-name{font-size:1.18rem}}
-@media (max-width:1100px){.brand-name{font-size:1rem}}
-@media (max-width:960px){
-  .brand-logo{width:50px;height:50px}
-  .brand-name{font-size:.95rem}
-  .brand-name small{font-size:.62rem}
+.brand-name small{display:block;font-weight:600;color:var(--muted);font-size:.78rem;letter-spacing:.02em;margin-top:6px;text-transform:none;font-family:'Plus Jakarta Sans',sans-serif}
+@media (max-width:1280px){.brand-name{font-size:1.35rem}}
+@media (max-width:1100px){.brand-name{font-size:1.18rem}.brand-logo{width:56px;height:56px}}
+@media (max-width:880px){
+  .brand-name{font-size:1rem}
+  .brand-name small{font-size:.7rem;margin-top:3px}
+  .brand-logo{width:48px;height:48px}
 }
-@media (max-width:560px){
-  .brand-name .sub{display:none}
-  .brand-name small{display:none}
+@media (max-width:520px){
+  .brand-name{font-size:.88rem}
+  .brand-logo{width:42px;height:42px}
 }
+
+/* Drawer toggle */
+.drawer-toggle{background:var(--card-bg);border:1px solid var(--line);width:44px;height:44px;border-radius:12px;cursor:pointer;color:var(--ink);display:grid;place-items:center;font-size:1.3rem;transition:var(--t);flex-shrink:0}
+.drawer-toggle:hover{border-color:var(--brand);color:var(--brand);background:rgba(4,65,95,.06)}
+html[data-theme="dark"] .drawer-toggle:hover{background:rgba(58,166,211,.12)}
+
+/* Auth pill */
+.auth-pill{display:inline-flex;align-items:center;background:var(--card-bg);border:1.5px solid var(--line);border-radius:999px;overflow:hidden;flex-shrink:0;box-shadow:var(--shadow-sm)}
+.auth-pill a{padding:9px 18px;font-weight:700;font-size:.9rem;color:var(--ink-soft);text-decoration:none;transition:var(--t);white-space:nowrap}
+.auth-pill a:hover{color:var(--brand);background:rgba(4,65,95,.06)}
+.auth-pill a.signup{background:var(--brand);color:#fff;border-radius:999px}
+.auth-pill a.signup:hover{background:var(--brand-dark);color:#fff}
+.auth-pill .sep{color:var(--muted);font-weight:400;padding:0 2px;user-select:none}
+@media (max-width:520px){.auth-pill a{padding:7px 12px;font-size:.82rem}}
+
+/* Row 2: nav menu — left-aligned */
+.menu{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:6px 0;flex-wrap:wrap;justify-content:flex-start}
+.header-row2 .container{display:flex;justify-content:flex-start;padding:0 24px}
+.menu a{color:var(--ink-soft);padding:10px 16px;border-radius:10px;font-weight:600;font-size:.94rem;transition:var(--t);position:relative}
+.menu a:hover{color:var(--brand);background:rgba(4,65,95,.07)}
+.menu a.active{color:var(--brand);background:rgba(4,65,95,.1)}
+html[data-theme="dark"] .menu a:hover,html[data-theme="dark"] .menu a.active{background:rgba(58,166,211,.13)}
+.menu-toggle{display:none;background:var(--card-bg);border:1px solid var(--line);padding:9px 11px;border-radius:11px;cursor:pointer;font-size:1.2rem;color:var(--ink)}
+@media (max-width:880px){
+  .header-row2{display:none}
+  .menu-toggle{display:inline-flex}
+  .menu{position:fixed;inset:auto 0 auto 0;top:80px;background:var(--bg);flex-direction:column;align-items:stretch;padding:14px;border-bottom:1px solid var(--line);box-shadow:var(--shadow);transform:translateY(-110%);transition:var(--t);z-index:40}
+  .menu.open{transform:translateY(0)}
+  .menu a{padding:14px 16px;font-size:1rem}
+}
+
+/* Hide Google Translate widget completely */
+#google_translate_element,.goog-te-banner-frame,.skiptranslate{display:none !important}
+body{top:0 !important}
 .menu{display:flex;align-items:center;gap:4px;list-style:none;margin:0;padding:0}
 .menu a{color:var(--ink-soft);padding:11px 15px;border-radius:11px;font-weight:600;font-size:.96rem;transition:var(--t);position:relative}
 .menu a:hover{color:var(--brand);background:rgba(11,95,255,.08)}
