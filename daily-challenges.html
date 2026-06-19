@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Daily Challenges — DSEL Sidhi</title>
+<meta name="description" content="Daily English challenges — word of the day, grammar challenge, speaking prompt, and writing prompt. Build your English skills one day at a time.">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/css/style.css?v=12">
+<script>(function(){var s=localStorage.getItem('dsel-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));})();</script>
+<style>
+.dc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:900px;margin:0 auto}
+@media(max-width:640px){.dc-grid{grid-template-columns:1fr}}
+.dc-card{background:var(--card-bg,#fff);border:1px solid var(--line,#d8e2e7);border-radius:16px;padding:24px;transition:.15s;position:relative}
+.dc-card:hover{border-color:var(--brand,#04415f)}
+.dc-card.completed{border-color:#16a34a;background:rgba(22,163,74,.03)}
+.dc-card .dc-icon{font-size:2rem;margin-bottom:10px}
+.dc-card h3{font-size:1rem;margin-bottom:4px}
+.dc-card .dc-hint{font-size:.82rem;color:var(--muted);margin-bottom:12px}
+.dc-card .dc-target{font-size:1.15rem;font-weight:700;padding:12px 16px;background:var(--bg,#f1f5f7);border-radius:10px;margin-bottom:12px;line-height:1.5}
+.dc-card .dc-action{display:flex;gap:8px;flex-wrap:wrap}
+.dc-btn{padding:10px 20px;border-radius:10px;border:none;cursor:pointer;font-weight:700;font-size:.85rem;font-family:inherit;transition:.12s}
+.dc-btn-primary{background:var(--brand,#04415f);color:#fff}.dc-btn-primary:hover{opacity:.9}
+.dc-btn-done{background:#16a34a;color:#fff}.dc-btn-done:hover{opacity:.9}
+.dc-btn-outline{background:transparent;border:2px solid var(--line,#d8e2e7);color:var(--ink,#011e2c)}.dc-btn-outline:hover{border-color:var(--brand,#04415f)}
+.dc-check{position:absolute;top:12px;right:16px;font-size:1.4rem;color:#16a34a;display:none}.dc-card.completed .dc-check{display:block}
+.dc-streak{text-align:center;margin-bottom:28px}
+.dc-streak .streak-num{font-size:3.5rem;font-weight:800;color:var(--brand,#04415f);line-height:1}
+.dc-streak .streak-label{font-size:.85rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.dc-streak .streak-flame{font-size:2rem}
+</style>
+</head>
+<body>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><div class="drawer-avatar" id="drawerAvatar">G</div><div class="drawer-user"><strong id="drawerUserName">Guest</strong><small id="drawerUserMail">Sign in to access your account</small></div><button class="drawer-close" id="drawerClose" aria-label="Close"><i class="bi bi-x-lg"></i></button></div>
+  <div class="drawer-section" id="drawerAuthBlock"><div class="drawer-label">Account</div><a class="dlink" href="/login.html"><i class="bi bi-box-arrow-in-right"></i> Login<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/register.html"><i class="bi bi-person-plus-fill"></i> Sign Up<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section" id="drawerUserBlock" style="display:none"><div class="drawer-label">My Profile</div><a class="dlink" href="/profile.html"><i class="bi bi-person-circle"></i> View Profile<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/progress.html"><i class="bi bi-graph-up"></i> Progress<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Practice Tools</div><a class="dlink" href="/reading-speed.html"><i class="bi bi-speedometer2"></i> Reading Speed<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/placement-test.html"><i class="bi bi-patch-question"></i> Placement Test<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/speech-practice.html"><i class="bi bi-mic-fill"></i> Speech Practice<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/daily-challenges.html"><i class="bi bi-lightning-charge-fill"></i> Daily Challenges<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Preferences</div><button class="dlink" id="drawerThemeToggle"><i class="bi bi-moon-stars-fill"></i> <span id="drawerThemeLabel">Dark Mode</span><span class="arrow"><i class="bi bi-chevron-right"></i></span></button></div>
+  <div class="drawer-foot">© <span class="year"></span> The Dream School of English Language · DSEL</div>
+</aside>
+
+<header class="header">
+  <div class="container nav"><div class="header-left"><button class="drawer-toggle" id="drawerToggle" aria-label="Open menu"><i class="bi bi-list"></i></button><a class="brand" href="/"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo"><span class="brand-name"><span class="full">The Dream School of English Language <span style="color:var(--brand)">(DSEL)</span></span><small><i class="bi bi-geo-alt-fill"></i> Stadium Road, Sidhi, MP — 486661 · Since 2011</small></span></a></div><div class="header-right"><button class="menu-toggle" aria-label="Open navigation"><i class="bi bi-list"></i></button><div class="nav-cta"><span class="auth-pill"><a href="/login.html">Login</a><span class="sep">/</span><a class="signup" href="/register.html">Sign Up</a></span></div></div></div>
+  <div class="header-row2"><div class="container"><ul class="menu"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/courses.html">Courses</a></li><li><a href="/activities.html" class="active">Activities</a></li><li><a href="/tests.html">Tests</a></li><li><a href="/contact.html">Contact</a></li></ul></div></div>
+</header>
+
+<section class="page-head"><div class="container"><div class="crumbs"><a href="/">Home</a> · Daily Challenges</div><h1>Daily Challenges</h1><p>Build your English skills every day. Complete all 4 challenges to maintain your learning streak!</p></div></section>
+
+<section><div class="container" style="max-width:900px;margin:0 auto">
+  <div class="dc-streak"><div class="streak-flame" id="flameIcon">🔥</div><div class="streak-num" id="streakNum">0</div><div class="streak-label">Day Streak</div></div>
+
+  <div class="dc-grid" id="challengesGrid">
+    <!-- Filled by JS -->
+  </div>
+</div></section>
+
+<footer class="footer"><div class="container"><div class="footer-grid">
+<div><a class="brand" href="/" style="color:#fff"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo" style="background:#fff"><span class="brand-name" style="color:#fff"><span class="full">The Dream School of English Language (DSEL)</span><small style="color:#94a3b8">Sidhi · Madhya Pradesh</small></span></a><div class="social"><a href="https://www.facebook.com/people/The-Dream-Spoken-English-Institute-Sidhi-100066703335355/" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a><a href="https://www.youtube.com/@DSELSIDHIFORENGLISH" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a><a href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a></div></div>
+<div><h4>Practice</h4><a href="/reading-speed.html">Reading Speed</a><a href="/placement-test.html">Placement Test</a><a href="/speech-practice.html">Speech Practice</a><a href="/daily-challenges.html">Daily Challenges</a></div>
+<div><h4>Explore</h4><a href="/about.html">About</a><a href="/courses.html">Courses</a><a href="/activities.html">Activities</a><a href="/tests.html">Tests</a></div>
+<div><h4>Reach Us</h4><a href="tel:+918770462942"><i class="bi bi-telephone"></i> +91 8770462942</a><a href="tel:+919685586327"><i class="bi bi-telephone"></i> +91 9685586327</a><a href="https://maps.google.com/?q=Stadium+Road+Sidhi+MP" target="_blank" rel="noopener"><i class="bi bi-geo-alt"></i> Stadium Rd, Sidhi, MP</a></div>
+</div><div class="copyright">© <span id="year"></span> The Dream (DSEL) — Sidhi. All rights reserved.</div></div></footer>
+<a class="fab-wa" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="/js/main.js?v=12"></script>
+<script src="/js/chat-widget.js?v=13"></script>
+<script src="/js/gamification.js?v=1"></script>
+<script>
+(function(){
+  var WORD_BANK = [
+    {word:'Eloquent',meaning:'Fluent and persuasive in speaking or writing',example:'She gave an eloquent speech at the graduation ceremony.'},
+    {word:'Resilient',meaning:'Able to recover quickly from difficulties',example:'Children are often more resilient than adults.'},
+    {word:'Pragmatic',meaning:'Dealing with things sensibly and realistically',example:'We need a pragmatic approach to solve this problem.'},
+    {word:'Inevitable',meaning:'Certain to happen; unavoidable',example:'Change is inevitable in every aspect of life.'},
+    {word:'Innovative',meaning:'Featuring new methods; advanced and original',example:'The company is known for its innovative products.'},
+    {word:'Articulate',meaning:'Having the ability to speak fluently and clearly',example:'He is very articulate when explaining complex ideas.'},
+    {word:'Persevere',meaning:'To continue in spite of difficulties',example:'You must persevere to achieve your goals.'},
+    {word:'Ambiguous',meaning:'Open to more than one interpretation',example:'The contract language was ambiguous and led to confusion.'},
+    {word:'Comprehensive',meaning:'Complete and including everything necessary',example:'We offer a comprehensive English learning program.'},
+    {word:'Diligent',meaning:'Having careful and persistent effort',example:'A diligent student always completes their homework on time.'},
+    {word:'Empathy',meaning:'The ability to understand others feelings',example:'Good leaders show empathy toward their team members.'},
+    {word:'Versatile',meaning:'Able to adapt to many different functions',example:'English is a versatile language used worldwide.'},
+  ];
+
+  var GRAMMAR_QUESTIONS = [
+    {q:'Choose the correct form: "If I ___ rich, I would travel the world."',opts:['am','was','were','be'],ans:2},
+    {q:'Which is correct? "Neither the teacher nor the students ___ present."',opts:['is','are','was','am'],ans:1},
+    {q:'Choose the correct article: "He is ___ honest man."',opts:['a','an','the','no article'],ans:1},
+    {q:'"She has been working here ___ 2019." Fill in:',opts:['for','since','from','in'],ans:1},
+    {q:'Which is correct? "I look forward ___ from you."',opts:['to hear','to hearing','hearing','hear'],ans:1},
+    {q:'"Hardly had I reached the station ___ the train arrived."',opts:['than','when','then','as'],ans:1},
+    {q:'Correct the sentence: "Each of the boys have a bicycle."',opts:['have','has','having','are having'],ans:1},
+    {q:'"He is superior ___ me in English." Choose correct:',opts:['than','to','from','over'],ans:1},
+  ];
+
+  var SPEAKING_PROMPTS = [
+    'Describe your favorite festival and why you enjoy it.',
+    'Talk about a person who has inspired you in life.',
+    'Describe your daily routine from morning to night.',
+    'Talk about a place you would love to visit and why.',
+    'Describe a challenge you faced and how you overcame it.',
+    'Talk about your favorite movie or book and why you recommend it.',
+    'Describe the importance of education in todays world.',
+    'Talk about what you would do if you won a million rupees.',
+  ];
+
+  var WRITING_PROMPTS = [
+    'Write 5 sentences about your best friend using present tense.',
+    'Write 5 sentences about what you did last weekend using past tense.',
+    'Write 5 sentences about your future goals using future tense.',
+    'Write 5 sentences comparing village life and city life.',
+    'Write 5 sentences describing your favorite food and how it is made.',
+    'Write 5 sentences about the advantages of learning English.',
+    'Write 5 sentences about how technology has changed our lives.',
+    'Write 5 sentences describing a memorable day in your life.',
+  ];
+
+  var STORAGE_KEY = 'dsel-daily-challenges';
+
+  // Seed-based daily rotation
+  function dailySeed() { var d=new Date(); return d.getFullYear()*10000 + (d.getMonth()+1)*100 + d.getDate(); }
+  function todayKey() { return 'dc-'+dailySeed(); }
+
+  function pseudoRandom(seed) { var x=Math.sin(seed)*10000; return x-Math.floor(x); }
+
+  function loadState() {
+    try { var s=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');
+      if (s.key===todayKey()) return s; return {key:todayKey(),completed:[],writingText:''};
+    } catch(_){ return {key:todayKey(),completed:[],writingText:''}; }
+  }
+
+  function saveState(st) { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(st)); } catch(_){} }
+
+  var state = loadState();
+  var seed = dailySeed();
+
+  // Pick daily items
+  var wordItem = WORD_BANK[Math.floor(pseudoRandom(seed)*WORD_BANK.length)];
+  var gramItem = GRAMMAR_QUESTIONS[Math.floor(pseudoRandom(seed+1)*GRAMMAR_QUESTIONS.length)];
+  var speakItem = SPEAKING_PROMPTS[Math.floor(pseudoRandom(seed+2)*SPEAKING_PROMPTS.length)];
+  var writeItem = WRITING_PROMPTS[Math.floor(pseudoRandom(seed+3)*WRITING_PROMPTS.length)];
+
+  // Update streak
+  function updateStreak() {
+    var streak=0;
+    try { streak=parseInt(localStorage.getItem('dsel-daily-streak')||'0'); } catch(_){}
+    var lastDate;
+    try { lastDate=localStorage.getItem('dsel-streak-date'); } catch(_){}
+    var today = new Date().toDateString();
+    var yesterday = new Date(Date.now()-86400000).toDateString();
+
+    if (lastDate === today) { /* already logged today */ }
+    else if (lastDate === yesterday) { streak++; }
+    else { streak = 1; }
+    try { localStorage.setItem('dsel-daily-streak',streak); localStorage.setItem('dsel-streak-date',today); } catch(_){}
+    document.getElementById('streakNum').textContent = streak;
+    if (streak >= 30) document.getElementById('flameIcon').textContent = '🔥';
+    else if (streak >= 14) document.getElementById('flameIcon').textContent = '🔥';
+    else if (streak >= 7) document.getElementById('flameIcon').textContent = '🔥';
+    else document.getElementById('flameIcon').textContent = '⭐';
+  }
+  updateStreak();
+
+  function completeChallenge(id) {
+    if (state.completed.indexOf(id) !== -1) return;
+    state.completed.push(id); saveState(state);
+    document.getElementById('card-'+id).classList.add('completed');
+    try { window.dispatchEvent(new CustomEvent('dsel-xp-earn',{detail:{amount:10,source:'daily-challenge',challenge:id}})); } catch(_){}
+    checkAllDone();
+  }
+
+  function checkAllDone() {
+    if (state.completed.length >= 4) {
+      setTimeout(function(){ alert('Congratulations! You completed all 4 challenges today! 🎉'); }, 300);
+    }
+  }
+
+  var grid = document.getElementById('challengesGrid');
+
+  function buildCard(id, icon, title, hint, content, actionHTML) {
+    var done = state.completed.indexOf(id) !== -1;
+    return '<div class="dc-card'+(done?' completed':'')+'" id="card-'+id+'"><span class="dc-check">✅</span><div class="dc-icon">'+icon+'</div><h3>'+title+'</h3><div class="dc-hint">'+hint+'</div><div class="dc-target">'+content+'</div><div class="dc-action">'+actionHTML+'</div></div>';
+  }
+
+  // 1. Word of the Day
+  var wordCard = buildCard('word','📖','Word of the Day','Learn a new word and its usage',
+    '<b>'+wordItem.word+'</b> — '+wordItem.meaning+'<br><i style="font-size:.85rem">"'+wordItem.example+'"</i>',
+    state.completed.indexOf('word')!==-1 ? '<button class="dc-btn dc-btn-done" disabled>✓ Learned</button>' : '<button class="dc-btn dc-btn-primary word-learn">I\'ve Learned It</button>');
+
+  // 2. Grammar Challenge
+  var gramCard = buildCard('grammar','✏️','Grammar Challenge','Test your grammar knowledge',
+    gramItem.q+'<br><div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">'+gramItem.opts.map(function(o,i){return '<button class="dc-btn dc-btn-outline gram-opt" data-idx="'+i+'">'+o+'</button>';}).join('')+'</div><div id="gramFeedback" style="margin-top:8px;font-weight:700;min-height:20px"></div>',
+    '');
+
+  // 3. Speaking Prompt
+  var speakCard = buildCard('speak','🎙️','Speaking Prompt','Practice speaking for 1 minute',
+    '"'+speakItem+'"',
+    state.completed.indexOf('speak')!==-1 ? '<button class="dc-btn dc-btn-done" disabled>✓ Practiced</button>' : '<button class="dc-btn dc-btn-primary speak-done">✓ I Practiced This</button>');
+
+  // 4. Writing Prompt
+  var writeCard = buildCard('write','📝','Writing Prompt','Practice your writing skills',
+    '"'+writeItem+'"',
+    '<textarea id="writeArea" placeholder="Write your sentences here..." style="width:100%;min-height:80px;padding:10px;border:1px solid var(--line);border-radius:8px;font-family:inherit;font-size:.9rem;resize:vertical;margin-bottom:8px">'+(state.writingText||'')+'</textarea>'+
+    (state.completed.indexOf('write')!==-1 ? '<button class="dc-btn dc-btn-done" disabled>✓ Submitted</button>' : '<button class="dc-btn dc-btn-primary write-submit">✓ Submit Writing</button>'));
+
+  grid.innerHTML = wordCard + gramCard + speakCard + writeCard;
+
+  // Event handlers
+  var wordLearnBtn = grid.querySelector('.word-learn');
+  if (wordLearnBtn) wordLearnBtn.addEventListener('click', function(){ completeChallenge('word'); wordLearnBtn.outerHTML = '<button class="dc-btn dc-btn-done" disabled>✓ Learned</button>'; });
+
+  grid.addEventListener('click', function(e){
+    var optBtn = e.target.closest('.gram-opt');
+    if (optBtn && state.completed.indexOf('grammar')===-1) {
+      var idx = parseInt(optBtn.dataset.idx);
+      var fb = document.getElementById('gramFeedback');
+      var allOpts = grid.querySelectorAll('.gram-opt');
+      if (idx === gramItem.ans) {
+        fb.innerHTML = '<span style="color:#16a34a">✓ Correct!</span>';
+        allOpts.forEach(function(b){ b.disabled=true; });
+        completeChallenge('grammar');
+      } else {
+        fb.innerHTML = '<span style="color:#dc2626">✗ Try again!</span>';
+      }
+    }
+    var speakBtn = e.target.closest('.speak-done');
+    if (speakBtn) { completeChallenge('speak'); speakBtn.outerHTML = '<button class="dc-btn dc-btn-done" disabled>✓ Practiced</button>'; }
+    var writeBtn = e.target.closest('.write-submit');
+    if (writeBtn) {
+      var ta = document.getElementById('writeArea');
+      if (ta && ta.value.trim().length > 10) {
+        state.writingText = ta.value.trim(); saveState(state);
+        completeChallenge('write'); writeBtn.outerHTML = '<button class="dc-btn dc-btn-done" disabled>✓ Submitted</button>';
+      } else { alert('Please write at least a few sentences before submitting.'); }
+    }
+  });
+
+  // Save writing as user types
+  var writeArea = document.getElementById('writeArea');
+  if (writeArea) writeArea.addEventListener('input', function(){ state.writingText = writeArea.value; saveState(state); });
+})();
+</script>
+</body></html>

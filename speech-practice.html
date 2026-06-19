@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Speech Practice — DSEL Sidhi</title>
+<meta name="description" content="Practice your English speaking using speech recognition. Read sentences aloud and get instant feedback on pronunciation and fluency.">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/css/style.css?v=12">
+<script>(function(){var s=localStorage.getItem('dsel-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));})();</script>
+<style>
+.sp-container{max-width:750px;margin:0 auto}
+.sp-card{background:var(--card-bg,#fff);border:1px solid var(--line,#d8e2e7);border-radius:16px;padding:28px 32px;text-align:center;margin-bottom:20px}
+.sp-sentence{font-size:1.4rem;font-weight:700;line-height:1.6;margin:20px 0;color:var(--ink,#011e2c);padding:20px;background:var(--bg,#f1f5f7);border-radius:12px;border:2px dashed var(--line,#d8e2e7)}
+.sp-sentence .highlight{color:#16a34a}
+.sp-sentence .miss{color:#dc2626;text-decoration:line-through}
+.sp-mic{width:90px;height:90px;border-radius:50%;border:none;cursor:pointer;background:linear-gradient(135deg,#04415f,#0a6b96);color:#fff;font-size:2rem;display:inline-flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(4,65,95,.4);transition:transform .15s,box-shadow .2s;margin:10px}
+.sp-mic:hover:not(:disabled){transform:scale(1.05)}
+.sp-mic:disabled{opacity:.5;cursor:not-allowed}
+.sp-mic.listening{background:#16a34a;box-shadow:0 0 0 0 rgba(22,163,74,.6);animation:spPulse 1.2s ease infinite}
+@keyframes spPulse{to{box-shadow:0 0 0 16px transparent}}
+.sp-status{font-size:.95rem;color:var(--muted);margin:8px 0;font-weight:600;min-height:24px}
+.sp-heard{padding:14px;border-radius:10px;background:var(--bg,#f1f5f7);margin:14px 0;font-size:1.05rem;min-height:40px}
+.sp-score{font-size:1.2rem;font-weight:700;margin-top:10px}
+.sp-score.great{color:#16a34a}.sp-score.good{color:#b8860b}.sp-score.ok{color:var(--muted)}
+.sp-levels{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.sp-lvl{padding:8px 18px;border-radius:999px;border:2px solid var(--line,#d8e2e7);cursor:pointer;font-weight:700;font-size:.82rem;background:var(--card-bg,#fff);transition:.12s;font-family:inherit}
+.sp-lvl:hover{border-color:var(--brand,#04415f)}
+.sp-lvl.active{background:var(--brand,#04415f);color:#fff;border-color:var(--brand,#04415f)}
+.sp-stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.sp-stat{padding:10px 18px;border-radius:10px;background:var(--bg-alt,#e6edf0);text-align:center;flex:1;min-width:70px}
+.sp-stat .val{font-size:1.3rem;font-weight:800;color:var(--brand)}.sp-stat .lbl{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+</style>
+</head>
+<body>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><div class="drawer-avatar" id="drawerAvatar">G</div><div class="drawer-user"><strong id="drawerUserName">Guest</strong><small id="drawerUserMail">Sign in to access your account</small></div><button class="drawer-close" id="drawerClose" aria-label="Close"><i class="bi bi-x-lg"></i></button></div>
+  <div class="drawer-section" id="drawerAuthBlock"><div class="drawer-label">Account</div><a class="dlink" href="/login.html"><i class="bi bi-box-arrow-in-right"></i> Login<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/register.html"><i class="bi bi-person-plus-fill"></i> Sign Up<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section" id="drawerUserBlock" style="display:none"><div class="drawer-label">My Profile</div><a class="dlink" href="/profile.html"><i class="bi bi-person-circle"></i> View Profile<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/progress.html"><i class="bi bi-graph-up"></i> Progress<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Practice Tools</div><a class="dlink" href="/reading-speed.html"><i class="bi bi-speedometer2"></i> Reading Speed<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/placement-test.html"><i class="bi bi-patch-question"></i> Placement Test<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/speech-practice.html"><i class="bi bi-mic-fill"></i> Speech Practice<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/daily-challenges.html"><i class="bi bi-lightning-charge-fill"></i> Daily Challenges<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Speaking Resources</div><a class="dlink" href="/idioms-phrasal.html"><i class="bi bi-chat-square-quote-fill"></i> Idioms & Phrasal Verbs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/tongue-twisters.html"><i class="bi bi-mic-fill"></i> Tongue Twisters<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Preferences</div><button class="dlink" id="drawerThemeToggle"><i class="bi bi-moon-stars-fill"></i> <span id="drawerThemeLabel">Dark Mode</span><span class="arrow"><i class="bi bi-chevron-right"></i></span></button></div>
+  <div class="drawer-foot">© <span class="year"></span> The Dream School of English Language · DSEL</div>
+</aside>
+
+<header class="header">
+  <div class="container nav"><div class="header-left"><button class="drawer-toggle" id="drawerToggle" aria-label="Open menu"><i class="bi bi-list"></i></button><a class="brand" href="/"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo"><span class="brand-name"><span class="full">The Dream School of English Language <span style="color:var(--brand)">(DSEL)</span></span><small><i class="bi bi-geo-alt-fill"></i> Stadium Road, Sidhi, MP — 486661 · Since 2011</small></span></a></div><div class="header-right"><button class="menu-toggle" aria-label="Open navigation"><i class="bi bi-list"></i></button><div class="nav-cta"><span class="auth-pill"><a href="/login.html">Login</a><span class="sep">/</span><a class="signup" href="/register.html">Sign Up</a></span></div></div></div>
+  <div class="header-row2"><div class="container"><ul class="menu"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/courses.html">Courses</a></li><li><a href="/activities.html">Activities</a></li><li><a href="/tests.html">Tests</a></li><li><a href="/contact.html">Contact</a></li></ul></div></div>
+</header>
+
+<section class="page-head"><div class="container"><div class="crumbs"><a href="/">Home</a> · Speech Practice</div><h1>Speech Practice</h1><p>Read sentences aloud using your microphone. Get instant feedback on how well you pronounced each word.</p></div></section>
+
+<section><div class="container sp-container">
+  <div class="sp-levels" id="levelSelector">
+    <button class="sp-lvl active" data-lvl="0">🟢 Easy</button>
+    <button class="sp-lvl" data-lvl="1">🟡 Medium</button>
+    <button class="sp-lvl" data-lvl="2">🟠 Hard</button>
+  </div>
+
+  <div class="sp-card">
+    <div style="font-size:.75rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px">Read this aloud</div>
+    <div class="sp-sentence" id="sentence">Click the microphone and read the sentence aloud.</div>
+    <button class="sp-mic" id="micBtn" aria-label="Start speaking">🎤</button>
+    <div class="sp-status" id="status">Press the mic button to begin</div>
+    <div class="sp-heard" id="heard" style="display:none"></div>
+    <div class="sp-score" id="score"></div>
+    <button class="btn btn-ghost" id="btnSkip" style="margin-top:12px">⏭ Next Sentence</button>
+  </div>
+
+  <div class="sp-stats">
+    <div class="sp-stat"><div class="val" id="statAttempts">0</div><div class="lbl">Attempts</div></div>
+    <div class="sp-stat"><div class="val" id="statAccuracy">--</div><div class="lbl">Best Accuracy</div></div>
+    <div class="sp-stat"><div class="val" id="statStreak">0</div><div class="lbl">Streak</div></div>
+  </div>
+</div></section>
+
+<footer class="footer"><div class="container"><div class="footer-grid">
+<div><a class="brand" href="/" style="color:#fff"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo" style="background:#fff"><span class="brand-name" style="color:#fff"><span class="full">The Dream School of English Language (DSEL)</span><small style="color:#94a3b8">Sidhi · Madhya Pradesh</small></span></a><div class="social"><a href="https://www.facebook.com/people/The-Dream-Spoken-English-Institute-Sidhi-100066703335355/" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a><a href="https://www.youtube.com/@DSELSIDHIFORENGLISH" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a><a href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a></div></div>
+<div><h4>Practice</h4><a href="/reading-speed.html">Reading Speed</a><a href="/placement-test.html">Placement Test</a><a href="/speech-practice.html">Speech Practice</a><a href="/daily-challenges.html">Daily Challenges</a></div>
+<div><h4>Explore</h4><a href="/about.html">About</a><a href="/courses.html">Courses</a><a href="/activities.html">Activities</a><a href="/tests.html">Tests</a></div>
+<div><h4>Reach Us</h4><a href="tel:+918770462942"><i class="bi bi-telephone"></i> +91 8770462942</a><a href="tel:+919685586327"><i class="bi bi-telephone"></i> +91 9685586327</a><a href="https://maps.google.com/?q=Stadium+Road+Sidhi+MP" target="_blank" rel="noopener"><i class="bi bi-geo-alt"></i> Stadium Rd, Sidhi, MP</a></div>
+</div><div class="copyright">© <span id="year"></span> The Dream (DSEL) — Sidhi. All rights reserved.</div></div></footer>
+<a class="fab-wa" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="/js/main.js?v=12"></script>
+<script src="/js/chat-widget.js?v=13"></script>
+<script src="/js/gamification.js?v=1"></script>
+<script>
+(function(){
+  var SENTENCES = [
+    // Easy
+    ["The cat is sleeping on the mat.","I like to play cricket with my friends.","She goes to school every morning.","The sun rises in the east.","My mother cooks delicious food.","We went to the park yesterday.","He is reading a very good book.","There are many flowers in the garden.","I want to learn English very well.","Please open the door for me.","The children are playing happily outside.","I have two brothers and one sister.","She drinks tea every morning.","The dog is running very fast.","We should always speak the truth."],
+    // Medium
+    ["The weather today is quite pleasant and comfortable.","I have been studying English for the past three years.","She completed her assignment before the deadline.","The restaurant we visited last night was absolutely wonderful.","Learning a new language requires patience and consistent practice.","He couldn't attend the meeting because of a prior commitment.","The students were discussing the project with great enthusiasm.","I would like to order a cup of coffee and a sandwich.","She has been working at this company since 2018.","The movie was interesting but a little too long for my taste.","We should arrive at the station at least thirty minutes early.","Many people prefer to work from home these days.","The teacher explained the concept until everyone understood it.","I'm thinking about taking a short trip next weekend.","She speaks three languages fluently: Hindi, English, and French."],
+    // Hard
+    ["The unprecedented technological advancements of the twenty-first century have fundamentally transformed how we communicate.","Despite numerous obstacles and setbacks, the dedicated team persevered and ultimately achieved their ambitious objectives.","The professor's comprehensive lecture on environmental sustainability captivated the audience for nearly two hours.","Negotiations between the two parties reached an impasse after several hours of intense deliberation and debate.","The intricate relationship between economic policies and social development continues to be extensively studied by researchers worldwide.","Implementing effective strategies for climate change mitigation requires unprecedented international cooperation and commitment.","The documentary provided a compelling examination of how historical events continue to shape contemporary political discourse.","Sophisticated algorithms now enable machines to perform tasks that were previously considered exclusively within the domain of human intelligence.","The philosopher's groundbreaking work fundamentally challenged conventional assumptions about the nature of consciousness and perception.","Establishing meaningful cross-cultural communication requires sensitivity to nuanced differences in customs, values, and social expectations."]
+  ];
+
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  var recog = null;
+  var currentLvl = 0, currentIdx = 0, listening = false;
+  var attempts = 0, bestAccuracy = 0, streak = 0;
+  var micBtn = document.getElementById('micBtn'), statusEl = document.getElementById('status');
+  var sentenceEl = document.getElementById('sentence'), heardEl = document.getElementById('heard');
+  var scoreEl = document.getElementById('score');
+
+  try {
+    var saved = JSON.parse(localStorage.getItem('dsel-speech-stats')||'{}');
+    if (saved.attempts) attempts = saved.attempts;
+    if (saved.bestAccuracy) bestAccuracy = saved.bestAccuracy;
+    if (saved.streak) streak = saved.streak;
+  } catch(_){}
+  function saveStats(){
+    try { localStorage.setItem('dsel-speech-stats', JSON.stringify({attempts:attempts,bestAccuracy:bestAccuracy,streak:streak})); } catch(_){}
+  }
+  function updateStats(){
+    document.getElementById('statAttempts').textContent = attempts;
+    document.getElementById('statAccuracy').textContent = bestAccuracy > 0 ? Math.round(bestAccuracy)+'%' : '--';
+    document.getElementById('statStreak').textContent = streak;
+  }
+
+  if (!SR) {
+    micBtn.disabled = true; statusEl.textContent = 'Speech recognition not supported in this browser. Please use Chrome.';
+  } else {
+    recog = new SR(); recog.lang = 'en-US'; recog.interimResults = false; recog.continuous = false; recog.maxAlternatives = 1;
+  }
+
+  function loadSentence() {
+    var lvlSentences = SENTENCES[currentLvl];
+    var s = lvlSentences[currentIdx % lvlSentences.length];
+    sentenceEl.innerHTML = s;
+    heardEl.style.display = 'none'; scoreEl.textContent = '';
+    statusEl.textContent = 'Press the mic button to begin';
+  }
+
+  function startListening() {
+    if (!recog || listening) return;
+    listening = true; micBtn.classList.add('listening'); statusEl.textContent = 'Listening... Speak now!';
+    heardEl.style.display = 'none'; scoreEl.textContent = '';
+    try { recog.start(); } catch(_) { listening = false; micBtn.classList.remove('listening'); }
+  }
+
+  function stopListening() {
+    if (!recog || !listening) return;
+    listening = false; micBtn.classList.remove('listening');
+    try { recog.stop(); } catch(_){}
+  }
+
+  function compareStrings(target, spoken) {
+    var tWords = target.toLowerCase().replace(/[^\w\s]/g,'').split(/\s+/);
+    var sWords = spoken.toLowerCase().replace(/[^\w\s]/g,'').split(/\s+/);
+    var matched = 0;
+    for (var i=0;i<tWords.length;i++) { if (sWords.indexOf(tWords[i]) !== -1) matched++; }
+    return Math.round((matched / tWords.length) * 100);
+  }
+
+  function buildHighlightedHTML(target, spoken) {
+    var tWords = target.split(/(\s+)/);
+    var sWords = spoken.toLowerCase().replace(/[^\w\s]/g,'').split(/\s+/);
+    var html = '';
+    for (var i=0;i<tWords.length;i++) {
+      var w = tWords[i].trim();
+      if (!w) { html += tWords[i]; continue; }
+      var isWord = /^\w/.test(w);
+      var clean = w.replace(/[^\w\s]/g,'').toLowerCase();
+      if (isWord && sWords.indexOf(clean)!==-1) html += '<span class="highlight">'+w+'</span>';
+      else if (isWord) html += '<span class="miss">'+w+'</span>';
+      else html += w;
+    }
+    return html;
+  }
+
+  if (recog) {
+    recog.onstart = function(){ listening = true; };
+    recog.onresult = function(e){
+      var spoken = e.results[0][0].transcript;
+      var target = sentenceEl.textContent;
+      var acc = compareStrings(target, spoken);
+
+      attempts++;
+      if (acc > bestAccuracy) bestAccuracy = acc;
+      if (acc >= 80) streak++; else streak = 0;
+      saveStats(); updateStats();
+
+      heardEl.style.display = 'block';
+      heardEl.innerHTML = '<div style="font-size:.75rem;color:var(--muted);font-weight:700;margin-bottom:4px">You said:</div>' + buildHighlightedHTML(target, spoken);
+      heardEl.querySelector('.highlight') && (heardEl.querySelector('.highlight').style.color = '#16a34a');
+
+      var cls = acc >= 80 ? 'great' : (acc >= 50 ? 'good' : 'ok');
+      var label = acc >= 80 ? 'Excellent!' : (acc >= 50 ? 'Good try!' : 'Keep practicing!');
+      scoreEl.className = 'sp-score ' + cls;
+      scoreEl.textContent = label + ' — Accuracy: ' + acc + '%';
+      statusEl.textContent = 'Tap the mic to try again, or go to the next sentence.';
+
+      // Award XP
+      try { window.dispatchEvent(new CustomEvent('dsel-xp-earn',{detail:{amount:Math.round(acc/10),source:'speech-practice',accuracy:acc}})); } catch(_){}
+
+      stopListening();
+    };
+    recog.onerror = function(e){
+      listening = false; micBtn.classList.remove('listening');
+      statusEl.textContent = 'Error: ' + (e.error||'unknown') + '. Try again.';
+    };
+    recog.onend = function(){ listening = false; micBtn.classList.remove('listening'); };
+  }
+
+  micBtn.addEventListener('click', function(){
+    if (listening) stopListening(); else startListening();
+  });
+
+  document.getElementById('btnSkip').addEventListener('click', function(){
+    stopListening();
+    currentIdx++;
+    loadSentence();
+  });
+
+  document.getElementById('levelSelector').addEventListener('click', function(e){
+    var btn = e.target.closest('.sp-lvl'); if (!btn) return;
+    currentLvl = parseInt(btn.dataset.lvl); currentIdx = 0;
+    var btns = document.querySelectorAll('.sp-lvl');
+    for (var i=0;i<btns.length;i++) btns[i].classList.toggle('active', parseInt(btns[i].dataset.lvl) === currentLvl);
+    loadSentence();
+  });
+
+  loadSentence();
+  updateStats();
+})();
+</script>
+</body></html>

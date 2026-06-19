@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>English Placement Test — DSEL Sidhi</title>
+<meta name="description" content="Take our free English placement test to determine your current level — Beginner, Intermediate, or Advanced. 25 questions covering grammar, vocabulary, and comprehension.">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/css/style.css?v=12">
+<script>(function(){var s=localStorage.getItem('dsel-theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));})();</script>
+<style>
+.test-container{max-width:780px;margin:0 auto}
+.test-progress{height:6px;background:var(--bg-alt,#e6edf0);border-radius:3px;margin-bottom:28px;overflow:hidden}
+.test-progress-bar{height:100%;background:linear-gradient(90deg,#04415f,#0a6b96);border-radius:3px;transition:width .3s}
+.test-q{margin-bottom:32px;display:none}.test-q.active{display:block}
+.test-q h3{font-size:1.05rem;margin-bottom:14px;font-weight:700}
+.test-q .options{display:flex;flex-direction:column;gap:8px}
+.test-opt{padding:14px 18px;border:2px solid var(--line,#d8e2e7);border-radius:12px;cursor:pointer;font-size:.95rem;transition:.12s;background:var(--card-bg,#fff);font-family:inherit;text-align:left}
+.test-opt:hover{border-color:var(--brand,#04415f);background:rgba(4,65,95,.03)}
+.test-opt.selected{border-color:var(--brand,#04415f);background:rgba(4,65,95,.08);font-weight:600}
+.test-opt.correct{border-color:#16a34a;background:#dcfce7;color:#166534}
+.test-opt.wrong{border-color:#dc2626;background:#fee2e2;color:#991b1b}
+.test-nav{display:flex;gap:10px;justify-content:space-between;margin-top:24px}
+.test-btn{padding:12px 24px;border-radius:10px;border:none;cursor:pointer;font-weight:700;font-size:.9rem;font-family:inherit;transition:.15s}
+.btn-next{background:var(--brand,#04415f);color:#fff}.btn-next:hover{opacity:.9}
+.btn-prev{background:var(--bg-alt,#e6edf0);color:var(--ink,#011e2c)}.btn-prev:hover{background:#d8e2e7}
+.btn-submit{background:#16a34a;color:#fff}.btn-submit:hover{opacity:.9}
+.btn-next:disabled{opacity:.4;cursor:not-allowed}
+.test-result{display:none;text-align:center;padding:40px 20px}
+.test-result.show{display:block}
+.test-result .level-badge{display:inline-block;font-size:1.4rem;font-weight:800;padding:12px 28px;border-radius:999px;margin-bottom:16px}
+.level-beginner{background:#dcfce7;color:#166534}
+.level-intermediate{background:#fef9c3;color:#854d0e}
+.level-advanced{background:#dbeafe;color:#1e40af}
+.test-score{font-size:3rem;font-weight:800;margin:10px 0}
+.test-feedback{max-width:500px;margin:16px auto;font-size:.95rem;line-height:1.6;color:var(--muted)}
+.test-retake{margin-top:20px;padding:12px 28px;border-radius:10px;background:var(--bg-alt,#e6edf0);border:none;cursor:pointer;font-weight:700;font-size:.9rem;font-family:inherit}
+.test-retake:hover{background:#d8e2e7}
+</style>
+</head>
+<body>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><div class="drawer-avatar" id="drawerAvatar">G</div><div class="drawer-user"><strong id="drawerUserName">Guest</strong><small id="drawerUserMail">Sign in to access your account</small></div><button class="drawer-close" id="drawerClose" aria-label="Close"><i class="bi bi-x-lg"></i></button></div>
+  <div class="drawer-section" id="drawerAuthBlock"><div class="drawer-label">Account</div><a class="dlink" href="/login.html"><i class="bi bi-box-arrow-in-right"></i> Login<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/register.html"><i class="bi bi-person-plus-fill"></i> Sign Up<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section" id="drawerUserBlock" style="display:none"><div class="drawer-label">My Profile</div><a class="dlink" href="/profile.html"><i class="bi bi-person-circle"></i> View Profile<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/progress.html"><i class="bi bi-graph-up"></i> Progress<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Practice Tools</div><a class="dlink" href="/reading-speed.html"><i class="bi bi-speedometer2"></i> Reading Speed<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/placement-test.html"><i class="bi bi-patch-question"></i> Placement Test<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/speech-practice.html"><i class="bi bi-mic-fill"></i> Speech Practice<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/daily-challenges.html"><i class="bi bi-lightning-charge-fill"></i> Daily Challenges<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Speaking Resources</div><a class="dlink" href="/idioms-phrasal.html"><i class="bi bi-chat-square-quote-fill"></i> Idioms & Phrasal Verbs<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/tongue-twisters.html"><i class="bi bi-mic-fill"></i> Tongue Twisters<span class="arrow"><i class="bi bi-chevron-right"></i></span></a><a class="dlink" href="/phonetics.html"><i class="bi bi-soundwave"></i> Phonetic Chart<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-section"><div class="drawer-label">Preferences</div><button class="dlink" id="drawerThemeToggle"><i class="bi bi-moon-stars-fill"></i> <span id="drawerThemeLabel">Dark Mode</span><span class="arrow"><i class="bi bi-chevron-right"></i></span></button><a class="dlink" href="/settings.html"><i class="bi bi-gear-fill"></i> Settings<span class="arrow"><i class="bi bi-chevron-right"></i></span></a></div>
+  <div class="drawer-foot">© <span class="year"></span> The Dream School of English Language · DSEL</div>
+</aside>
+
+<header class="header">
+  <div class="container nav"><div class="header-left"><button class="drawer-toggle" id="drawerToggle" aria-label="Open menu"><i class="bi bi-list"></i></button><a class="brand" href="/"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo"><span class="brand-name"><span class="full">The Dream School of English Language <span style="color:var(--brand)">(DSEL)</span></span><small><i class="bi bi-geo-alt-fill"></i> Stadium Road, Sidhi, MP — 486661 · Since 2011</small></span></a></div><div class="header-right"><button class="menu-toggle" aria-label="Open navigation"><i class="bi bi-list"></i></button><div class="nav-cta"><span class="auth-pill"><a href="/login.html">Login</a><span class="sep">/</span><a class="signup" href="/register.html">Sign Up</a></span></div></div></div>
+  <div class="header-row2"><div class="container"><ul class="menu"><li><a href="/">Home</a></li><li><a href="/about.html">About</a></li><li><a href="/courses.html">Courses</a></li><li><a href="/activities.html">Activities</a></li><li><a href="/tests.html" class="active">Tests</a></li><li><a href="/contact.html">Contact</a></li></ul></div></div>
+</header>
+
+<section class="page-head"><div class="container"><div class="crumbs"><a href="/">Home</a> · <a href="/tests.html">Tests</a> · Placement Test</div><h1>English Placement Test</h1><p>25 questions covering grammar, vocabulary, and comprehension. Find out your current English level — Beginner, Intermediate, or Advanced.</p></div></section>
+
+<section><div class="container test-container">
+  <div class="test-progress"><div class="test-progress-bar" id="progressBar" style="width:4%"></div></div>
+  <div id="questionsContainer"></div>
+  <div class="test-nav" id="testNav">
+    <button class="test-btn btn-prev" id="btnPrev" disabled>← Previous</button>
+    <span id="qIndicator" style="color:var(--muted);font-size:.85rem;font-weight:600;align-self:center">1 of 25</span>
+    <button class="test-btn btn-next" id="btnNext">Next →</button>
+  </div>
+  <div class="test-result" id="testResult"></div>
+</div></section>
+
+<footer class="footer"><div class="container"><div class="footer-grid">
+<div><a class="brand" href="/" style="color:#fff"><img src="/img/original/logo.webp" alt="DSEL" class="brand-logo" style="background:#fff"><span class="brand-name" style="color:#fff"><span class="full">The Dream School of English Language (DSEL)</span><small style="color:#94a3b8">Sidhi · Madhya Pradesh</small></span></a><div class="social"><a href="https://www.facebook.com/people/The-Dream-Spoken-English-Institute-Sidhi-100066703335355/" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a><a href="https://www.youtube.com/@DSELSIDHIFORENGLISH" target="_blank" rel="noopener"><i class="bi bi-youtube"></i></a><a href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a></div></div>
+<div><h4>Practice</h4><a href="/reading-speed.html">Reading Speed</a><a href="/placement-test.html">Placement Test</a><a href="/speech-practice.html">Speech Practice</a><a href="/daily-challenges.html">Daily Challenges</a></div>
+<div><h4>Explore</h4><a href="/about.html">About</a><a href="/courses.html">Courses</a><a href="/activities.html">Activities</a><a href="/tests.html">Tests</a></div>
+<div><h4>Reach Us</h4><a href="tel:+918770462942"><i class="bi bi-telephone"></i> +91 8770462942</a><a href="tel:+919685586327"><i class="bi bi-telephone"></i> +91 9685586327</a><a href="https://maps.google.com/?q=Stadium+Road+Sidhi+MP" target="_blank" rel="noopener"><i class="bi bi-geo-alt"></i> Stadium Rd, Sidhi, MP</a></div>
+</div><div class="copyright">© <span id="year"></span> The Dream (DSEL) — Sidhi. All rights reserved.</div></div></footer>
+<a class="fab-wa" href="https://wa.me/918770462942" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="/js/main.js?v=12"></script>
+<script src="/js/chat-widget.js?v=13"></script>
+<script src="/js/gamification.js?v=1"></script>
+<script>
+(function(){
+  var QUESTIONS = [
+    { q:"Choose the correct sentence:", opts:["She don't like coffee.","She doesn't like coffee.","She not like coffee.","She doesn't likes coffee."], ans:1, cat:"grammar" },
+    { q:"I ___ to the market yesterday.", opts:["go","going","went","gone"], ans:2, cat:"grammar" },
+    { q:"Which word means the same as 'happy'?", opts:["Sad","Angry","Joyful","Tired"], ans:2, cat:"vocab" },
+    { q:"There ___ many students in the classroom.", opts:["is","are","am","was"], ans:1, cat:"grammar" },
+    { q:"Choose the correct spelling:", opts:["Beautiful","Beautifull","Beautifal","Beauteful"], ans:0, cat:"vocab" },
+    { q:"He has been working here ___ 2015.", opts:["for","since","from","until"], ans:1, cat:"grammar" },
+    { q:"What is the opposite of 'brave'?", opts:["Strong","Weak","Cowardly","Kind"], ans:2, cat:"vocab" },
+    { q:"If it rains, I ___ at home.", opts:["will stay","would stay","stayed","stay"], ans:0, cat:"grammar" },
+    { q:"The book ___ by my friend last week.", opts:["is written","was written","wrote","written"], ans:1, cat:"grammar" },
+    { q:"Which word is a synonym for 'begin'?", opts:["End","Start","Stop","Pause"], ans:1, cat:"vocab" },
+    { q:"Neither Ravi nor his friends ___ present.", opts:["is","are","was","has"], ans:1, cat:"grammar" },
+    { q:"She is interested ___ learning new languages.", opts:["at","in","on","for"], ans:1, cat:"grammar" },
+    { q:"Despite the heavy rain, the match ___.", opts:["was cancelled","continued","postponed","was called off"], ans:1, cat:"comprehension" },
+    { q:"The phrase 'break the ice' means:", opts:["To break something frozen","To start a conversation","To end a relationship","To become angry"], ans:1, cat:"vocab" },
+    { q:"I wish I ___ a car.", opts:["have","had","has","having"], ans:1, cat:"grammar" },
+    { q:"Hardly had he reached the station ___ the train left.", opts:["than","when","then","while"], ans:1, cat:"grammar" },
+    { q:"The manager, along with his team, ___ attending the conference.", opts:["is","are","were","have"], ans:0, cat:"grammar" },
+    { q:"Which sentence is grammatically correct?", opts:["Each of the students have a book.","Each of the students has a book.","Each of the students are having a book.","Each student have books."], ans:1, cat:"grammar" },
+    { q:"He was accused ___ stealing the money.", opts:["for","of","with","about"], ans:1, cat:"grammar" },
+    { q:"What does 'comprehensive' mean?", opts:["Small and limited","Complete and including everything","Difficult to understand","Easy and simple"], ans:1, cat:"vocab" },
+    { q:"I would rather you ___ at home.", opts:["stay","stayed","to stay","staying"], ans:1, cat:"grammar" },
+    { q:"Not only the students but also the teacher ___ present.", opts:["are","were","was","have been"], ans:2, cat:"grammar" },
+    { q:"Choose the most appropriate word: Her speech was so ___ that everyone was inspired.", opts:["boring","compelling","confusing","ordinary"], ans:1, cat:"comprehension" },
+    { q:"It is high time we ___ action on climate change.", opts:["take","took","taken","taking"], ans:1, cat:"grammar" },
+    { q:"Read the passage and answer: 'Sarah had been preparing for the interview for weeks. She researched the company thoroughly, practiced common questions, and chose her outfit carefully. On the day of the interview, she arrived early and greeted the receptionist with a warm smile.' What best describes Sarah's attitude?", opts:["Careless and casual","Thorough and well-prepared","Nervous and anxious","Overconfident and arrogant"], ans:1, cat:"comprehension" }
+  ];
+
+  var currentQ = 0;
+  var answers = new Array(QUESTIONS.length).fill(-1);
+  var submitted = false;
+  var container = document.getElementById('questionsContainer');
+  var progressBar = document.getElementById('progressBar');
+  var btnPrev = document.getElementById('btnPrev');
+  var btnNext = document.getElementById('btnNext');
+  var qIndicator = document.getElementById('qIndicator');
+  var testNav = document.getElementById('testNav');
+  var resultDiv = document.getElementById('testResult');
+
+  function renderQuestion(idx) {
+    var q = QUESTIONS[idx];
+    var selected = answers[idx];
+    var disabled = submitted ? ' disabled' : '';
+    var html = '<div class="test-q active" data-idx="'+idx+'"><h3><span style="color:var(--muted);font-size:.8rem">Q'+(idx+1)+' of '+QUESTIONS.length+' · '+q.cat.toUpperCase()+'</span><br>'+q.q+'</h3><div class="options">';
+    for (var i=0;i<q.opts.length;i++) {
+      var cls = 'test-opt';
+      if (submitted) {
+        if (i === q.ans) cls += ' correct';
+        else if (i === selected && selected !== q.ans) cls += ' wrong';
+      } else if (i === selected) cls += ' selected';
+      html += '<button class="'+cls+'" data-opt="'+i+'"'+disabled+'>' + String.fromCharCode(65+i) + '. ' + q.opts[i] + '</button>';
+    }
+    html += '</div></div>';
+    container.innerHTML = html;
+    updateNav();
+  }
+
+  function updateNav() {
+    progressBar.style.width = ((currentQ + 1) / QUESTIONS.length * 100) + '%';
+    qIndicator.textContent = (currentQ + 1) + ' of ' + QUESTIONS.length;
+    btnPrev.disabled = currentQ === 0;
+    if (submitted) {
+      btnNext.textContent = currentQ < QUESTIONS.length - 1 ? 'Next →' : 'See Results';
+    } else {
+      btnNext.textContent = currentQ < QUESTIONS.length - 1 ? 'Next →' : '✓ Submit';
+    }
+    btnNext.disabled = !submitted && answers[currentQ] === -1;
+  }
+
+  container.addEventListener('click', function(e){
+    if (submitted) return;
+    var btn = e.target.closest('.test-opt');
+    if (!btn) return;
+    var optIdx = parseInt(btn.dataset.opt);
+    answers[currentQ] = optIdx;
+    renderQuestion(currentQ);
+  });
+
+  function showResult() {
+    var correct = 0, grammarC = 0, grammarT = 0, vocabC = 0, vocabT = 0, compC = 0, compT = 0;
+    for (var i=0;i<QUESTIONS.length;i++) {
+      if (answers[i] === QUESTIONS[i].ans) {
+        correct++;
+        if (QUESTIONS[i].cat === 'grammar') grammarC++;
+        if (QUESTIONS[i].cat === 'vocab') vocabC++;
+        if (QUESTIONS[i].cat === 'comprehension') compC++;
+      }
+      if (QUESTIONS[i].cat === 'grammar') grammarT++;
+      if (QUESTIONS[i].cat === 'vocab') vocabT++;
+      if (QUESTIONS[i].cat === 'comprehension') compT++;
+    }
+
+    var pct = Math.round(correct / QUESTIONS.length * 100);
+    var level, cls, feedback;
+
+    if (pct >= 80) {
+      level = 'Advanced'; cls = 'level-advanced';
+      feedback = 'Your English is strong! You have a solid understanding of grammar, vocabulary, and comprehension. You are ready for advanced speaking practice, debate, and public speaking. Consider joining our advanced practice sessions to further polish your skills.';
+    } else if (pct >= 50) {
+      level = 'Intermediate'; cls = 'level-intermediate';
+      feedback = 'You have a good foundation but there is room for improvement. Focus on practicing tenses, prepositions, and expanding your vocabulary. Our foundation course would be perfect for you to reach the next level!';
+    } else {
+      level = 'Beginner'; cls = 'level-beginner';
+      feedback = 'This is a great starting point! With consistent practice, you can improve quickly. DSEL specializes in taking students from the basics to confident English speaking. Join our foundation course and start your journey!';
+    }
+
+    container.style.display = 'none';
+    testNav.style.display = 'none';
+    resultDiv.className = 'test-result show';
+    resultDiv.innerHTML = '<h2>Your Results</h2><div class="level-badge '+cls+'">'+level+'</div><div class="test-score">'+correct+' / '+QUESTIONS.length+'</div><div style="color:var(--muted);font-size:1rem">Score: '+pct+'%</div><div style="margin-top:16px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap"><div><b style="color:var(--brand)">'+grammarC+'/'+grammarT+'</b><br><small style="color:var(--muted)">Grammar</small></div><div><b style="color:var(--brand)">'+vocabC+'/'+vocabT+'</b><br><small style="color:var(--muted)">Vocabulary</small></div><div><b style="color:var(--brand)">'+compC+'/'+compT+'</b><br><small style="color:var(--muted)">Comprehension</small></div></div><p class="test-feedback">'+feedback+'</p><div style="margin-top:20px"><a href="https://wa.me/918770462942?text=Hi%2C%20I%20took%20the%20DSEL%20placement%20test%20and%20scored%20'+pct+'%25.%20I%20am%20interested%20in%20the%20course." class="btn btn-wa" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:12px 24px;border-radius:10px;background:#25d366;color:#fff;text-decoration:none;font-weight:700;margin-right:10px"><i class="bi bi-whatsapp"></i> Enquire on WhatsApp</a><button class="test-retake" onclick="location.reload()">🔄 Retake Test</button></div>';
+
+    // Save result
+    try {
+      localStorage.setItem('dsel-placement-result', JSON.stringify({score:correct,total:QUESTIONS.length,pct:pct,level:level,date:new Date().toISOString()}));
+      window.dispatchEvent(new CustomEvent('dsel-xp-earn',{detail:{amount:correct*5,source:'placement-test',score:correct}}));
+    } catch(_) {}
+  }
+
+  btnNext.addEventListener('click', function(){
+    if (submitted) {
+      if (currentQ < QUESTIONS.length - 1) { currentQ++; renderQuestion(currentQ); }
+      return;
+    }
+    if (currentQ < QUESTIONS.length - 1) {
+      currentQ++;
+      renderQuestion(currentQ);
+    } else if (answers.every(function(a){return a>=0})) {
+      submitted = true;
+      renderQuestion(currentQ);
+      testNav.innerHTML = '<span style="color:var(--muted);font-size:.85rem;font-weight:600">Review your answers</span><button class="test-btn btn-submit" id="btnSubmit">📊 See My Results</button>';
+      document.getElementById('btnSubmit').addEventListener('click', showResult);
+    }
+  });
+
+  btnPrev.addEventListener('click', function(){
+    if (currentQ > 0) { currentQ--; renderQuestion(currentQ); }
+  });
+
+  renderQuestion(0);
+})();
+</script>
+</body></html>
